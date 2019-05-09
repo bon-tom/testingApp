@@ -1,9 +1,11 @@
 # testingApp
+
 //////////////////////////////////
 Description je zmáčknuté do úzkého sloupce a zbytek vpravo je prázdný (totéž pravděpodobně platí pro ostatní sloupce, 
 i když tam už to není takový problém
 
 -Description rozšířenou na celý jeden řádek úpravou "Fill"
+
 /////////////////////////////////
 Na detailu není potřeba ID
 
