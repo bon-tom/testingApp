@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="urlRouteParam" />
+  <Generator value="*" />
+  <Type value="ScreenFactory.Data.Core.MetaObject" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="routeParamName" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="routeParamValueColumnName" />
+      <Type value="string" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

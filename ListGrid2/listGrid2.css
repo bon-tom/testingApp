@@ -1,0 +1,209 @@
+.sffw-listgrid-paging {
+    margin-top: 1em;
+}
+.sffw-listgrid-paging-top {
+    margin-bottom: 1em;
+}
+.sffw-listgrid-paging-button {
+    margin: 0 0.25em;
+
+    font-family: "Segoe UI Light", "Open Sans", "Helvetica Neue Light", "HelveticaNeue-Light", sans-serif;
+    outline: medium none;
+    background-color: #5f7599;
+    color: white;
+    border: 0px solid transparent;
+    -webkit-border-radius: 0px;
+            border-radius: 0px;
+    padding: 4px 12px;
+    vertical-align: middle;
+    text-align: center;
+}
+.sffw-listgrid-paging-button:active {
+    background-color: #1d1d1d;
+}
+.sffw-listgrid-paging-button:disabled {
+    background-color: #F2F2F2;
+    color: black;
+}
+.sffw-listgrid-display-inline {
+    display: inline-block;
+}
+
+.sffw-listgrid-paging-button:disabled:active {
+    background-color: #F2F2F2;
+}
+.sffw-listgrid-paging-pageinput, .sffw-listgrid-paging-pagemax {
+    margin: 0 1em;
+    width: 4em;
+}
+.sffw-listgrid-paging-pageinput {
+    text-align: right;
+    width: 4em;
+    vertical-align: middle;
+}
+.sffw-listgrid-paging-spin {
+    width: 2em;
+    text-align: center;
+    display: inline-block;
+}
+.sffw-listgrid-ordering-glyph {
+    margin: 0 0.25em;
+}
+.sffw-listgrid-clear-glyph {
+    margin: 0 0.25em;
+    float: right;
+}
+.sffw-listgrid-clear-glyph > button {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 1em;
+    background: transparent;
+    cursor: pointer;
+}
+.sffw-listgrid table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.sffw-listgrid td {
+    padding: 0;
+    height: 1.5em;
+}
+.sffw-listgrid td > a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    text-decoration: none;
+    color: initial;
+}
+/* hack for Mozilla FF to fill full height of td with a */
+@-moz-document url-prefix() {
+    .sffw-listgrid td {
+        height: 100%;
+    }
+    .sffw-listgrid td > a {
+        display: inline-table;
+        line-height: 2.5em;
+        margin-left: 0.25em;
+    }
+}
+.sffw-listgrid th {
+    cursor: pointer;
+    text-align: left;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    padding-bottom: 0.5em;
+    vertical-align: bottom;
+}
+.sffw-listgrid tbody tr {
+    cursor: pointer;
+}
+.sffw-listgrid tbody tr:nth-child(even) {
+    background-color: #EEE;
+}
+.sffw-listgrid tbody tr:hover {
+	background-color: lightyellow;
+}
+.sffw-listgrid tbody tr.sffw-listgrid-selected-row {
+    background-color: gold;
+}
+.sffw-listgrid tbody tr.sffw-listgrid-marked-row {
+    background-color: salmon;
+}
+.sffw-listgrid .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sffw-listgrid-filter-wrap {
+    padding-right: 1.5em;
+}
+.sffw-listgrid-filter {
+    width: 100%;
+    border: 1px solid silver;
+    padding: 0.25em;
+    height: 100%;
+}
+.sffw-listgrid-filter-active {
+    background-color: gold;
+}
+.sffw-listgrid-sort-active {
+    font-weight: bolder;
+}
+.sffw-listgrid-error, .sffw-listgrid-paging-spin-error {
+    color: red;
+}
+
+.sffw-listgrid-dd {
+    border: 1px silver solid;
+    margin-top: 24px;
+    z-index: 1010;
+    position: absolute;
+    background-color: white;
+    overflow: auto;
+}
+
+.sffw-listgrid-dd-filter {
+    width: 100%;
+    float: left;
+}
+.sffw-listgrid-dd-filter-empty {
+    background-color: white;
+}
+
+.sffw-listgrid-buttons button {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.sffw-listgrid-buttons button:disabled {
+    cursor: not-allowed;
+}
+
+.sffw-listgrid-buttons a {
+    border: none;
+    display: inline-block;
+}
+
+.dd-check-input{
+    height: 12px;
+    width: 12px;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+.enum-th{
+    width: 16em;
+}
+
+.sffw-listgrid-view-settings-button, .sffw-listgrid-clear-button {
+    float: right;
+}
+
+.icon-crossed-out {
+    position: relative;
+}
+
+.icon-crossed-out:after {
+    position: absolute;
+    top:-0.3em;
+    left:0.05em;
+    content: '|';
+    color: white;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+}

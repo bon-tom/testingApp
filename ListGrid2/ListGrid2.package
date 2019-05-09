@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb" />
+  <Version value="1.25.2" />
+  <Items>
+    <PackageItem Src="urlRouteParam.componentManifest" />
+    <PackageItem Src="urlRouteForm.componentManifest" />
+    <PackageItem Src="filterOption.componentManifest" />
+    <PackageItem Src="gridColumn.componentManifest" />
+    <PackageItem Src="gridActionButton.componentManifest" />
+    <PackageItem Src="ListGrid2.componentManifest" />
+    <ResourceItem ResourceName="listGrid2Generator.js" Action="None" OutputFileName="listGrid2Generator.js" Src="listGrid2Generator.js" />
+    <ResourceItem ResourceName="listGrid2.js" LinkerAction="Script" OutputFileName="listGrid2.js" Src="listGrid2.js" />
+    <ResourceItem ResourceName="listGrid2.css" LinkerAction="Css" OutputFileName="listGrid2.css" Src="listGrid2.css" />
+    <PackageItem Src="localizations.packageLocalizations" />
+  </Items>
+</Package>

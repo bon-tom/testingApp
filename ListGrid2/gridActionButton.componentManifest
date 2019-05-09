@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="gridActionButton" />
+  <Generator value="&lt;gridActionButton&gt;" />
+  <Type value="ScreenFactory.Data.Model.UiData.BindableMetaObject" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="ButtonName" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ButtonCaption" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsVisible" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsEnabled" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ButtonClass" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="TitleText" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ButtonType" />
+      <Default value="button" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiEditor value="list/button|link" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="LinkHref" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="LinkTarget" />
+      <Type value="string" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

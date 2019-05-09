@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ListGrid2" />
+  <Generator value="listGrid2Generator.js" />
+  <Type value="Control" />
+  <Events>
+    <EventManifest>
+      <Name value="OnSelectionChange" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnRowClicked" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="columnName" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnButtonClicked" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnRowsChanged" />
+      <UiDescription value="Fired when rows were passed from controller to component and eventually projected to referenced dataCollection structure and selected row was projected to referenced selectedRowReference structure." />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnViewSettingsButtonClicked" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="listName" />
+      <UiCategory value="Common" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="showCheckboxes" />
+      <Bindable value="OneWay" />
+      <Type value="bool" />
+      <UiCategory value="Checkboxes on rows" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="lastClickedRow" />
+      <Bindable value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.NamedDataChildWithChildren" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="lastActionButtonClickedName" />
+      <Bindable value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="columns" />
+      <Type value="collection-gridColumn" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="pagingTemplate" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="actionButtons" />
+      <Type value="collection-gridActionButton" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="dataCollection" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.NamedDataChildWithChildren" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isMultiselect" />
+      <Type value="bool" />
+      <UiCategory value="Checkboxes on rows" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="controller" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiEditor value="contract/IListCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="urlRouter" />
+      <Type value="ApiObject" />
+      <UiCategory value="Row ctrl + click" />
+      <UiDescription value="UrlRouter for navigation" />
+      <UiEditor value="contract/IUrlRouter" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="targetForms" />
+      <Type value="collection-urlRouteForm" />
+      <UiCategory value="Row ctrl + click" />
+      <UiDescription value="Collection of navigation target forms" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="targetFormAliasAttName" />
+      <Type value="string" />
+      <UiCategory value="Row ctrl + click" />
+      <UiDescription value="Name of attribute in dataCollection, that controls to which target form to navigate. Attribute should return one of aliases defined in targetForms collection." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="accessibleName" />
+      <Bindable value="OneWay" />
+      <UiCategory value="Accessibility" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="actionButtonsColumnCaption" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="maxVisibleFilterOptions" />
+      <Bindable value="OneWay" />
+      <Type value="integer" />
+      <UiCaption value="Maximum of visible filter options" />
+      <UiDescription value="Maximum of visible filter options without scrolling" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="allowSelectAll" />
+      <Type value="bool" />
+      <UiCategory value="Checkboxes on rows" />
+      <UiDescription value="Displays 'Select all' checkbox in header row" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isRowMarkedAttName" />
+      <Default value="_marked" />
+      <Type value="string" />
+      <UiCategory value="Controlling attributes" />
+      <UiDescription value="Name of boolen attribute in dataCollection, that can indicate rows on which the css class 'sffw-listgrid-marked-row' is applied." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isRowSelectedAttName" />
+      <Default value="_selected" />
+      <Type value="string" />
+      <UiCategory value="Controlling attributes" />
+      <UiDescription value="Name of boolen attribute in dataCollection, to which the component will propagate selection status of the row." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="showCheckboxInRowAttName" />
+      <Default value="_checkbox" />
+      <Type value="string" />
+      <UiCategory value="Controlling attributes" />
+      <UiDescription value="Name of boolen attribute in dataCollection, that controls on row level if checkbox is generated (showCheckboxes must be also set). If dataCollection does not contain the attribute, showCheckboxes setting is used." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="lastClickedRowSelectWhenCheckboxesOff" />
+      <Type value="bool" />
+      <UiDescription value="Marks clicked row as selected, applicable only if showCheckboxes is set to false." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="pagingControlsPosition" />
+      <Default value="bottom" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="Position of paging controls" />
+      <UiEditor value="list/bottom|top|both" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="actionButtonsColumnWidth" />
+      <Type value="Length" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="savedState" />
+      <Bindable value="Always" />
+      <Type value="string" />
+      <UiCategory value="Automatic saving/loading of list state" />
+      <UiDescription value="Binding to global string attribute in which the state will be persisted" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="savedStateOptions" />
+      <UiCategory value="Automatic saving/loading of list state" />
+      <UiDescription value="Comma separated options (sorting, visibleFilter, invisibleFilter, paging) or empty (=all)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="savedColumns" />
+      <Bindable value="Always" />
+      <Type value="string" />
+      <UiCategory value="Automatic saving/loading of list state" />
+      <UiDescription value="Binding to global string attribute in which the columns configuration will be persisted" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="allowFilterClearIcon" />
+      <Type value="bool" />
+      <UiDescription value="Displays icon in column header when column filter is active" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

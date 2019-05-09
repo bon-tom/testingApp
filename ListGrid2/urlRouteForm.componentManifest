@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="urlRouteForm" />
+  <Generator value="*" />
+  <Type value="ScreenFactory.Data.Core.MetaObject" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="form" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.Ui.Form" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="alias" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="routeParams" />
+      <Type value="collection-urlRouteParam" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>
