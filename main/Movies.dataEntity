@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="Movies" />
+  <Caption value="Movies" />
+  <Children>
+    <Attribute>
+      <Name value="id" />
+      <Caption value="Id" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="name" />
+      <Caption value="Name" />
+      <IsRequired value="True" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="yearOfRelease" />
+      <Caption value="Year of release" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Integer" />
+          <IntMax value="2020" />
+          <IntMin value="1894" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="type" />
+      <Caption value="Type" />
+      <IsRequired value="True" />
+      <MetaType reference="+MetaTypes.metaType" />
+    </Attribute>
+    <Attribute>
+      <Name value="mainDirector" />
+      <Caption value="Main director" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="description" />
+      <Caption value="Description" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

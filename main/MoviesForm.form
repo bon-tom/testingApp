@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="MoviesForm" />
+  <Caption value="Movies form" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext />
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~initMovieForm" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="initMovieForm" />
+      <ActionLangBody>
+        <Script><![CDATA[var response = apiobjects.serverForMovies.getAsync("list")
+
+
+if response.isError() then
+	globals.errorMessage = response.getErrorMessage()
+else
+
+endif
+/*
+apiobjects.northwind.getAsync("Products")
+
+if response.isError() then
+	globals.errorMessage = response.getErrorMessage()
+else
+	form.products.fromJson(response.extractJson("value"))
+endif
+
+*/]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

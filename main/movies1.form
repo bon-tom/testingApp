@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="movies1" />
+  <Caption value="movies" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Button>
+          <Name value="RefreshForm" />
+          <Caption value="Refresh form" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~initMovieForm" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="RemoveAll" />
+          <Caption value="Remove all" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~remove" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Panel>
+          <Name value="panel5" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="sortByName" />
+              <Caption value="Sort by name" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~orderByName" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="sortByReleaseYear" />
+              <Caption value="Sort by release year" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~orderByYearOfRelease" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel4" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="panel6" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="GotoAddForm" />
+                  <Caption value="Go to Add Form" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~goToMovieAdd" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="GotoSearchForm" />
+                  <Caption value="Go to Search and Sort form" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~goToMovieSearch" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <DataTable>
+          <Name value="dataTable2" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="DataItems" Expression="selectionofMovies" />
+          </Bindings>
+          <Columns>
+            <DataColumn>
+              <Name value="yearOfRelease" />
+              <Caption value="Year of Release" />
+              <Content>
+                <Label>
+                  <Name value="label1" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="yearOfRelease" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="name" />
+              <Caption value="Name" />
+              <Content>
+                <Label>
+                  <Name value="label5" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="name" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="type" />
+              <Caption value="Type" />
+              <Content>
+                <Label>
+                  <Name value="label2" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="type" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="dataColumn1" />
+              <Caption value="Remove Me Button" />
+              <Content>
+                <Panel>
+                  <Name value="panel3" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <Button>
+                      <Name value="RemoveMe" />
+                      <Caption value="Remove me" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_RemoveMe_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="dataColumn2" />
+              <Caption value="Show Whole Record" />
+              <Content>
+                <Panel>
+                  <Name value="panel2" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <Button>
+                      <Name value="ShowWholeRecord" />
+                      <Caption value="Show whole record" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_ShowWholeRecord_OnClick" />
+                      </OnClick>
+                    </Button>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+          </Columns>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-datatable" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </DataTable>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="dataforMovieDetail" />
+          <Caption value="Datafor movie detail" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="codeListData" />
+          <Caption value="Code list data" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="dataJson" />
+          <Caption value="Data json" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="_hasNoValue" />
+          <Caption value="_ has no value" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[not form.selectionofMovies.hasValue()]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Attribute>
+          <Name value="ascDesc" />
+          <Caption value="Asc desc" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="id" />
+          <Caption value="Id" />
+          <DataContextParameter.IsInput value="True" />
+          <DataContextParameter.IsInputRequired value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="yearOfRelease" />
+          <Caption value="Year of release" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="name" />
+          <Caption value="Name" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Complex>
+          <Name value="complex1" />
+          <Caption value="Complex 1" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.Movies" />
+            </Include>
+            <Collection>
+              <Name value="searchedMovies" />
+              <Caption value="Searched movies" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.Movies" />
+                </Include>
+              </Children>
+            </Collection>
+            <Complex>
+              <Name value="rating" />
+              <Caption value="Rating" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.RatingMovies" />
+                </Include>
+              </Children>
+            </Complex>
+          </Children>
+        </Complex>
+        <Collection>
+          <Name value="selectionofMovies" />
+          <Caption value="Selectionof movies" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.Movies" />
+            </Include>
+          </Children>
+        </Collection>
+        <Complex>
+          <Name value="filter" />
+          <Caption value="Filter" />
+          <Children>
+            <Attribute>
+              <Name value="_type" />
+              <Caption value="_ type" />
+              <IsRequired value="True" />
+              <MetaType reference="+MetaTypes.metaType" />
+            </Attribute>
+            <Attribute>
+              <Name value="yearOfRelease" />
+              <Caption value="Year of release" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="mainDirector" />
+              <Caption value="Main director" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Reference>
+              <Name value="typeFromMovieList2" />
+              <Caption value="Type from movie list 2" />
+              <Children>
+                <Attribute>
+                  <Name value="type" />
+                  <Caption value="Type" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="name" />
+                  <Caption value="Name" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Reference>
+          </Children>
+        </Complex>
+        <Collection>
+          <Name value="resOfOrder" />
+          <Caption value="Res Of Ordering" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.Movies" />
+            </Include>
+          </Children>
+        </Collection>
+        <Collection>
+          <Name value="collToOrder" />
+          <Caption value="Coll to order" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.Movies" />
+            </Include>
+          </Children>
+        </Collection>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~initMovieForm" />
+  </OnActivate>
+  <Actions>
+    <ActionBlock>
+      <Name value="initMovieForm" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[/*
+
+if apiobjects.breadcrumbsCtrl.count() = 0 then
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("main", "Main", "", "", true)
+else
+	apiobjects.breadcrumbsCtrl.removeTo(1)
+endif
+
+apiobjects.urlRouter.clearUrl()
+*/
+
+apiobjects.urlRouter1.clearUrl()
+var response = apiobjects.serverForMovies.getAsync("list")
+
+//system.console(response)
+
+if response.isError() then
+	globals.errorMessage = response.getErrorMessage()
+else
+	//system.console(response.extractJson())
+	//form.collection1.fromJson(response.extractJson("id"))
+	//form.collection1.fromJson(response.extractJson("name"))
+	system.console(response.getJsonString())
+	
+	//form.Movies.fromJson(response.getJsonString())
+	
+	form.dataJson = response.getJsonString()
+	form.dataforMovieDetail = response.getJsonString()
+	
+	
+	form.selectionofMovies.fromJson(form.dataJson)
+	
+	//form.complex1.fromJson(response.getJsonString())
+	
+	//var codelistData = response.extractJson("list")
+	//form.apiobjects.movieSet.fillFromJson(codelistData)
+	
+endif
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goToMovieSearch" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.movieSearching.go(form.dataJson)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_RemoveMe_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[params.data.removeMe()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="loadData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[
+
+/*
+
+var response = apiobjects.serverForMovies.getAsync("record?id= " +form.filter.mainDirector)
+
+if response.isError() then
+	//system.console.Error(response.getErrorMessage())
+	system.console(response.getErrorMessage())
+else
+	form.complex1.fromJson(response.extractJson("record"))
+endif
+*/
+
+//loadData
+/*
+var response = apiobjects.magicApi.getAsync("cards?set= " + form.filter.set + "&name=" + form.filter.name)
+
+if response.isError() then
+	system.console.Error(response.getErrorMessage())
+else
+	form.cards.fromJson(response.extractJson("cards"))
+endif
+
+*/
+
+//var response = apiobjects.serverForMovies.getAsync()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goToMovieAdd" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.movieAdd.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_SearchRecord_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.movieSearched.go(form.name)
+
+
+//navigation.main.movieSearched.go(form.name, form.yearOfRelease)
+//navigation.main.movieSearched.go(form.filter.name, form.filter.yearOfRelease, form.filter.mainDirector)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goToMovieEdit" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.movieEdit.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="remove" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.clear()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="orderByYearOfRelease" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//form.collToSearch.orderBy(current.yearOfRelease, true).toJson()
+//system.console(selectionofMovies)
+
+if form.ascDesc = true then
+	form.ascDesc = false
+else
+	form.ascDesc = true
+endif
+
+//var resOfOrder = form.selectionofMovies.orderBy(current.yearOfRelease, true).toJson()
+var resOfOrder = form.selectionofMovies.orderBy(current.yearOfRelease, form.ascDesc).toJson()
+//var resOfOrder = form.collToOrder.orderBy(current.yearOfRelease, true).toJson()
+
+system.console(resOfOrder)
+
+form.selectionofMovies.fromJson(resOfOrder)
+//form.selectionofMovies = resOfOrder
+//mít zdrojovou kolekci, kterou řadím; novou kolekci, do které ukládám
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="orderByName" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//form.collToSearch.orderBy(current.yearOfRelease, true).toJson()
+//system.console(selectionofMovies)
+
+if form.ascDesc = true then
+	form.ascDesc = false
+else
+	form.ascDesc = true
+endif
+
+//var resNameOfOrder = form.selectionofMovies.orderBy(current.name, true).toJson()
+var resNameOfOrder = form.selectionofMovies.orderBy(current.name, form.ascDesc).toJson()
+//var resOfOrder = form.collToOrder.orderBy(current.yearOfRelease, true).toJson()
+
+system.console(resNameOfOrder)
+
+form.selectionofMovies.fromJson(resNameOfOrder)
+//form.selectionofMovies = resOfOrder]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goToMovieDetail" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//navigation.main.movieDetail.go()
+//navigation.main.movieDetail.goandBack(form.codeListData)
+//navigation.main.movieDetail.go(form.dataFormovieDetail)
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_ShowWholeRecord_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.movieDetail.go(params.data.id)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="orderByRating" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.ascDesc = true then
+	form.ascDesc = false
+else
+	form.ascDesc = true
+endif
+
+//var resOfOrder = form.selectionofMovies.orderBy(current.yearOfRelease, true).toJson()
+var resOfOrder = form.selectionofMovies.orderBy(current.mainDirector, form.ascDesc).toJson()
+
+//var resOfOrder = form.selectionofMovies.orderBy(current.rating.score, form.ascDesc).toJson()
+
+system.console(resOfOrder)
+
+form.selectionofMovies.fromJson(resOfOrder)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="movieSet" />
+      <autoLoad value="False" />
+      <createDescriptionOnClient value="No" />
+      <filterByDate value="False" />
+      <name value="sets" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="type" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="name" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+  </ApiObjects>
+</Form>

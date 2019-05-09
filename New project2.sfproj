@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ProjectRoot>
+  <CreatedOn value="2019-04-25T11:17:38.1107686+02:00" />
+  <ProjectName value="New project2" />
+  <MainForm>
+    <ProjectMainFormOptions />
+  </MainForm>
+  <Options>
+    <ProjectOptions>
+      <DataToForm>
+        <DataToFormConfiguration BoolEditor="Sf.LibraryOne.CheckBox" CollectionEditor="Repeater" ComputedText="Sf.LibraryOne.Label" DateEditor="Sf.LibraryOne.DatePicker" DateTimeEditor="Sf.LibraryOne.DatePicker" DecimalEditor="ScreenFactory.Data.Model.Ui.TextBox" EnumEditor="ScreenFactory.Data.Model.Ui.EnumCombo" IntegerEditor="ScreenFactory.Data.Model.Ui.TextBox" ReferenceEditor="Sf.LibraryOne.ReferenceCombo" StringEditor="ScreenFactory.Data.Model.Ui.TextBox" />
+      </DataToForm>
+      <Theme>
+        <ProjectTheme>
+          <ThemeName value="m8" />
+        </ProjectTheme>
+      </Theme>
+    </ProjectOptions>
+  </Options>
+  <PackageReferences>
+    <PackageReference Alias="CorePackage" IsComponentLib="True" IsReadOnly="True" IsSystem="True" Origin="system://CorePackage/CorePackage.package">
+      <ReferencedIdentity value="CorePackage.5f000000000045f00000000000000000" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="main" Origin="main\main.package">
+      <ReferencedIdentity value="main.f7d31f056d6b42a29b16cd4ccb7ef711" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="ServerConnection" IsComponentLib="True" Origin="..\..\..\..\Downloads\sffw\dist\ServerConnection\ServerConnection.package">
+      <ReferencedIdentity value="ServerConnection.db7b3eef075548988df768923691922c" />
+      <ReferencedVersion value="3.1.1" />
+    </PackageReference>
+    <PackageReference Alias="ListGrid2" IsComponentLib="True" Origin="..\..\..\..\Downloads\sffw\dist\ListGrid2\ListGrid2.package">
+      <ReferencedIdentity value="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb" />
+      <ReferencedVersion value="1.25.2" />
+    </PackageReference>
+    <PackageReference Alias="labeledText" IsComponentLib="True" Origin="LabeledText\LabeledText.package">
+      <ReferencedIdentity value="labeledText.a92a691d6915448ebf9f0b804ce6a733" />
+      <ReferencedVersion value="1.0.4" />
+    </PackageReference>
+    <PackageReference Alias="Codelist" IsComponentLib="True" Origin="Codelist\Codelist.package">
+      <ReferencedIdentity value="Codelist.2fd2d7af4a6d445bad8a58610632f8e0" />
+      <ReferencedVersion value="3.11.0" />
+    </PackageReference>
+    <PackageReference Alias="Page" IsComponentLib="True" Origin="..\..\..\..\Downloads\sffw\dist\Page\Page.package">
+      <ReferencedIdentity value="Page.f7aa0c151c64407daef13910dcf7b72a" />
+      <ReferencedVersion value="1.6.1" />
+    </PackageReference>
+    <PackageReference Alias="UrlRouter" IsComponentLib="True" Origin="UrlRouter\UrlRouter.package">
+      <ReferencedIdentity value="UrlRouter.69a71809c45249cbb2999d13bb9100c0" />
+      <ReferencedVersion value="3.0.1" />
+    </PackageReference>
+    <PackageReference Alias="Breadcrumbs" IsComponentLib="True" Origin="Breadcrumbs\Breadcrumbs.package">
+      <ReferencedIdentity value="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb" />
+      <ReferencedVersion value="1.0.2" />
+    </PackageReference>
+    <PackageReference Alias="busyIndicator" IsComponentLib="True" Origin="BusyIndicator\BusyIndicator.package">
+      <ReferencedIdentity value="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e" />
+      <ReferencedVersion value="2.0.0" />
+    </PackageReference>
+    <PackageReference Alias="referenceLookup" IsComponentLib="True" Origin="..\..\..\..\Downloads\moviesApp-master (1)\moviesApp-master\ReferenceLookup\ReferenceLookup.package">
+      <ReferencedIdentity value="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e" />
+      <ReferencedVersion value="2.4.0" />
+    </PackageReference>
+    <PackageReference Alias="jQueryPackage" IsComponentLib="True" Origin="jQueryPackage\jQueryPackage.package">
+      <ReferencedIdentity value="jQueryPackage.969dfbfe76454b4187e210594a2a988b" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="DeclListQuery" IsComponentLib="True" Origin="DeclListQuery\DeclListQuery.package">
+      <ReferencedIdentity value="DeclListQuery.f41d2c211a8f43618588763e63b56065" />
+      <ReferencedVersion value="1.0.2" />
+    </PackageReference>
+  </PackageReferences>
+</ProjectRoot>

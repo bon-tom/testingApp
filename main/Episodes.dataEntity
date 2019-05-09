@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="Episodes" />
+  <Caption value="Episodes" />
+  <Children>
+    <Attribute>
+      <Name value="episodename" />
+      <Caption value="Episode name" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

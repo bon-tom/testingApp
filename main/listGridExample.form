@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.300"?>
+<Form>
+  <Name value="listGridExample" />
+  <Caption value="listGridExample" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="1000px" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="m8-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Panel>
+          <Name value="panel5" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Label>
+              <Name value="label1" />
+              <Data value="Clicked actionbutton name:" />
+              <Panel.Height value="#" />
+              <Panel.Width value="250px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="m8-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <Label>
+              <Name value="clickedBtn" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data">
+                  <Expression>
+                    <Text><![CDATA[clickedActionButtonName]]></Text>
+                  </Expression>
+                </Binding>
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="m8-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="m8-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel4" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <ListGrid identity="ListGrid.f5743e6371bc48f8b76d70bcaec9913e">
+              <Name value="listGrid1" />
+              <filterDataApiProvider reference="~listFilterProvider1" />
+              <isMultiselect value="True" />
+              <listDataProvider reference="~listODataProvider1" />
+              <name value="Orders" />
+              <pagingTemplate value="$previous|$next|$refresh|$editableCurrentPage|$records|$pageSize" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <showCheckboxes value="True" />
+              <OnRowClicked>
+                <ActionEvent ReferencedAction="~rowClickedAction" />
+              </OnRowClicked>
+              <actionButtons>
+                <gridActionButton identity="ListGrid.f5743e6371bc48f8b76d70bcaec9913e">
+                  <ButtonCaption value="Test button" />
+                  <ButtonClass value="fa fa-arrow-right" />
+                  <ButtonName value="btnTest" />
+                  <IsEnabled value="btn1Enabled" />
+                  <IsVisible value="btn1Visible" />
+                  <Bindings>
+                    <Binding SourceProperty="TitleText">
+                      <Expression>
+                        <Text><![CDATA[localized.tooltip1]]></Text>
+                      </Expression>
+                    </Binding>
+                  </Bindings>
+                </gridActionButton>
+              </actionButtons>
+              <Bindings>
+                <Binding SourceProperty="dataCollection">
+                  <Expression>
+                    <Text><![CDATA[dColl]]></Text>
+                  </Expression>
+                </Binding>
+                <Binding SourceProperty="lastActionButtonClickedName">
+                  <Expression>
+                    <Text><![CDATA[clickedActionButtonName]]></Text>
+                  </Expression>
+                </Binding>
+                <Binding SourceProperty="lastClickedRow">
+                  <Expression>
+                    <Text><![CDATA[reference1]]></Text>
+                  </Expression>
+                </Binding>
+                <Binding SourceProperty="additionalFilter">
+                  <Expression>
+                    <Text><![CDATA[additionalFIlter]]></Text>
+                  </Expression>
+                </Binding>
+                <Binding SourceProperty="recordsCount">
+                  <Expression>
+                    <Text><![CDATA[recordsCount]]></Text>
+                  </Expression>
+                </Binding>
+                <Binding SourceProperty="recordsDisplayed">
+                  <Expression>
+                    <Text><![CDATA[displayedRecords]]></Text>
+                  </Expression>
+                </Binding>
+              </Bindings>
+              <columns>
+                <gridColumn identity="ListGrid.f5743e6371bc48f8b76d70bcaec9913e">
+                  <DataType value="string" />
+                  <DisplayedName value="CustomerID" />
+                  <IsHtml value="True" />
+                  <Name value="Status" />
+                  <Width value="10" />
+                  <Bindings>
+                    <Binding SourceProperty="Caption">
+                      <Expression>
+                        <Text><![CDATA[localizedColumn]]></Text>
+                      </Expression>
+                    </Binding>
+                  </Bindings>
+                </gridColumn>
+                <gridColumn identity="ListGrid.f5743e6371bc48f8b76d70bcaec9913e">
+                  <Caption value="Sloupec" />
+                  <DataType value="enum-integer" />
+                  <Name value="ShipVia" />
+                  <Width value="40" />
+                </gridColumn>
+                <gridColumn identity="ListGrid.f5743e6371bc48f8b76d70bcaec9913e">
+                  <Caption value="Ship Country" />
+                  <DataType value="enum" />
+                  <Name value="ShipCountry" />
+                  <Width value="50" />
+                </gridColumn>
+              </columns>
+            </ListGrid>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="m8-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel6" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Label>
+              <Name value="label6" />
+              <Data value="Selected rows" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="m8-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <Label>
+              <Name value="label7" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data">
+                  <Expression>
+                    <Text><![CDATA[reference1.ShipVia]]></Text>
+                  </Expression>
+                </Binding>
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="m8-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <TextBox>
+              <Name value="textBox1" />
+              <Caption value="Additional filter" />
+              <CaptionPosition value="Top" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data">
+                  <Expression>
+                    <Text><![CDATA[additionalFilter]]></Text>
+                  </Expression>
+                </Binding>
+                <Binding SourceProperty="IsRequiredMarkVisible">
+                  <Expression>
+                    <Text><![CDATA[additionalFilter.isRequired()]]></Text>
+                  </Expression>
+                </Binding>
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="m8-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <CheckBox>
+              <Name value="checkBox1" />
+              <CaptionPosition value="Top" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data">
+                  <Expression>
+                    <Text><![CDATA[ShowCheckboxes]]></Text>
+                  </Expression>
+                </Binding>
+                <Binding SourceProperty="IsRequiredMarkVisible">
+                  <Expression>
+                    <Text><![CDATA[ShowCheckboxes.isRequired()]]></Text>
+                  </Expression>
+                </Binding>
+                <Binding SourceProperty="Caption">
+                  <Expression>
+                    <Text><![CDATA[ShowCheckboxes.caption()]]></Text>
+                  </Expression>
+                </Binding>
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="m8-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="m8-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="m8-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Collection>
+          <Name value="dColl" />
+          <Caption value="D coll" />
+          <DataContextParameter.IsInput value="True" />
+          <ItemCaption value="{" />
+          <Children>
+            <Attribute>
+              <Name value="CustomerID" />
+              <Caption value="Customer ID" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ShipVia" />
+              <Caption value="Ship via" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Freight" />
+              <Caption value="Freight" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ShipCountry" />
+              <Caption value="Ship country" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="computed1" />
+              <Caption value="Computed 1" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="computed2" />
+              <Caption value="Computed 2" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="computed3" />
+              <Caption value="Computed 3" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Attribute>
+              <Name value="_selected" />
+              <Caption value="_ selected" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="Status" />
+              <Caption value="Status" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.CustomerID <> "VICTE" ? toString(this.CustomerID) : "<span class=\"fa fa-exclamation-triangle\" style=\"margin-right: 5px;\"></span>" + toString(this.CustomerID)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="btn1Enabled" />
+              <Caption value="Btn 1 enabled" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="btn1Visible" />
+              <Caption value="Btn 1 visible" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Collection>
+        <Attribute>
+          <Name value="clickedActionButtonName" />
+          <Caption value="Clicked action button name" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="selectedRows" />
+          <Caption value="Selected rows" />
+          <Children>
+            <Reference>
+              <Name value="clickedRow" />
+              <Caption value="Clicked row" />
+              <Children>
+                <Attribute>
+                  <Name value="CustomerID" />
+                  <Caption value="Customer ID" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Reference>
+          </Children>
+        </Collection>
+        <Complex>
+          <Name value="complex1" />
+          <Caption value="Complex 1" />
+          <Children>
+            <Attribute>
+              <Name value="CustomerID" />
+              <Caption value="Customer ID" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Reference>
+          <Name value="reference1" />
+          <Caption value="Reference 1" />
+          <Children>
+            <Attribute>
+              <Name value="CustomerID" />
+              <Caption value="Customer ID" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ShipVia" />
+              <Caption value="Ship via" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="additionalFilter" />
+          <Caption value="Additional filter" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="NazevSloupce1" />
+          <Caption value="Nazev sloupce 1" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA["MujSloupec"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Computed>
+          <Name value="NazevSloupce" />
+          <Caption value="Nazev sloupce" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA["MujSLoupecZnova"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Attribute>
+          <Name value="TestNazvu" />
+          <Caption value="Test nazvu" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="computed1" />
+          <Caption value="Computed 1" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[true]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Attribute>
+          <Name value="ShowCheckboxes" />
+          <Caption value="Show checkboxes" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="recordsCount" />
+          <Caption value="Records count" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="displayedRecords" />
+          <Caption value="Displayed records" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="localizedColumn" />
+          <Caption value="Localized column" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~InitializeGrid" />
+  </OnActivate>
+  <Actions>
+    <ActionBlock>
+      <Name value="InitializeGrid" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.listFilterProvider1.fillFromJson("ShipCountry","[{\"value\":\"France\",\"text\":\"France\"},{\"value\":\"Austria\",\"text\":\"Austria\"}]")
+
+form.apiobjects.listFilterProvider1.fillFromJson("ShipVia","[{\"value\":1,\"text\":\"ShipVia - 1\"},{\"value\":2,\"text\":\"ShipVia - 2\"}]")
+
+
+form.localizedColumn = "Muj sloupec"
+//form.apiobjects.listODataProvider1.SetDatasetColumns("CustomerID")
+//form.apiobjects.listODataProvider1.SetDatasetColumns("ShipVia")
+//form.apiobjects.listODataProvider1.SetDatasetColumns("Freight")
+//form.apiobjects.listODataProvider1.SetDatasetColumns("ShipCountry")
+form.apiobjects.listODataProvider1.SetGroupBy("ShipCountry", false)
+form.apiobjects.listODataProvider1.LoadData()
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="rowClickedAction" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[console.log(this.reference1.ShipVia.$value());]]></Script>
+      <ActionLangBody>
+        <Script><![CDATA[alert("Row clicked")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <ListODataProvider identity="ListODataProvider.f76d719154f1474893ef07b5a4994e65">
+      <Name value="listODataProvider1" />
+      <dataCollectionReference value="dColl" />
+      <datasetName value="Orders" />
+      <recordsCountReference value="recordsCount" />
+      <server reference="+GlobalApiObjects.northwind" />
+    </ListODataProvider>
+    <ListFilterProvider identity="ListFilterProvider.b8c1bb9d41ce4aa7b49407bd33312f2f">
+      <Name value="listFilterProvider1" />
+      <name value="FilterProvider2" />
+    </ListFilterProvider>
+  </ApiObjects>
+</Form>

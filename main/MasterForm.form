@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="MasterForm" />
+  <Caption value="Master form" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Label>
+          <Name value="MoviesAndSeriesMaster" />
+          <Data value="Movies and Series DB" />
+          <Heading value="h3" />
+          <Panel.Height value="#" />
+          <Panel.HorizontalAlignment value="Center" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <Condition value="False" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+          <Name value="breadcrumbs1" />
+          <controller reference="+GlobalApiObjects.breadcrumbsCtrl1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <OnItemClick>
+            <ActionEvent ReferencedAction="~handler_breadcrumbs1_OnItemClick" />
+          </OnItemClick>
+        </Breadcrumbs>
+        <FormPlaceholder>
+          <Name value="formPlaceholder1" />
+          <InitialForm reference="+UiParts.movies1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+        </FormPlaceholder>
+        <Label>
+          <Name value="label1" />
+          <Data value="(Editace záznamu); (mazání záznamu), (vytvoření záznamu), (vyhledávání záznamů); (třídění záznamů);" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Label>
+          <Name value="label2" />
+          <Data value="rozlišení na movies/series včetně rozdílného hodnocení" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext />
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_breadcrumbs1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//form.apiobjects.eventDispatcher1.sendMessage("master", "breadcrumbsClick", params.id)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
+      <Name value="serverConnection1" />
+    </ServerConnection>
+  </ApiObjects>
+</Form>

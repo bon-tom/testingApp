@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package>
+  <Identity value="main.f7d31f056d6b42a29b16cd4ccb7ef711" />
+  <Items>
+    <PackageItem Src="MasterForm.form" />
+    <PackageItem Src="movies1.form" />
+    <PackageItem Src="globalApiObjects.globalApiObjects" />
+    <PackageItem Src="globalVariables.globalVariables" />
+    <PackageItem Src="Movies.dataEntity" />
+    <PackageItem Src="movieAdd.form" />
+    <PackageItem Src="movieDetail.form" />
+    <PackageItem Src="metaType.metaType" />
+    <PackageItem Src="globalActions.globalActions" />
+    <PackageItem Src="editRecord.form" />
+    <PackageItem Src="movieSearching.form" />
+    <PackageItem Src="Episodes.dataEntity" />
+    <PackageItem Src="RatingMovies.dataEntity" />
+    <PackageItem Src="Seasons.dataEntity" />
+    <PackageItem Src="RatingSeries.dataEntity" />
+    <PackageItem Src="Starring.dataEntity" />
+    <PackageItem Src="Genre.dataEntity" />
+    <PackageItem Src="movieEdit.form" />
+    <PackageItem Src="movieSearched.form" />
+    <PackageItem Src="editRecordII.form" />
+  </Items>
+</Package>
