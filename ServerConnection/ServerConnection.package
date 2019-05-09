@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?data-format version="0.301"?>
+<?data-format version="0.400"?>
 <Package IsComponentLib="True">
   <Identity value="ServerConnection.db7b3eef075548988df768923691922c" />
   <Version value="3.1.1" />

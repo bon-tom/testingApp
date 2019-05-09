@@ -1,0 +1,30 @@
+
+//////////////////////////////////
+	Description je zmáèknuté do úzkého sloupce a zbytek vpravo je prázdný (totéž pravdìpodobnì platí pro ostatní sloupce, i když tam už to není takový problém
+
+-Description rozšíøenou na celý jeden øádek úpravou "Fill"
+/////////////////////////////////
+	Na detailu není potøeba ID
+
+-vymazán labeledText complex1.ID
+/////////////////////////////////
+	Na konci detailu jsou dvì øádky "(Editace záznamu); (mazání záznamu), (vytvoøení záznamu), (vyhledávání záznamù); (tøídìní záznamù); rozlišení na movies/series vèetnì rozdílného hodnocení" To tam asi nepatøí 
+
+-zápatí sloužící k programátorským úèelùm
+////////////////////////////////
+
+	V editaèním módu jednak nemusí být ID a už urèitì nemùže být editovatelné. Pokud ho uživatel zmìní, save se samozøejmì nepovede (server vrací 400 Bad request)
+
+-vymazán labeledText complex1.ID i textBox complex1.ID
+
+
+/////////////////////////////////
+	Pokud se rozlišuje detail a editace (viz tlaèítko "edit record"), proè je i detail editovatelný?
+/////////////////////////////////
+	Tlaèítko "Go without saving" by se asi mìlo jmenovat "Cancel". Stejnì tak "Save dit record to server" by se asi mohlo jmenovat "Save".
+////////////////////////////////
+	V editaci nejde pøidat ani odebrat herce ani žánry
+////////////////////////////////
+	V detailu nejsou vidìt epizody seriálu, stejnì tak ani v editaci
+///////////////////////////////
+na detailu se nezobrazují žánry

@@ -56,21 +56,6 @@
           </CssClass>
         </Button>
         <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
-          <Name value="labeledText6" />
-          <Caption value="ID of Record" />
-          <Panel.Height value="#" />
-          <Panel.Width value="300px" />
-          <Bindings>
-            <Binding SourceProperty="Data" Expression="complex1.id" />
-          </Bindings>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-labeledtext" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </LabeledText>
-        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
           <Name value="labeledText1" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
@@ -137,7 +122,7 @@
         <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
           <Name value="labeledText5" />
           <Panel.Height value="#" />
-          <Panel.Width value="300px" />
+          <Panel.Width value="*" />
           <Bindings>
             <Binding SourceProperty="Data" Expression="complex1.description" />
             <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.description.isRequired()" />
@@ -165,6 +150,7 @@
                     <TextBox>
                       <Name value="textBox2" />
                       <CaptionVAlign value="Middle" />
+                      <IsEnabled value="False" />
                       <Panel.Height value="#" />
                       <Panel.Width value="300px" />
                       <Bindings>
@@ -224,6 +210,7 @@
                     <TextBox>
                       <Name value="textBox1" />
                       <CaptionVAlign value="Middle" />
+                      <IsEnabled value="False" />
                       <Panel.Height value="#" />
                       <Panel.Width value="300px" />
                       <Bindings>
@@ -276,6 +263,7 @@
           <Children>
             <DatePicker>
               <Name value="datePicker1" />
+              <IsEnabled value="False" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <Bindings>
@@ -292,6 +280,7 @@
             </DatePicker>
             <CheckBox>
               <Name value="checkBox1" />
+              <IsEnabled value="False" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <Bindings>

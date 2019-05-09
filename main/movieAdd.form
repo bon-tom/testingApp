@@ -119,7 +119,7 @@
               <Name value="textBox6" />
               <CaptionVAlign value="Middle" />
               <Panel.Height value="#" />
-              <Panel.Width value="300px" />
+              <Panel.Width value="*" />
               <Bindings>
                 <Binding SourceProperty="Data" Expression="complex1.description" />
                 <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.description.isRequired()" />
@@ -178,8 +178,8 @@
                           </CssClass>
                         </Button>
                         <Button>
-                          <Name value="DeletelGenreItem" />
-                          <Caption value="Deletel genre item" />
+                          <Name value="DeleteGenreItem" />
+                          <Caption value="Delete genre item" />
                           <Panel.Height value="#" />
                           <Panel.Width value="150px" />
                           <OnClick>

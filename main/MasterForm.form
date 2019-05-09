@@ -40,30 +40,6 @@
           <Panel.Height value="#" />
           <Panel.Width value="*" />
         </FormPlaceholder>
-        <Label>
-          <Name value="label1" />
-          <Data value="(Editace záznamu); (mazání záznamu), (vytvoření záznamu), (vyhledávání záznamů); (třídění záznamů);" />
-          <Panel.Height value="#" />
-          <Panel.Width value="*" />
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-label" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Label>
-        <Label>
-          <Name value="label2" />
-          <Data value="rozlišení na movies/series včetně rozdílného hodnocení" />
-          <Panel.Height value="#" />
-          <Panel.Width value="*" />
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-label" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Label>
       </Children>
       <CssClass>
         <CssClassConditional>

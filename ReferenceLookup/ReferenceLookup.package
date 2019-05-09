@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?data-format version="0.301"?>
+<?data-format version="0.400"?>
 <Package IsComponentLib="True">
   <Identity value="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e" />
   <Version value="2.4.1" />
