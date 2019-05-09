@@ -61,7 +61,7 @@
     </PackageReference>
     <PackageReference Alias="referenceLookup" IsComponentLib="True" Origin="ReferenceLookup\ReferenceLookup.package">
       <ReferencedIdentity value="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e" />
-      <ReferencedVersion value="2.4.0" />
+      <ReferencedVersion value="2.4.1" />
     </PackageReference>
     <PackageReference Alias="jQueryPackage" IsComponentLib="True" Origin="jQueryPackage\jQueryPackage.package">
       <ReferencedIdentity value="jQueryPackage.969dfbfe76454b4187e210594a2a988b" />
