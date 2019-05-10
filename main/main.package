@@ -19,7 +19,7 @@
     <PackageItem Src="Seasons.dataEntity" />
     <PackageItem Src="RatingSeries.dataEntity" />
     <PackageItem Src="Starring.dataEntity" />
-    <PackageItem Src="Genre.dataEntity" />
+    <PackageItem Src="Genres.dataEntity" />
     <PackageItem Src="movieEdit.form" />
     <PackageItem Src="movieSearched.form" />
     <PackageItem Src="editRecordII.form" />

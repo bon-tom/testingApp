@@ -9,7 +9,7 @@
       <Caption value="Date of watching" />
       <DeclaredType>
         <AttributeType>
-          <BaseType value="Bool" />
+          <BaseType value="DateTime" />
         </AttributeType>
       </DeclaredType>
     </Attribute>

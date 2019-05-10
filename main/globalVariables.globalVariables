@@ -22,7 +22,7 @@
           <Caption value="Genre" />
           <Children>
             <Include>
-              <Include reference="+DataEntities.Genre" />
+              <Include reference="+DataEntities.Genres" />
             </Include>
           </Children>
         </Collection>

@@ -149,9 +149,9 @@
                               <Panel.Height value="#" />
                               <Panel.Width value="300px" />
                               <Bindings>
-                                <Binding SourceProperty="Data" Expression="genreItem" />
-                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="genreItem.isRequired()" />
-                                <Binding SourceProperty="Caption" Expression="genreItem.caption()" />
+                                <Binding SourceProperty="Data" Expression="genre" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="genre.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="genre.caption()" />
                               </Bindings>
                               <CssClass>
                                 <CssClassConditional>
@@ -440,9 +440,9 @@
                                   <Panel.Height value="#" />
                                   <Panel.Width value="*" />
                                   <Bindings>
-                                    <Binding SourceProperty="Data" Expression="genreItem" />
-                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="genreItem.isRequired()" />
-                                    <Binding SourceProperty="Caption" Expression="genreItem.caption()" />
+                                    <Binding SourceProperty="Data" Expression="genre" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="genre.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="genre.caption()" />
                                   </Bindings>
                                   <CssClass>
                                     <CssClassConditional>
@@ -734,7 +734,7 @@
               <Caption value="Genre" />
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.Genre" />
+                  <Include reference="+DataEntities.Genres" />
                 </Include>
               </Children>
             </Collection>

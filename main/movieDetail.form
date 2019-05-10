@@ -154,9 +154,9 @@
                       <Panel.Height value="#" />
                       <Panel.Width value="300px" />
                       <Bindings>
-                        <Binding SourceProperty="Data" Expression="genreItem" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="genreItem.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="genreItem.caption()" />
+                        <Binding SourceProperty="Data" Expression="genre" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="genre.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="genre.caption()" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -175,7 +175,7 @@
                 </Panel>
               </Content>
               <Bindings>
-                <Binding SourceProperty="DataItems" Expression="complex1.genre" />
+                <Binding SourceProperty="DataItems" Expression="complex1.genres" />
               </Bindings>
               <CssClass>
                 <CssClassConditional>
@@ -186,7 +186,7 @@
             </Repeater>
           </Content>
           <Bindings>
-            <Binding SourceProperty="Caption" Expression="complex1.genre.caption()" />
+            <Binding SourceProperty="Caption" Expression="complex1.genres.caption()" />
           </Bindings>
           <CssClass>
             <CssClassConditional>
@@ -378,11 +378,11 @@
               <Include reference="+DataEntities.Movies" />
             </Include>
             <Collection>
-              <Name value="genre" />
-              <Caption value="Genre" />
+              <Name value="genres" />
+              <Caption value="Genres" />
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.Genre" />
+                  <Include reference="+DataEntities.Genres" />
                 </Include>
               </Children>
             </Collection>

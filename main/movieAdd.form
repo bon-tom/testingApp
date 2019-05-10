@@ -10,8 +10,8 @@
       <Panel.Width value="*" />
       <Children>
         <Button>
-          <Name value="button1" />
-          <Caption value="Button 1" />
+          <Name value="reset" />
+          <Caption value="Reset" />
           <Panel.Height value="#" />
           <Panel.Width value="150px" />
           <OnClick>
@@ -133,6 +133,290 @@
               </CssClass>
             </TextBox>
             <GroupBox>
+              <Name value="seasonGroup" />
+              <Caption value="Season group" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
+                <Panel>
+                  <Name value="panel17" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <Button>
+                      <Name value="button11" />
+                      <Caption value="Button 11" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action5" />
+                      </OnClick>
+                    </Button>
+                    <Button>
+                      <Name value="button2" />
+                      <Caption value="Button 2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <GroupBox>
+                      <Name value="groupBox4" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Repeater>
+                          <Name value="repeater5" />
+                          <Content>
+                            <Panel>
+                              <Name value="panel14" />
+                              <Orientation value="Vertical" />
+                              <Children>
+                                <TextBox>
+                                  <Name value="textBox11" />
+                                  <CaptionVAlign value="Middle" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="300px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="number" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="number.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="number.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-textbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </TextBox>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="DataItems" Expression="complex1.seasons" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-repeater" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Repeater>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="complex1.seasons.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-groupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </GroupBox>
+            <GroupBox>
+              <Name value="Episodes" />
+              <Caption value="Episodes" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
+                <Panel>
+                  <Name value="panel16" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <Button>
+                      <Name value="AddEpisodeItem" />
+                      <Caption value="Add episode item" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_AddEpisodeItem_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <Button>
+                      <Name value="DeleteEpisodeItem" />
+                      <Caption value="Delete episode item" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action4" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <GroupBox>
+                      <Name value="EpisodeItem" />
+                      <Caption value="Episode item" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel15" />
+                          <Orientation value="Horizontal" />
+                          <Children>
+                            <Panel>
+                              <Name value="panel9" />
+                              <Orientation value="Vertical" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Children>
+                                <TextBox>
+                                  <Name value="textBox9" />
+                                  <Caption value="Text box 9" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="episodeItem.episodename" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="episodeItem.episodename.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="episodeItem.episodename.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-textbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </TextBox>
+                                <Panel>
+                                  <Name value="panel13" />
+                                  <Orientation value="Vertical" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Children>
+                                    <DatePicker>
+                                      <Name value="datePicker2" />
+                                      <Caption value="Date picker 2" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="complex1.ratingSeason.dateOfWatching" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.ratingSeason.dateOfWatching.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="complex1.ratingSeason.dateOfWatching.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-datepicker" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </DatePicker>
+                                    <CheckBox>
+                                      <Name value="checkBox2" />
+                                      <Caption value="Check box 2" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="complex1.ratingSeason.seenItWhole" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.ratingSeason.seenItWhole.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="complex1.ratingSeason.seenItWhole.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-checkbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </CheckBox>
+                                    <TextBox>
+                                      <Name value="textBox10" />
+                                      <Caption value="Text box 10" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="complex1.ratingSeason.score" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.ratingSeason.score.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="complex1.ratingSeason.score.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-textbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </TextBox>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-groupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </GroupBox>
+            <GroupBox>
               <Name value="groupBox2" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
@@ -151,9 +435,9 @@
                           <Panel.Height value="#" />
                           <Panel.Width value="300px" />
                           <Bindings>
-                            <Binding SourceProperty="Data" Expression="genreItem" />
-                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="genreItem.isRequired()" />
-                            <Binding SourceProperty="Caption" Expression="genreItem.caption()" />
+                            <Binding SourceProperty="Data" Expression="genre" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="genre.isRequired()" />
+                            <Binding SourceProperty="Caption" Expression="genre.caption()" />
                           </Bindings>
                           <CssClass>
                             <CssClassConditional>
@@ -163,12 +447,12 @@
                           </CssClass>
                         </TextBox>
                         <Button>
-                          <Name value="AddAnothergenreItem" />
-                          <Caption value="Add another genre item" />
+                          <Name value="AddGenreItem" />
+                          <Caption value="Add genre item" />
                           <Panel.Height value="#" />
                           <Panel.Width value="150px" />
                           <OnClick>
-                            <ActionEvent ReferencedAction="~handler_AddAnothergenreItem_OnClick" />
+                            <ActionEvent ReferencedAction="~handler_AddGenreItem_OnClick" />
                           </OnClick>
                           <CssClass>
                             <CssClassConditional>
@@ -178,12 +462,12 @@
                           </CssClass>
                         </Button>
                         <Button>
-                          <Name value="DeleteGenreItem" />
+                          <Name value="deleteGenreItem" />
                           <Caption value="Delete genre item" />
                           <Panel.Height value="#" />
                           <Panel.Width value="150px" />
                           <OnClick>
-                            <ActionEvent ReferencedAction="~handler_button3_OnClick" />
+                            <ActionEvent ReferencedAction="~action1" />
                           </OnClick>
                           <CssClass>
                             <CssClassConditional>
@@ -256,7 +540,7 @@
                           <Panel.Height value="#" />
                           <Panel.Width value="150px" />
                           <OnClick>
-                            <ActionEvent ReferencedAction="~handler_AddAnotherActorItem_OnClick" />
+                            <ActionEvent ReferencedAction="~handler_button4_OnClick" />
                           </OnClick>
                           <CssClass>
                             <CssClassConditional>
@@ -266,12 +550,12 @@
                           </CssClass>
                         </Button>
                         <Button>
-                          <Name value="DeleteActorItem" />
+                          <Name value="deleteActorItem" />
                           <Caption value="Delete actor item" />
                           <Panel.Height value="#" />
                           <Panel.Width value="150px" />
                           <OnClick>
-                            <ActionEvent ReferencedAction="~handler_DeleteActorItem_OnClick" />
+                            <ActionEvent ReferencedAction="~handler_button5_OnClick" />
                           </OnClick>
                           <CssClass>
                             <CssClassConditional>
@@ -436,6 +720,15 @@
     <DataContext>
       <Children>
         <Attribute>
+          <Name value="episodesCounter" />
+          <Caption value="Episodes counter" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
           <Name value="postResult" />
           <Caption value="Post result" />
           <DeclaredType>
@@ -459,6 +752,15 @@
           </DeclaredType>
         </Attribute>
         <Complex>
+          <Name value="episodeItem" />
+          <Caption value="Episode item" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.Episodes" />
+            </Include>
+          </Children>
+        </Complex>
+        <Complex>
           <Name value="complex1" />
           <Caption value="Complex 1" />
           <Children>
@@ -470,7 +772,7 @@
               <Caption value="Genre" />
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.Genre" />
+                  <Include reference="+DataEntities.Genres" />
                 </Include>
               </Children>
             </Collection>
@@ -480,6 +782,33 @@
               <Children>
                 <Include>
                   <Include reference="+DataEntities.Starring" />
+                </Include>
+              </Children>
+            </Collection>
+            <Complex>
+              <Name value="ratingSeason" />
+              <Caption value="Rating season" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.RatingSeries" />
+                </Include>
+              </Children>
+            </Complex>
+            <Collection>
+              <Name value="seasons" />
+              <Caption value="Seasons" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.Seasons" />
+                </Include>
+              </Children>
+            </Collection>
+            <Collection>
+              <Name value="episodes" />
+              <Caption value="Episodes" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.Episodes" />
                 </Include>
               </Children>
             </Collection>
@@ -532,7 +861,7 @@
               <Caption value="Genre" />
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.Genre" />
+                  <Include reference="+DataEntities.Genres" />
                 </Include>
               </Children>
             </Collection>
@@ -585,9 +914,9 @@
       </Children>
     </DataContext>
   </DataContext>
-  <OnCreate>
-    <ActionEvent ReferencedAction="~initAdd" />
-  </OnCreate>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~action2" />
+  </OnActivate>
   <Actions>
     <ActionBlock>
       <Name value="goBackWithoutSaving" />
@@ -727,7 +1056,11 @@ endif
       <Name value="initAdd" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.complex1.starring.addItem()
-form.complex1.genre.addItem()]]></Script>
+form.complex1.genre.addItem()
+//form.complex1.seasons.addItem()
+//form.complex1.episodes.addItem()
+//form.complex1.episodes.removeItem(1)
+//form.complex1.ratingSeries.addItem()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -737,7 +1070,7 @@ form.complex1.genre.addItem()]]></Script>
       <Name value="handler_AddAnotherActorItem_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.starring.addItem()]]></Script>
+        <Script><![CDATA[//form.complex1.seasons.addItem()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -748,7 +1081,7 @@ form.complex1.genre.addItem()]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[//form.complex1.starring.ActorName.clear()
-form.complex1.starring.removeItem(1)]]></Script>
+form.complex1.seasons.removeItem(1)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -820,6 +1153,159 @@ else
 navigation.main.movies1.go("")
 
 endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button4_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.starring.addItem()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button5_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.starring.removeItem(1)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button11_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.seasons.addItem()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_AddGenreItem_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.genre.addItem()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action1" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.genre.removeItem(1)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_AddAnotherEpisodeItem_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.episodes.addItem()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_deleteEpisodeItem_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.episodes.removeItem(1)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_AddAnotherEpisode_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.episodes.addItem()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_DeleteEpisode_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.episodes.removeItem(1)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action2" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.starring.addItem()
+form.complex1.genre.addItem()
+form.complex1.seasons.addItem()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action3" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.episodes.addItem()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_deleteAnotherEpisodeItem_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.episodes.removeItem(1)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action4" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.episodes.removeItem(1)
+form.episodesCounter = form.episodesCounter - 1 ]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_AddEpisodeItem_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.episodes.addItem()
+form.episodesCounter = form.episodesCounter + 1]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action5" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.seasons.addItem()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
