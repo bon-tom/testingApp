@@ -1,30 +1,30 @@
 
 //////////////////////////////////
-	Description je zmáèknuté do úzkého sloupce a zbytek vpravo je prázdný (totéž pravdìpodobnì platí pro ostatní sloupce, i když tam už to není takový problém
+	Description je zmï¿½ï¿½knutï¿½ do ï¿½zkï¿½ho sloupce a zbytek vpravo je prï¿½zdnï¿½ (totï¿½ pravdï¿½podobnï¿½ platï¿½ pro ostatnï¿½ sloupce, i kdyï¿½ tam uï¿½ to nenï¿½ takovï¿½ problï¿½m
 
--Description rozšíøenou na celý jeden øádek úpravou "Fill"
+-Description rozï¿½ï¿½ï¿½enou na celï¿½ jeden ï¿½ï¿½dek ï¿½pravou "Fill"
 /////////////////////////////////
-	Na detailu není potøeba ID
+	Na detailu nenï¿½ potï¿½eba ID
 
--vymazán labeledText complex1.ID
+-vymazï¿½n labeledText complex1.ID
 /////////////////////////////////
-	Na konci detailu jsou dvì øádky "(Editace záznamu); (mazání záznamu), (vytvoøení záznamu), (vyhledávání záznamù); (tøídìní záznamù); rozlišení na movies/series vèetnì rozdílného hodnocení" To tam asi nepatøí 
+	Na konci detailu jsou dvï¿½ ï¿½ï¿½dky "(Editace zï¿½znamu); (mazï¿½nï¿½ zï¿½znamu), (vytvoï¿½enï¿½ zï¿½znamu), (vyhledï¿½vï¿½nï¿½ zï¿½znamï¿½); (tï¿½ï¿½dï¿½nï¿½ zï¿½znamï¿½); rozliï¿½enï¿½ na movies/series vï¿½etnï¿½ rozdï¿½lnï¿½ho hodnocenï¿½" To tam asi nepatï¿½ï¿½ 
 
--zápatí sloužící k programátorským úèelùm
+-zï¿½patï¿½ slouï¿½ï¿½cï¿½ k programï¿½torskï¿½m ï¿½ï¿½elï¿½m
 ////////////////////////////////
 
-	V editaèním módu jednak nemusí být ID a už urèitì nemùže být editovatelné. Pokud ho uživatel zmìní, save se samozøejmì nepovede (server vrací 400 Bad request)
+	V editaï¿½nï¿½m mï¿½du jednak nemusï¿½ bï¿½t ID a uï¿½ urï¿½itï¿½ nemï¿½ï¿½e bï¿½t editovatelnï¿½. Pokud ho uï¿½ivatel zmï¿½nï¿½, save se samozï¿½ejmï¿½ nepovede (server vracï¿½ 400 Bad request)
 
--vymazán labeledText complex1.ID i textBox complex1.ID
+-vymazï¿½n labeledText complex1.ID i textBox complex1.ID
 
 
 /////////////////////////////////
-	Pokud se rozlišuje detail a editace (viz tlaèítko "edit record"), proè je i detail editovatelný?
+	Pokud se rozliï¿½uje detail a editace (viz tlaï¿½ï¿½tko "edit record"), proï¿½ je i detail editovatelnï¿½?
 /////////////////////////////////
-	Tlaèítko "Go without saving" by se asi mìlo jmenovat "Cancel". Stejnì tak "Save dit record to server" by se asi mohlo jmenovat "Save".
+	Tlaï¿½ï¿½tko "Go without saving" by se asi mï¿½lo jmenovat "Cancel". Stejnï¿½ tak "Save dit record to server" by se asi mohlo jmenovat "Save".
 ////////////////////////////////
-	V editaci nejde pøidat ani odebrat herce ani žánry
+	V editaci nejde pï¿½idat ani odebrat herce ani ï¿½ï¿½nry
 ////////////////////////////////
-	V detailu nejsou vidìt epizody seriálu, stejnì tak ani v editaci
+	V detailu nejsou vidï¿½t epizody seriï¿½lu, stejnï¿½ tak ani v editaci
 ///////////////////////////////
-na detailu se nezobrazují žánry
+na detailu se nezobrazujï¿½ ï¿½ï¿½nry
