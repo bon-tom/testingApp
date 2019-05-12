@@ -300,9 +300,9 @@
                                   <Panel.Height value="#" />
                                   <Panel.Width value="*" />
                                   <Bindings>
-                                    <Binding SourceProperty="Data" Expression="episodeItem.episodename" />
-                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="episodeItem.episodename.isRequired()" />
-                                    <Binding SourceProperty="Caption" Expression="episodeItem.episodename.caption()" />
+                                    <Binding SourceProperty="Data" Expression="episodeItem.episodeName" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="episodeItem.episodeName.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="episodeItem.episodeName.caption()" />
                                   </Bindings>
                                   <CssClass>
                                     <CssClassConditional>
@@ -771,9 +771,13 @@
               <Name value="genre" />
               <Caption value="Genre" />
               <Children>
-                <Include>
-                  <Include reference="+DataEntities.Genres" />
-                </Include>
+                <Attribute>
+                  <Name value="genre" />
+                  <Caption value="Genre" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
               </Children>
             </Collection>
             <Collection>
@@ -781,7 +785,7 @@
               <Caption value="Starring" />
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.Starring" />
+                  <Include reference="+DataEntities.starring" />
                 </Include>
               </Children>
             </Collection>
@@ -849,68 +853,6 @@
             </Complex>
           </Children>
         </Complex>
-        <Collection>
-          <Name value="collection1" />
-          <Caption value="Collection 1" />
-          <Children>
-            <Include>
-              <Include reference="+DataEntities.Movies" />
-            </Include>
-            <Collection>
-              <Name value="genre" />
-              <Caption value="Genre" />
-              <Children>
-                <Include>
-                  <Include reference="+DataEntities.Genres" />
-                </Include>
-              </Children>
-            </Collection>
-            <Collection>
-              <Name value="starring" />
-              <Caption value="Starring" />
-              <Children>
-                <Include>
-                  <Include reference="+DataEntities.Starring" />
-                </Include>
-              </Children>
-            </Collection>
-            <Complex>
-              <Name value="rating" />
-              <Caption value="Rating" />
-              <Children>
-                <Attribute>
-                  <Name value="dateOfWatching" />
-                  <Caption value="Date of watching" />
-                  <DeclaredType>
-                    <AttributeType>
-                      <BaseType value="Date" />
-                    </AttributeType>
-                  </DeclaredType>
-                </Attribute>
-                <Attribute>
-                  <Name value="seenItWhole" />
-                  <Caption value="Seen it whole" />
-                  <DeclaredType>
-                    <AttributeType>
-                      <BaseType value="Bool" />
-                    </AttributeType>
-                  </DeclaredType>
-                </Attribute>
-                <Attribute>
-                  <Name value="score" />
-                  <Caption value="Score" />
-                  <DeclaredType>
-                    <AttributeType>
-                      <BaseType value="Integer" />
-                      <IntMax value="10" />
-                      <IntMin value="0" />
-                    </AttributeType>
-                  </DeclaredType>
-                </Attribute>
-              </Children>
-            </Complex>
-          </Children>
-        </Collection>
       </Children>
     </DataContext>
   </DataContext>

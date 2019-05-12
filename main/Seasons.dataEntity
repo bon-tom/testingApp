@@ -13,5 +13,23 @@
         </AttributeType>
       </DeclaredType>
     </Attribute>
+    <Collection>
+      <Name value="episodes" />
+      <Caption value="Episodes" />
+      <Children>
+        <Include>
+          <Include reference="+DataEntities.Episodes" />
+        </Include>
+        <Complex>
+          <Name value="rating" />
+          <Caption value="Rating" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.RatingMovies" />
+            </Include>
+          </Children>
+        </Complex>
+      </Children>
+    </Collection>
   </Children>
 </DataEntity>

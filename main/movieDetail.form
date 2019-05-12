@@ -255,6 +255,184 @@
             </CssClassConditional>
           </CssClass>
         </GroupBox>
+        <GroupBox>
+          <Name value="groupBox3" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Repeater>
+              <Name value="repeater3" />
+              <Content>
+                <Panel>
+                  <Name value="panel5" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox3" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="number" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="number.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="number.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <GroupBox>
+                      <Name value="groupBox4" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Repeater>
+                          <Name value="repeater4" />
+                          <Content>
+                            <Panel>
+                              <Name value="panel6" />
+                              <Orientation value="Vertical" />
+                              <Children>
+                                <TextBox>
+                                  <Name value="textBox4" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="episodeName" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="episodeName.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="episodeName.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-textbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </TextBox>
+                                <Panel>
+                                  <Name value="panel7" />
+                                  <Orientation value="Vertical" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Children>
+                                    <DatePicker>
+                                      <Name value="datePicker2" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="rating.dateOfWatching" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.dateOfWatching.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="rating.dateOfWatching.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-datepicker" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </DatePicker>
+                                    <CheckBox>
+                                      <Name value="checkBox2" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="rating.seenItWhole" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.seenItWhole.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="rating.seenItWhole.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-checkbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </CheckBox>
+                                    <TextBox>
+                                      <Name value="textBox5" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="rating.score" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.score.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="rating.score.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-textbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </TextBox>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="DataItems" Expression="Episodes" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-repeater" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Repeater>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="Episodes.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <Bindings>
+                <Binding SourceProperty="DataItems" Expression="complex1.seasons" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-repeater" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Repeater>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="Caption" Expression="complex1.seasons.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
         <Panel>
           <Name value="panel2" />
           <Orientation value="Vertical" />
@@ -381,9 +559,13 @@
               <Name value="genres" />
               <Caption value="Genres" />
               <Children>
-                <Include>
-                  <Include reference="+DataEntities.Genres" />
-                </Include>
+                <Attribute>
+                  <Name value="genre" />
+                  <Caption value="Genre" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
               </Children>
             </Collection>
             <Collection>
@@ -391,7 +573,7 @@
               <Caption value="Starring" />
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.Starring" />
+                  <Include reference="+DataEntities.starring" />
                 </Include>
               </Children>
             </Collection>
@@ -430,6 +612,15 @@
                 </Attribute>
               </Children>
             </Complex>
+            <Collection>
+              <Name value="seasons" />
+              <Caption value="Seasons" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.Seasons" />
+                </Include>
+              </Children>
+            </Collection>
           </Children>
         </Complex>
         <Complex>

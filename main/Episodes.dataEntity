@@ -5,7 +5,7 @@
   <Caption value="Episodes" />
   <Children>
     <Attribute>
-      <Name value="episodename" />
+      <Name value="episodeName" />
       <Caption value="Episode name" />
       <DeclaredType>
         <AttributeType />

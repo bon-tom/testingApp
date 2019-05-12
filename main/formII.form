@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?data-format version="0.400"?>
 <Form>
-  <Name value="form" />
-  <Caption value="Form" />
+  <Name value="formII" />
+  <Caption value="Form II" />
   <Content>
     <Panel>
       <Name value="panel1" />
@@ -111,19 +111,19 @@
               </CssClass>
             </TextBox>
             <Panel>
-              <Name value="panel9" />
+              <Name value="panel15" />
               <Orientation value="Vertical" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <Children>
                 <DatePicker>
-                  <Name value="datePicker2" />
+                  <Name value="datePicker3" />
                   <Panel.Height value="#" />
-                  <Panel.Width value="*" />
+                  <Panel.Width value="300px" />
                   <Bindings>
-                    <Binding SourceProperty="Data" Expression="Record.RatingMovies.dateOfWatching" />
-                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.RatingMovies.dateOfWatching.isRequired()" />
-                    <Binding SourceProperty="Caption" Expression="Record.RatingMovies.dateOfWatching.caption()" />
+                    <Binding SourceProperty="Data" Expression="Record.rating.dateOfWatching" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.rating.dateOfWatching.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="Record.rating.dateOfWatching.caption()" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -133,13 +133,13 @@
                   </CssClass>
                 </DatePicker>
                 <CheckBox>
-                  <Name value="checkBox2" />
+                  <Name value="checkBox3" />
                   <Panel.Height value="#" />
-                  <Panel.Width value="*" />
+                  <Panel.Width value="300px" />
                   <Bindings>
-                    <Binding SourceProperty="Data" Expression="Record.RatingMovies.seenItWhole" />
-                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.RatingMovies.seenItWhole.isRequired()" />
-                    <Binding SourceProperty="Caption" Expression="Record.RatingMovies.seenItWhole.caption()" />
+                    <Binding SourceProperty="Data" Expression="Record.rating.seenItWhole" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.rating.seenItWhole.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="Record.rating.seenItWhole.caption()" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -149,13 +149,14 @@
                   </CssClass>
                 </CheckBox>
                 <TextBox>
-                  <Name value="textBox18" />
+                  <Name value="textBox3" />
+                  <CaptionVAlign value="Middle" />
                   <Panel.Height value="#" />
-                  <Panel.Width value="*" />
+                  <Panel.Width value="300px" />
                   <Bindings>
-                    <Binding SourceProperty="Data" Expression="Record.RatingMovies.score" />
-                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.RatingMovies.score.isRequired()" />
-                    <Binding SourceProperty="Caption" Expression="Record.RatingMovies.score.caption()" />
+                    <Binding SourceProperty="Data" Expression="Record.rating.score" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.rating.score.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="Record.rating.score.caption()" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -225,7 +226,7 @@
                         </Panel>
                       </Content>
                       <Bindings>
-                        <Binding SourceProperty="DataItems" Expression="Record.Starring" />
+                        <Binding SourceProperty="DataItems" Expression="Record.starring" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -244,7 +245,7 @@
                 </Panel>
               </Content>
               <Bindings>
-                <Binding SourceProperty="Caption" Expression="Record.Starring.caption()" />
+                <Binding SourceProperty="Caption" Expression="Record.starring.caption()" />
               </Bindings>
               <CssClass>
                 <CssClassConditional>
@@ -328,9 +329,9 @@
                                               <Panel.Height value="#" />
                                               <Panel.Width value="*" />
                                               <Bindings>
-                                                <Binding SourceProperty="Data" Expression="episodename" />
-                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="episodename.isRequired()" />
-                                                <Binding SourceProperty="Caption" Expression="episodename.caption()" />
+                                                <Binding SourceProperty="Data" Expression="episodeName" />
+                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="episodeName.isRequired()" />
+                                                <Binding SourceProperty="Caption" Expression="episodeName.caption()" />
                                               </Bindings>
                                               <CssClass>
                                                 <CssClassConditional>
@@ -350,9 +351,9 @@
                                                   <Panel.Height value="#" />
                                                   <Panel.Width value="*" />
                                                   <Bindings>
-                                                    <Binding SourceProperty="Data" Expression="RatingMovies.dateOfWatching" />
-                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="RatingMovies.dateOfWatching.isRequired()" />
-                                                    <Binding SourceProperty="Caption" Expression="RatingMovies.dateOfWatching.caption()" />
+                                                    <Binding SourceProperty="Data" Expression="rating.dateOfWatching" />
+                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.dateOfWatching.isRequired()" />
+                                                    <Binding SourceProperty="Caption" Expression="rating.dateOfWatching.caption()" />
                                                   </Bindings>
                                                   <CssClass>
                                                     <CssClassConditional>
@@ -366,9 +367,9 @@
                                                   <Panel.Height value="#" />
                                                   <Panel.Width value="*" />
                                                   <Bindings>
-                                                    <Binding SourceProperty="Data" Expression="RatingMovies.seenItWhole" />
-                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="RatingMovies.seenItWhole.isRequired()" />
-                                                    <Binding SourceProperty="Caption" Expression="RatingMovies.seenItWhole.caption()" />
+                                                    <Binding SourceProperty="Data" Expression="rating.seenItWhole" />
+                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.seenItWhole.isRequired()" />
+                                                    <Binding SourceProperty="Caption" Expression="rating.seenItWhole.caption()" />
                                                   </Bindings>
                                                   <CssClass>
                                                     <CssClassConditional>
@@ -382,9 +383,9 @@
                                                   <Panel.Height value="#" />
                                                   <Panel.Width value="*" />
                                                   <Bindings>
-                                                    <Binding SourceProperty="Data" Expression="RatingMovies.score" />
-                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="RatingMovies.score.isRequired()" />
-                                                    <Binding SourceProperty="Caption" Expression="RatingMovies.score.caption()" />
+                                                    <Binding SourceProperty="Data" Expression="rating.score" />
+                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.score.isRequired()" />
+                                                    <Binding SourceProperty="Caption" Expression="rating.score.caption()" />
                                                   </Bindings>
                                                   <CssClass>
                                                     <CssClassConditional>
@@ -411,7 +412,7 @@
                                         </Panel>
                                       </Content>
                                       <Bindings>
-                                        <Binding SourceProperty="DataItems" Expression="Episodes" />
+                                        <Binding SourceProperty="DataItems" Expression="episodes" />
                                       </Bindings>
                                       <CssClass>
                                         <CssClassConditional>
@@ -430,7 +431,7 @@
                                 </Panel>
                               </Content>
                               <Bindings>
-                                <Binding SourceProperty="Caption" Expression="Episodes.caption()" />
+                                <Binding SourceProperty="Caption" Expression="episodes.caption()" />
                               </Bindings>
                               <CssClass>
                                 <CssClassConditional>
@@ -559,87 +560,6 @@
                 </CssClassConditional>
               </CssClass>
             </GroupBox>
-            <GroupBox>
-              <Name value="groupBox8" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Content>
-                <Panel>
-                  <Name value="panel6" />
-                  <Orientation value="Horizontal" />
-                  <Children>
-                    <Button>
-                      <Name value="button13" />
-                      <Caption value="Button 13" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="150px" />
-                      <OnClick>
-                        <ActionEvent ReferencedAction="~action4" />
-                      </OnClick>
-                    </Button>
-                    <Repeater>
-                      <Name value="repeater8" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="*" />
-                      <Content>
-                        <Panel>
-                          <Name value="panel13" />
-                          <Orientation value="Vertical" />
-                          <Children>
-                            <TextBox>
-                              <Name value="textBox22" />
-                              <Panel.Height value="#" />
-                              <Panel.Width value="*" />
-                              <Bindings>
-                                <Binding SourceProperty="Data" Expression="genre" />
-                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="genre.isRequired()" />
-                                <Binding SourceProperty="Caption" Expression="genre.caption()" />
-                              </Bindings>
-                              <CssClass>
-                                <CssClassConditional>
-                                  <ClassName value="{theme}-textbox" />
-                                  <IsThemedStyle value="True" />
-                                </CssClassConditional>
-                              </CssClass>
-                            </TextBox>
-                          </Children>
-                          <CssClass>
-                            <CssClassConditional>
-                              <ClassName value="{theme}-panel" />
-                              <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                          </CssClass>
-                        </Panel>
-                      </Content>
-                      <Bindings>
-                        <Binding SourceProperty="DataItems" Expression="Record.Genres" />
-                      </Bindings>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-repeater" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </Repeater>
-                  </Children>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-panel" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Panel>
-              </Content>
-              <Bindings>
-                <Binding SourceProperty="Caption" Expression="Record.Genres.caption()" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-groupbox" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </GroupBox>
           </Children>
           <CssClass>
             <CssClassConditional>
@@ -703,6 +623,15 @@
                 </Attribute>
               </Children>
             </Collection>
+            <Complex>
+              <Name value="rating" />
+              <Caption value="Rating" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.rating" />
+                </Include>
+              </Children>
+            </Complex>
           </Children>
         </Complex>
       </Children>
@@ -723,7 +652,7 @@ item.number =  form.Record.Seasons.count()]]></Script>
       <Name value="handler_button11_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[params.data.Episodes.addItem()]]></Script>
+        <Script><![CDATA[params.data.episodes.addItem()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -762,7 +691,7 @@ item.number =  form.Record.Seasons.count()]]></Script>
     <ActionBlock>
       <Name value="action3" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.Record.Starring.addItem()]]></Script>
+        <Script><![CDATA[form.Record.starring.addItem()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

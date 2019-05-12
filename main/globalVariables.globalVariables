@@ -20,11 +20,6 @@
         <Collection>
           <Name value="genre" />
           <Caption value="Genre" />
-          <Children>
-            <Include>
-              <Include reference="+DataEntities.Genres" />
-            </Include>
-          </Children>
         </Collection>
       </Children>
     </Collection>

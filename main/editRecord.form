@@ -50,7 +50,7 @@
               <Name value="panel3" />
               <Orientation value="Vertical" />
               <Panel.Height value="#" />
-              <Panel.Width value="*" />
+              <Panel.Width value="42%" />
               <Children>
                 <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
                   <Name value="labeledText2" />
@@ -170,7 +170,7 @@
                         </Panel>
                       </Content>
                       <Bindings>
-                        <Binding SourceProperty="DataItems" Expression="complex1.genre" />
+                        <Binding SourceProperty="DataItems" Expression="complex1.genres" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -181,7 +181,7 @@
                     </Repeater>
                   </Content>
                   <Bindings>
-                    <Binding SourceProperty="Caption" Expression="complex1.genre.caption()" />
+                    <Binding SourceProperty="Caption" Expression="complex1.genres.caption()" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -326,7 +326,7 @@
               <Name value="panel7" />
               <Orientation value="Vertical" />
               <Panel.Height value="#" />
-              <Panel.Width value="*" />
+              <Panel.Width value="52%" />
               <Children>
                 <TextBox>
                   <Name value="textBox2" />
@@ -360,10 +360,10 @@
                     </CssClassConditional>
                   </CssClass>
                 </TextBox>
-                <TextBox>
-                  <Name value="textBox4" />
+                <EnumCombo>
+                  <Name value="enumCombo1" />
                   <Panel.Height value="#" />
-                  <Panel.Width value="*" />
+                  <Panel.Width value="300px" />
                   <Bindings>
                     <Binding SourceProperty="Data" Expression="complex1.type" />
                     <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.type.isRequired()" />
@@ -371,11 +371,11 @@
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
-                      <ClassName value="{theme}-textbox" />
+                      <ClassName value="{theme}-enumcombo" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
                   </CssClass>
-                </TextBox>
+                </EnumCombo>
                 <TextBox>
                   <Name value="textBox5" />
                   <Panel.Height value="#" />
@@ -394,7 +394,8 @@
                 </TextBox>
                 <TextBox>
                   <Name value="textBox6" />
-                  <Panel.Height value="#" />
+                  <InputType value="Multiline" />
+                  <Panel.Height value="100%" />
                   <Panel.Width value="*" />
                   <Bindings>
                     <Binding SourceProperty="Data" Expression="complex1.description" />
@@ -476,7 +477,7 @@
                             </Panel>
                           </Content>
                           <Bindings>
-                            <Binding SourceProperty="DataItems" Expression="complex1.genre" />
+                            <Binding SourceProperty="DataItems" Expression="complex1.genres" />
                           </Bindings>
                           <CssClass>
                             <CssClassConditional>
@@ -495,7 +496,7 @@
                     </Panel>
                   </Content>
                   <Bindings>
-                    <Binding SourceProperty="Caption" Expression="complex1.genre.caption()" />
+                    <Binding SourceProperty="Caption" Expression="complex1.genres.caption()" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -730,12 +731,16 @@
               <Include reference="+DataEntities.Movies" />
             </Include>
             <Collection>
-              <Name value="genre" />
-              <Caption value="Genre" />
+              <Name value="genres" />
+              <Caption value="Genres" />
               <Children>
-                <Include>
-                  <Include reference="+DataEntities.Genres" />
-                </Include>
+                <Attribute>
+                  <Name value="genre" />
+                  <Caption value="Genre" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
               </Children>
             </Collection>
             <Collection>
@@ -743,7 +748,7 @@
               <Caption value="Starring" />
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.Starring" />
+                  <Include reference="+DataEntities.starring" />
                 </Include>
               </Children>
             </Collection>
@@ -999,7 +1004,7 @@ endif
 
 // úspěšný POSTING?
 //navigace na hlavní formulář vynechána, raději postupný UPDATE
-//navigation.main.movies1.go("")
+navigation.main.movies1.go("")
 
 
 ]]></Script>
@@ -1032,7 +1037,7 @@ endif
       <Name value="handler_AddAnothergenreItem_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.genre.addItem()]]></Script>
+        <Script><![CDATA[form.complex1.genres.addItem()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1042,7 +1047,7 @@ endif
       <Name value="handler_DeleteGenreItem_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.genre.removeItem(1)]]></Script>
+        <Script><![CDATA[form.complex1.genres.removeItem(1)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1052,7 +1057,7 @@ endif
       <Name value="handler_button1_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.genre.addItem()]]></Script>
+        <Script><![CDATA[form.complex1.genres.addItem()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1062,7 +1067,7 @@ endif
       <Name value="action1" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.genre.addItem()]]></Script>
+        <Script><![CDATA[form.complex1.genres.addItem()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1072,7 +1077,7 @@ endif
       <Name value="handler_button2_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.genre.removeItem(1)]]></Script>
+        <Script><![CDATA[form.complex1.genres.removeItem(1)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="Series" />
+  <Caption value="Series" />
+  <Children>
+    <Attribute>
+      <Name value="id" />
+      <Caption value="Id" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="name" />
+      <Caption value="Name" />
+      <IsRequired value="True" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="type" />
+      <Caption value="Type" />
+      <IsRequired value="True" />
+      <MetaType reference="+MetaTypes.metaType" />
+    </Attribute>
+    <Attribute>
+      <Name value="yearOfRelease" />
+      <Caption value="Year of release" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Integer" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="mainDirector" />
+      <Caption value="Main director" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="description" />
+      <Caption value="Description" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Complex>
+      <Name value="RatingMovies" />
+      <Caption value="Rating movies" />
+      <Children>
+        <Include>
+          <Include reference="+DataEntities.RatingMovies" />
+        </Include>
+      </Children>
+    </Complex>
+    <Collection>
+      <Name value="starring" />
+      <Caption value="Starring" />
+      <Children>
+        <Include>
+          <Include reference="+DataEntities.starring" />
+        </Include>
+      </Children>
+    </Collection>
+    <Collection>
+      <Name value="Seasons" />
+      <Caption value="Seasons" />
+      <Children>
+        <Include>
+          <Include reference="+DataEntities.Seasons" />
+        </Include>
+      </Children>
+    </Collection>
+  </Children>
+</DataEntity>

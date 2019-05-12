@@ -618,7 +618,7 @@
               <Caption value="Starring" />
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.Starring" />
+                  <Include reference="+DataEntities.starring" />
                 </Include>
               </Children>
             </Collection>

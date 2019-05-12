@@ -5,8 +5,8 @@
   <Caption value="Genre" />
   <Children>
     <Attribute>
-      <Name value="genreItem" />
-      <Caption value="Genre item" />
+      <Name value="genre" />
+      <Caption value="Genre" />
       <DeclaredType>
         <AttributeType />
       </DeclaredType>

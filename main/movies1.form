@@ -595,7 +595,7 @@ endif
     <ActionBlock>
       <Name value="goToMovieAdd" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.movieAdd.go()]]></Script>
+        <Script><![CDATA[navigation.main.formII.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
