@@ -71,7 +71,7 @@
       <Caption value="Seasons" />
       <Children>
         <Include>
-          <Include reference="+DataEntities.Seasons" />
+          <Include reference="+DataEntities.seasons" />
         </Include>
       </Children>
     </Collection>

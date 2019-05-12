@@ -16,12 +16,11 @@
     <PackageItem Src="movieSearching.form" />
     <PackageItem Src="Episodes.dataEntity" />
     <PackageItem Src="RatingMovies.dataEntity" />
-    <PackageItem Src="Seasons.dataEntity" />
+    <PackageItem Src="seasons.dataEntity" />
     <PackageItem Src="RatingSeries.dataEntity" />
     <PackageItem Src="starring.dataEntity" />
     <PackageItem Src="movieEdit.form" />
     <PackageItem Src="movieSearched.form" />
-    <PackageItem Src="editRecordII.form" />
     <PackageItem Src="Series.dataEntity" />
     <PackageItem Src="formII.form" />
     <PackageItem Src="formAdd.form" />

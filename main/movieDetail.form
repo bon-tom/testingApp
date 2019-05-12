@@ -269,6 +269,7 @@
                   <Children>
                     <TextBox>
                       <Name value="textBox3" />
+                      <IsEnabled value="False" />
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
                       <Bindings>
@@ -297,6 +298,7 @@
                               <Children>
                                 <TextBox>
                                   <Name value="textBox4" />
+                                  <IsEnabled value="False" />
                                   <Panel.Height value="#" />
                                   <Panel.Width value="*" />
                                   <Bindings>
@@ -319,6 +321,7 @@
                                   <Children>
                                     <DatePicker>
                                       <Name value="datePicker2" />
+                                      <IsEnabled value="False" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="*" />
                                       <Bindings>
@@ -335,6 +338,7 @@
                                     </DatePicker>
                                     <CheckBox>
                                       <Name value="checkBox2" />
+                                      <IsEnabled value="False" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="*" />
                                       <Bindings>
@@ -351,6 +355,7 @@
                                     </CheckBox>
                                     <TextBox>
                                       <Name value="textBox5" />
+                                      <IsEnabled value="False" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="*" />
                                       <Bindings>
@@ -617,7 +622,7 @@
               <Caption value="Seasons" />
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.Seasons" />
+                  <Include reference="+DataEntities.seasons" />
                 </Include>
               </Children>
             </Collection>

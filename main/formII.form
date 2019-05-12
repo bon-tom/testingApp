@@ -15,7 +15,22 @@
           <Panel.Height value="#" />
           <Panel.Width value="150px" />
           <OnClick>
-            <ActionEvent ReferencedAction="~action2" />
+            <ActionEvent ReferencedAction="~SaveRecord" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="Cancel" />
+          <Caption value="Cancel" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~handler_Cancel_OnClick" />
           </OnClick>
           <CssClass>
             <CssClassConditional>
@@ -183,12 +198,12 @@
                   <Orientation value="Horizontal" />
                   <Children>
                     <Button>
-                      <Name value="button12" />
-                      <Caption value="Button 12" />
+                      <Name value="AddActorItem" />
+                      <Caption value="Add actor item" />
                       <Panel.Height value="#" />
                       <Panel.Width value="150px" />
                       <OnClick>
-                        <ActionEvent ReferencedAction="~action3" />
+                        <ActionEvent ReferencedAction="~addActor" />
                       </OnClick>
                     </Button>
                     <Repeater>
@@ -216,6 +231,21 @@
                                 </CssClassConditional>
                               </CssClass>
                             </TextBox>
+                            <Button>
+                              <Name value="DeleteActorItem" />
+                              <Caption value="Delete actor item" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_DeleteActorItem_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
                           </Children>
                           <CssClass>
                             <CssClassConditional>
@@ -264,12 +294,12 @@
                   <Orientation value="Horizontal" />
                   <Children>
                     <Button>
-                      <Name value="button1" />
-                      <Caption value="Button 1" />
+                      <Name value="AddSeason" />
+                      <Caption value="Add season" />
                       <Panel.Height value="#" />
                       <Panel.Width value="150px" />
                       <OnClick>
-                        <ActionEvent ReferencedAction="~action1" />
+                        <ActionEvent ReferencedAction="~addSeasonItem" />
                       </OnClick>
                     </Button>
                     <Repeater>
@@ -281,6 +311,21 @@
                           <Name value="panel11" />
                           <Orientation value="Vertical" />
                           <Children>
+                            <Button>
+                              <Name value="DeleteSeason" />
+                              <Caption value="Delete season" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_DeleteSeason_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
                             <TextBox>
                               <Name value="textBox20" />
                               <Panel.Height value="#" />
@@ -307,8 +352,8 @@
                                   <Orientation value="Horizontal" />
                                   <Children>
                                     <Button>
-                                      <Name value="button11" />
-                                      <Caption value="Button 11" />
+                                      <Name value="AddEpisode" />
+                                      <Caption value="Add episode" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="150px" />
                                       <OnClick>
@@ -324,6 +369,21 @@
                                           <Name value="panel12" />
                                           <Orientation value="Vertical" />
                                           <Children>
+                                            <Button>
+                                              <Name value="DeleteEpisode" />
+                                              <Caption value="Delete episode" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="150px" />
+                                              <OnClick>
+                                                <ActionEvent ReferencedAction="~handler_DeleteEpisode_OnClick" />
+                                              </OnClick>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-button" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Button>
                                             <TextBox>
                                               <Name value="textBox21" />
                                               <Panel.Height value="#" />
@@ -488,8 +548,8 @@
                   <Orientation value="Horizontal" />
                   <Children>
                     <Button>
-                      <Name value="button14" />
-                      <Caption value="Button 14" />
+                      <Name value="AddGenre" />
+                      <Caption value="Add genre" />
                       <Panel.Height value="#" />
                       <Panel.Width value="150px" />
                       <OnClick>
@@ -505,6 +565,21 @@
                           <Name value="panel7" />
                           <Orientation value="Vertical" />
                           <Children>
+                            <Button>
+                              <Name value="DeleteGenre" />
+                              <Caption value="Delete genre" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_DeleteGenre_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
                             <TextBox>
                               <Name value="textBox2" />
                               <CaptionVAlign value="Middle" />
@@ -639,7 +714,7 @@
   </DataContext>
   <Actions>
     <ActionBlock>
-      <Name value="action1" />
+      <Name value="addSeasonItem" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[var item = form.Record.Seasons.addItem()
 item.number =  form.Record.Seasons.count()]]></Script>
@@ -659,7 +734,7 @@ item.number =  form.Record.Seasons.count()]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="action2" />
+      <Name value="SaveRecord" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[//form.saveConfirm = apiobjects.page1.confirm("Do you really want to save all changes?")
 
@@ -689,7 +764,7 @@ item.number =  form.Record.Seasons.count()]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="action3" />
+      <Name value="addActor" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.Record.starring.addItem()]]></Script>
       </ActionLangBody>
@@ -698,7 +773,7 @@ item.number =  form.Record.Seasons.count()]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="action4" />
+      <Name value="AddGenreItem" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.Record.Genres.addItem()]]></Script>
       </ActionLangBody>
@@ -711,6 +786,56 @@ item.number =  form.Record.Seasons.count()]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.Record.genres.addItem()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_DeleteActorItem_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[params.data.removeMe()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_DeleteEpisode_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[params.data.removeMe()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_DeleteSeason_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[params.data.removeMe()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_DeleteGenre_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[params.data.removeMe()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_Cancel_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.movies1.go("")]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
