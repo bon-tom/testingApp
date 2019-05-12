@@ -474,15 +474,6 @@
             </Include>
           </Children>
         </Collection>
-        <Collection>
-          <Name value="collToOrder" />
-          <Caption value="Coll to order" />
-          <Children>
-            <Include>
-              <Include reference="+DataEntities.Movies" />
-            </Include>
-          </Children>
-        </Collection>
       </Children>
     </DataContext>
   </DataContext>

@@ -424,6 +424,7 @@
                   </Content>
                   <Bindings>
                     <Binding SourceProperty="Caption" Expression="complex1.seasons.caption()" />
+                    <Binding SourceProperty="IsVisible" Expression="computed1" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -795,8 +796,8 @@
                       <Orientation value="Horizontal" />
                       <Children>
                         <Button>
-                          <Name value="AddSeason" />
-                          <Caption value="Add season" />
+                          <Name value="AddSeason1" />
+                          <Caption value="Add season 1" />
                           <Panel.Height value="#" />
                           <Panel.Width value="150px" />
                           <OnClick>
@@ -1054,6 +1055,7 @@
                   </Content>
                   <Bindings>
                     <Binding SourceProperty="Caption" Expression="complex1.seasons.caption()" />
+                    <Binding SourceProperty="IsVisible" Expression="computed1" />
                   </Bindings>
                   <CssClass>
                     <CssClassConditional>
@@ -1153,6 +1155,16 @@
   <DataContext>
     <DataContext>
       <Children>
+        <Computed>
+          <Name value="computed1" />
+          <Caption value="Computed 1" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[form.complex1.type.enumValue() = "series" ? true : false]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
         <Attribute>
           <Name value="recordForEdit" />
           <Caption value="Record for edit" />

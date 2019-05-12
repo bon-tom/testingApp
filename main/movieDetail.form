@@ -247,6 +247,7 @@
           </Content>
           <Bindings>
             <Binding SourceProperty="Caption" Expression="complex1.starring.caption()" />
+            <Binding SourceProperty="IsVisible" Expression="computed1" />
           </Bindings>
           <CssClass>
             <CssClassConditional>
@@ -514,6 +515,18 @@
   <DataContext>
     <DataContext>
       <Children>
+        <Computed>
+          <Name value="computed1" />
+          <Caption value="Computed 1" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[//form.Record.type.enumValue() = "series" ? true : false
+
+form.complex1.type.enumValue() = "series" ? true : false]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
         <Attribute>
           <Name value="recordForEdit" />
           <Caption value="Record for edit" />

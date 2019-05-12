@@ -23,7 +23,6 @@
     <PackageItem Src="movieSearched.form" />
     <PackageItem Src="Series.dataEntity" />
     <PackageItem Src="formII.form" />
-    <PackageItem Src="formAdd.form" />
     <PackageItem Src="rating.dataEntity" />
   </Items>
 </Package>

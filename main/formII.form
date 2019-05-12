@@ -530,6 +530,7 @@
               </Content>
               <Bindings>
                 <Binding SourceProperty="Caption" Expression="Record.Seasons.caption()" />
+                <Binding SourceProperty="IsVisible" Expression="computed1" />
               </Bindings>
               <CssClass>
                 <CssClassConditional>
@@ -678,6 +679,18 @@
             <AttributeType />
           </DeclaredType>
         </Attribute>
+        <Computed>
+          <Name value="computed1" />
+          <Caption value="Computed 1" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[//((form.Record.type.) ="series") ? true : false
+form.Record.type.enumValue() = "series" ? true : false
+//false]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
         <Complex>
           <Name value="Record" />
           <Caption value="Record" />
