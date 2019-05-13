@@ -863,7 +863,8 @@
     <ActionBlock>
       <Name value="goBackWithoutSaving" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.movies1.go("")]]></Script>
+        <Script><![CDATA[//navigation.main.movies1.go("")
+navigation.main.movies1.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -900,13 +901,14 @@ if form.saveConfirm = true then
 		form.ContentType = response.getHeader("Content-Type")
 	endif
 	
-	navigation.main.movies1.go("")
+	//navigation.main.movies1.go("")
+	navigation.main.movies1.go()
 // SuccessFull POSTING?
 
 else 
 //navigace na hlavní formulář
-navigation.main.movies1.go("")
-
+//navigation.main.movies1.go("")
+navigation.main.movies1.go()
 endif]]></Script>
       </ActionLangBody>
       <DataContext>

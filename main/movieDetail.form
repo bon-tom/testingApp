@@ -664,7 +664,8 @@ form.complex1.type.enumValue() = "series" ? true : false]]></ExpressionText>
     <ActionBlock>
       <Name value="goToMovies1" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.movies1.go("")]]></Script>
+        <Script><![CDATA[//navigation.main.movies1.go("")
+navigation.main.movies1.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -749,10 +750,12 @@ if form.deleteConfirm = true then
 		system.console("uspesne mazani")
 	endif
 	
-	navigation.main.movies1.go("")
+	//navigation.main.movies1.go("")
+	navigation.main.movies1.go()
 else 
 //navigace na hlavní formulář
-navigation.main.movies1.go("")
+//navigation.main.movies1.go("")
+navigation.main.movies1.go()
 endif
 ]]></Script>
       </ActionLangBody>

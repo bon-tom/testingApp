@@ -763,7 +763,8 @@ item.number =  form.Record.Seasons.count()]]></Script>
 		form.ContentType = response.getHeader("Content-Type")
 	endif
 	
-	navigation.main.movies1.go("")
+	//navigation.main.movies1.go("")
+	navigation.main.movies1.go()
 // SuccessFull POSTING?
 
 //else 
@@ -839,7 +840,8 @@ item.number =  form.Record.Seasons.count()]]></Script>
       <Name value="handler_Cancel_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.movies1.go("")]]></Script>
+        <Script><![CDATA[//navigation.main.movies1.go("")
+navigation.main.movies1.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

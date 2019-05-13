@@ -801,7 +801,8 @@
     <ActionBlock>
       <Name value="goBackWithoutSearching" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.movies1.go("")]]></Script>
+        <Script><![CDATA[//navigation.main.movies1.go("")
+navigation.main.movies1.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
