@@ -54,6 +54,7 @@
               <Children>
                 <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
                   <Name value="labeledText2" />
+                  <IsEnabled value="False" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                   <Bindings>
@@ -70,6 +71,7 @@
                 </LabeledText>
                 <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
                   <Name value="labeledText3" />
+                  <IsEnabled value="False" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                   <Bindings>
