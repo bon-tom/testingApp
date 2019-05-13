@@ -362,8 +362,46 @@
               </HeaderCssClass>
             </DataColumn>
             <DataColumn>
-              <Name value="dataColumn3" />
-              <Caption value="Data column 3" />
+              <Name value="actorName" />
+              <Caption value="Actor Name" />
+              <Content>
+                <Panel>
+                  <Name value="panel6" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <Label>
+                      <Name value="actor" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="starring.actorName" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="ShowWholeRec" />
+              <Caption value="Show whole rec" />
               <Content>
                 <Button>
                   <Name value="ShowWholeRecord" />
@@ -631,6 +669,15 @@
             <Include>
               <Include reference="+DataEntities.Movies" />
             </Include>
+            <Complex>
+              <Name value="starring" />
+              <Caption value="Starring" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.starring" />
+                </Include>
+              </Children>
+            </Complex>
           </Children>
         </Collection>
       </Children>
@@ -644,160 +691,6 @@
       <Name value="goBackWithoutSearching" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[navigation.main.movies1.go("")]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="searchbyNameORType" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[
-system.console(form.dataJson)
-system.console(tostring(form.dataJson.isTouched()) )
-system.console("Seznam se jeví jako prázdny?" +tostring(form._MarkofEmptiness))
-
-form.apiobjects.movieName.fillFromJson(form.dataJson)
-
-//var source = tostring(form.dataJson)
-//form.name = tostring(source)
-
-if form.name.hasValue() then
-	//form.collection1.clear()
-	form.collection1.fromJson(form.dataJson)
-
-	foreach item in form.collection1 do
-		if indexOf(item.name, form.name) <> 0 then
-			var collectionItem = form.collectionMovies.addItem()
-			
-			collectionItem.name = item.name
-			collectionItem.yearOfRelease = item.yearOfRelease
-			collectionItem.type = item.type
-			collectionItem.mainDirector = item.mainDirector
-			
-			system.console("Cosik jsem aj našel podle částečného jména")
-		endif
-		system.console("blablabla")
-	endfor
-	
-	var x = form.collectionMovies.toJson()
-endif
-
-
-if form.type.hasValue() then
-	//form.collection1.clear()
-	form.collection1.fromJson(form.dataJson)
-
-	foreach item in form.collection1 do
-		if indexOf(item.name, form.type) <> 0 then
-			var collectionItem = form.collectionMovies.addItem()
-			
-			collectionItem.name = item.name
-			collectionItem.yearOfRelease = item.yearOfRelease
-			collectionItem.type = item.type
-			collectionItem.mainDirector = item.mainDirector
-			
-			system.console("Cosik jsem aj našel podle type")
-		endif
-		system.console("blablabla")
-	endfor
-	
-	var x = form.collectionMovies.toJson()
-endif
-//var movieListJson = apiobjects.serverForMovies.getAsync("list")
-
-/*
-system.console(tostring(form.name))
-system.console(tostring(form.name.hasValue()))
-
-
-
-if form.name.hasValue() then
-	//form.collection1.clear()
-	form.collection1.fromJson(movieListJson.getJsonString())
-	foreach item in form.collection1 do
-		if indexOf(item.name, form.name) <> 0 then
-			var collectionItem = form.collectionMovies.addItem()
-			
-			collectionItem.name = item.name
-			collectionItem.yearOfRelease = item.yearOfRelease
-			collectionItem.type = item.type
-			collectionItem.mainDirector = item.mainDirector
-			
-			system.console("Cosik jsem aj našel podle částečného jména")
-		endif
-		system.console("blablabla")
-	endfor
-	
-	var x = form.collectionMovies.toJson()
-endif
-*/
-
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-
-
-/*
-system.console(tostring(form.type))
-system.console(tostring(form.type.hasValue()))
-
-system.console(tostring(form.name))
-system.console(tostring(form.name.hasValue()))
-
-//var movieListJson = apiobjects.serverForMovies.getAsync("list")
-
-if form.type.hasValue() OR form.name.hasValue() then
-	//form.collection1.clear()
-	system.console("Jméno, nebo typ")
-	form.collection1.fromJson(movieListJson.getJsonString())
-	
-	foreach item in form.collection1 do
-	    system.console("Pom " + toString(indexOf(item.name, form.name) <> 0))
-		if ( (indexOf(item.type, form.type) <> 0) OR (indexOf(item.name, form.name) <> 0) ) then
-			var collectionItem = form.collectionMovies.addItem()
-			
-			collectionItem.name = item.name
-			collectionItem.yearOfRelease = item.yearOfRelease
-			collectionItem.type = item.type
-						
-			system.console("Cosik jsem aj našel podle druhu díla, nebo jména")
-		endif
-		system.console("blablabla")
-	endfor
-	
-	var x = form.collectionMovies.toJson()
-endif
-*/
-
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-
-
-//if form.type.hasValue() OR form.name.hasValue() then
-/*
-if form.name.hasValue() then
-	//form.collection1.clear()
-	system.console("Jméno, nebo typ")
-	form.collection1.fromJson(movieListJson.getJsonString())
-	
-	foreach item in form.collection1 do
-	    system.console("Pom " + toString(indexOf(item.name, form.name) <> 0))
-		//if ( (indexOf(item.type, form.type) <> 0) OR (indexOf(item.name, form.name) <> 0) ) then
-		if ( (indexOf(item.name, form.name) <> 0) ) then
-			var collectionItem = form.collectionMovies.addItem()
-			
-			collectionItem.name = item.name
-			collectionItem.yearOfRelease = item.yearOfRelease
-			collectionItem.type = item.type
-						
-			system.console("Cosik jsem aj našel podle jména")
-		endif
-		system.console("blablabla")
-	endfor
-	
-	var x = form.collectionMovies.toJson()
-endif
-*/]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -818,7 +711,7 @@ system.console(tostring(not form.dataJson.isTouched()))]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[//system.console(form.dataJson)
 form.collectionMovies.clear()
-form.apiobjects.movieName.fillFromJson(form.dataJson)
+//form.apiobjects.movieName.fillFromJson(form.dataJson)
 
 //var source = tostring(form.dataJson)
 //form.name = tostring(source)
@@ -885,19 +778,31 @@ if form.filter.starringString.hasValue() then
 		//if indexOf(form.filter.starringString, collection1.starring.actorName) then
 		//if indexOf(form.filter.starringString, collection1.starring.actorName) thenin
 		if item.starring.exists(indexOf(tolower(current.actorName), domalejchzfiltru) <> 0) then
-			var collectionItem = form.collectionMovies.addItem()
+			var collectionItem = form.collection1.addItem()
 			
-			collectionItem.id = item.id
+			//collectionItem.id = item.id
 			collectionItem.name = item.name
 			collectionItem.yearOfRelease = item.yearOfRelease
 			collectionItem.type = item.type
 			collectionItem.mainDirector = item.mainDirector
-			
+		    
+		    
+		    collectionItem.starring = item.starring
+		    
+		    //system.console(collectionItem.starring)
+		    //collectionItem.starring.actorName = form.filter.starringString
+		    
+		    //collectionItem.starring.actorName = item.starring.exists(current.actorName)
+		    //collectionItem.starring.actorName = form.collectionMovies.sta
+		    //collectionItem.starring.actorName = item.starring.
+		    //collectionItem.starring.actorName = item.starring
+			//collectionItem.starring.actorName = item.starring.actorName
 			system.console("Cosik jsem aj našel podle jmena herce")
 		endif
 	endfor
 	
 	var x = form.collectionMovies.toJson()
+	system.console(x)
 endif]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -965,7 +870,9 @@ form.collection1.fromJson(resOfOrder)]]></Script>
     <ActionBlock>
       <Name value="initSearching" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.collection1.fromJson(form.dataJson)]]></Script>
+        <Script><![CDATA[form.collection1.fromJson(form.dataJson)
+
+form.apiobjects.movieName.fillFromJson(form.dataJson)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

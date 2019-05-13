@@ -247,7 +247,6 @@
           </Content>
           <Bindings>
             <Binding SourceProperty="Caption" Expression="complex1.starring.caption()" />
-            <Binding SourceProperty="IsVisible" Expression="computed1" />
           </Bindings>
           <CssClass>
             <CssClassConditional>
@@ -431,6 +430,7 @@
           </Content>
           <Bindings>
             <Binding SourceProperty="Caption" Expression="complex1.seasons.caption()" />
+            <Binding SourceProperty="IsVisible" Expression="computed1" />
           </Bindings>
           <CssClass>
             <CssClassConditional>
@@ -661,18 +661,6 @@ form.complex1.type.enumValue() = "series" ? true : false]]></ExpressionText>
     <ActionEvent ReferencedAction="~loadSingleRecord" />
   </OnCreate>
   <Actions>
-    <ActionBlock>
-      <Name value="initmovieDetail" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[system.console(form.dataforMovieDetail)
-system.console(tostring(form.dataforMovieDetail.isTouched()) )
-
-form.actions.setUrl()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
     <ActionBlock>
       <Name value="goToMovies1" />
       <ActionLangBody IsValid="True">

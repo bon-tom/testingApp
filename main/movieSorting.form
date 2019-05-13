@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?data-format version="0.400"?>
 <Form>
-  <Name value="movieSearched" />
+  <Name value="movieSorting" />
+  <Caption value="Movie sorting" />
   <Content>
     <Panel>
       <Name value="panel1" />
@@ -17,18 +18,6 @@
     </Panel>
   </Content>
   <DataContext>
-    <DataContext>
-      <Children>
-        <Collection>
-          <Name value="collection1" />
-          <Caption value="Collection 1" />
-          <Children>
-            <Include>
-              <Include reference="+DataEntities.Movies" />
-            </Include>
-          </Children>
-        </Collection>
-      </Children>
-    </DataContext>
+    <DataContext />
   </DataContext>
 </Form>

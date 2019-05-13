@@ -870,131 +870,6 @@
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="SaveToServer" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.saveConfirm = apiobjects.page1.confirm("Do you really want to save all changes?")
-
-if form.saveConfirm = true then
-
-	/*
-	var item = form.collection1.addItem()
-
-	system.console("Tohle je počáteční položka"+item.toJson())
-	//item.id = form.complex1.id
-	item.name = form.complex1.name
-	item.yearOfRelease = form.complex1.yearOfRelease
-
-	item.type = form.complex1.type
-	item.mainDirector = form.complex1.mainDirector
-	item.description = form.complex1.description
-
-	item.rating.score = form.complex1.rating.score
-	item.rating.dateOfWatching = form.complex1.rating.dateOfWatching
-	item.rating.seenItWhole = form.complex1.rating.seenItWhole
-	
-	//var item2=form.collection1.genre.addItem()
-	item.starring = form.complex1.starring
-	//system.console(form.complex1.starring)
-	
-	
-	//system.console(tostring(item.starring))
-	//item.genre = form.complex1.genre.addItem()
-	//system.console(form.complex1.starring)
-	/*
-	foreach item2 in item.starring do
-		system.console(item.starring.item2)
-	endfor
-	
-	*/
-	//item.starring.ActorName = form.complex1.starring.ActorName
-	//item.starring = form.complex1.starring
-	
-	/*
-	foreach item2 in form.complex1.starring do
-		var actorName2 = form.complex1.starring.addItem()
-		//actorName2.actorName = form.complex1.starring.actorName
-	
-		item.starring.
-	
-	endfor
-	*/
-	/*
-	system.console("Tohle ukladam do JSONu"+item.toJson())
-	
-	
-	
-	var messageJson = item.toJson()
-	*/
-	
-	system.console(tostring(form.complex1.toJson()))
-	var response = apiobjects.serverForMovies.postAsync("create", form.complex1.toJson())
-
-	if (response.isError()) then
-		system.consoleError(response.getErrorMessage())
-	else 
-		form.postResult = response.getJsonString()
-		form.ContentType = response.getHeader("Content-Type")
-	endif
-	
-	navigation.main.movies1.go("")
-// SuccessFull POSTING?
-
-else 
-//navigace na hlavní formulář
-navigation.main.movies1.go("")
-
-endif
-]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_DeleteActorButton_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//params.data.removeMe()
-//params.data.complex1.starring.actorName.clear()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_AddOtherActor_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//form.complex1.starring.ActorName.hasValue()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_DeleteGenreItem_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//params.data.removeMe()
-//params.data.complex1.]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_button1_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//params.data.complex1.starring.ActorName.addItem()
-//params.data.complex1.starring.addItem()
-//params.data.complex1.starring.ActorName.addItem()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="initAdd" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.complex1.starring.addItem()
@@ -1003,68 +878,6 @@ form.complex1.genre.addItem()
 //form.complex1.episodes.addItem()
 //form.complex1.episodes.removeItem(1)
 //form.complex1.ratingSeries.addItem()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_AddAnotherActorItem_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//form.complex1.seasons.addItem()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_DeleteActorItem_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//form.complex1.starring.ActorName.clear()
-form.complex1.seasons.removeItem(1)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_button2_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.genre.removeItem(1)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_AddAnotherGenre_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//form.complex1.starring.addItem()
-form.complex1.genre.addItem()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_button3_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.genre.removeItem(1)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_AddAnothergenreItem_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.genre.addItem()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1114,17 +927,7 @@ endif]]></Script>
       <Name value="handler_button5_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.starring.removeItem(1)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_button11_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.seasons.addItem()]]></Script>
+        <Script><![CDATA[//form.complex1.starring.removeItem(1)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1151,71 +954,11 @@ endif]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="handler_AddAnotherEpisodeItem_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.episodes.addItem()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_deleteEpisodeItem_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.episodes.removeItem(1)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_AddAnotherEpisode_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.episodes.addItem()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_DeleteEpisode_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.episodes.removeItem(1)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="action2" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.complex1.starring.addItem()
 form.complex1.genre.addItem()
 form.complex1.seasons.addItem()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="action3" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.episodes.addItem()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_deleteAnotherEpisodeItem_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.complex1.episodes.removeItem(1)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

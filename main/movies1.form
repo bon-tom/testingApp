@@ -549,67 +549,9 @@ endif
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="loadData" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[
-
-/*
-
-var response = apiobjects.serverForMovies.getAsync("record?id= " +form.filter.mainDirector)
-
-if response.isError() then
-	//system.console.Error(response.getErrorMessage())
-	system.console(response.getErrorMessage())
-else
-	form.complex1.fromJson(response.extractJson("record"))
-endif
-*/
-
-//loadData
-/*
-var response = apiobjects.magicApi.getAsync("cards?set= " + form.filter.set + "&name=" + form.filter.name)
-
-if response.isError() then
-	system.console.Error(response.getErrorMessage())
-else
-	form.cards.fromJson(response.extractJson("cards"))
-endif
-
-*/
-
-//var response = apiobjects.serverForMovies.getAsync()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="goToMovieAdd" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[navigation.main.formII.go()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_SearchRecord_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.movieSearched.go(form.name)
-
-
-//navigation.main.movieSearched.go(form.name, form.yearOfRelease)
-//navigation.main.movieSearched.go(form.filter.name, form.filter.yearOfRelease, form.filter.mainDirector)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="goToMovieEdit" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.movieEdit.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -677,45 +619,10 @@ form.selectionofMovies.fromJson(resNameOfOrder)
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="goToMovieDetail" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//navigation.main.movieDetail.go()
-//navigation.main.movieDetail.goandBack(form.codeListData)
-//navigation.main.movieDetail.go(form.dataFormovieDetail)
-
-]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="handler_ShowWholeRecord_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[navigation.main.movieDetail.go(params.data.id)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="orderByRating" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[if form.ascDesc = true then
-	form.ascDesc = false
-else
-	form.ascDesc = true
-endif
-
-//var resOfOrder = form.selectionofMovies.orderBy(current.yearOfRelease, true).toJson()
-var resOfOrder = form.selectionofMovies.orderBy(current.mainDirector, form.ascDesc).toJson()
-
-//var resOfOrder = form.selectionofMovies.orderBy(current.rating.score, form.ascDesc).toJson()
-
-system.console(resOfOrder)
-
-form.selectionofMovies.fromJson(resOfOrder)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

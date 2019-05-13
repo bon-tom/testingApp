@@ -3,26 +3,25 @@
 <Package>
   <Identity value="main.f7d31f056d6b42a29b16cd4ccb7ef711" />
   <Items>
-    <PackageItem Src="MasterForm.form" />
-    <PackageItem Src="movies1.form" />
+    <PackageItem Src="editRecord.form" />
+    <PackageItem Src="Episodes.dataEntity" />
+    <PackageItem Src="formII.form" />
+    <PackageItem Src="globalActions.globalActions" />
     <PackageItem Src="globalApiObjects.globalApiObjects" />
     <PackageItem Src="globalVariables.globalVariables" />
-    <PackageItem Src="Movies.dataEntity" />
+    <PackageItem Src="MasterForm.form" />
+    <PackageItem Src="metaType.metaType" />
     <PackageItem Src="movieAdd.form" />
     <PackageItem Src="movieDetail.form" />
-    <PackageItem Src="metaType.metaType" />
-    <PackageItem Src="globalActions.globalActions" />
-    <PackageItem Src="editRecord.form" />
+    <PackageItem Src="movieSorting.form" />
+    <PackageItem Src="Movies.dataEntity" />
+    <PackageItem Src="movies1.form" />
     <PackageItem Src="movieSearching.form" />
-    <PackageItem Src="Episodes.dataEntity" />
-    <PackageItem Src="RatingMovies.dataEntity" />
-    <PackageItem Src="seasons.dataEntity" />
-    <PackageItem Src="RatingSeries.dataEntity" />
-    <PackageItem Src="starring.dataEntity" />
-    <PackageItem Src="movieEdit.form" />
-    <PackageItem Src="movieSearched.form" />
-    <PackageItem Src="Series.dataEntity" />
-    <PackageItem Src="formII.form" />
     <PackageItem Src="rating.dataEntity" />
+    <PackageItem Src="RatingMovies.dataEntity" />
+    <PackageItem Src="RatingSeries.dataEntity" />
+    <PackageItem Src="seasons.dataEntity" />
+    <PackageItem Src="Series.dataEntity" />
+    <PackageItem Src="starring.dataEntity" />
   </Items>
 </Package>

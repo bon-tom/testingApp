@@ -786,15 +786,6 @@ item.number =  form.Record.Seasons.count()]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="AddGenreItem" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.Record.Genres.addItem()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="handler_button14_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
