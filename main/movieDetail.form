@@ -10,6 +10,12 @@
       <Panel.Height value="#" />
       <Panel.Width value="*" />
       <Children>
+        <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+          <Name value="breadcrumbs1" />
+          <controller reference="~breadcrumbsCtrl2" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+        </Breadcrumbs>
         <Button>
           <Name value="goBacktoRecordList" />
           <Caption value="Go back to Record list" />
@@ -726,7 +732,8 @@ navigation.main.movies1.go()]]></Script>
     <ActionBlock>
       <Name value="loadSingleRecord" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var response = apiobjects.serverForMovies.getAsync("record?id=" +tostring(this.form.id))
+        <Script><![CDATA[form.actions.createBreadCrumbs()
+var response = apiobjects.serverForMovies.getAsync("record?id=" +tostring(this.form.id))
 
 system.console(form.id)
 if response.isError() then
@@ -748,7 +755,9 @@ else
 	
 	form.recordForEdit=response.getJsonString()
     form.actions.setUrl()
-	
+    
+    
+	form.actions.createBreadCrumbs()
 endif
 
 ]]></Script>
@@ -819,7 +828,7 @@ navigation.main.editRecord.go(form.recordForEdit)]]></Script>
       <Name value="createBreadCrumbs" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.apiobjects.breadcrumbsCtrl2.removeAll()
-form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("Home", "Movie list", "/list", defaultString(), true)
+form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("Movie", "Movie list", " /home", defaultString(), true)
 
 form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("Home", "Record", defaultString(), defaultString(), defaultBool())]]></Script>
       </ActionLangBody>

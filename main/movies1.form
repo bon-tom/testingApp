@@ -25,6 +25,14 @@
             </CssClassConditional>
           </CssClass>
         </Button>
+        <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+          <Name value="breadcrumbs1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <OnItemClick>
+            <ActionEvent ReferencedAction="~createbread" />
+          </OnItemClick>
+        </Breadcrumbs>
         <BusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
           <Name value="busyIndicator1" />
           <Panel.Height value="#" />
@@ -688,15 +696,16 @@
     <ActionBlock>
       <Name value="initMovieForm" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[
+        <Script><![CDATA[form.actions.createbread()
 
+/*
 if apiobjects.breadcrumbsCtrl1.count() = 0 then
 	apiobjects.breadcrumbsCtrl1.addBreadcrumb("main", "Main", "", "", true)
 else
 	apiobjects.breadcrumbsCtrl1.removeTo(1)
 endif
 
-
+*/
 
 //var attrForBusy = true
 
@@ -755,7 +764,7 @@ endif
     <ActionBlock>
       <Name value="goToMovieAdd" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.formII.go()]]></Script>
+        <Script><![CDATA[navigation.main.movieAdding.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -866,6 +875,18 @@ timer1.stop()]]></Script>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="createbread" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.breadcrumbsCtrl1.removeAll()
+form.apiobjects.breadcrumbsCtrl1.addBreadcrumb("Movie", "Movie list", "/list", defaultString(), true)
+
+//form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("Home", "Record", defaultString(), defaultString(), defaultBool())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
   <ApiObjects>
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
@@ -895,5 +916,8 @@ timer1.stop()]]></Script>
         <ActionEvent ReferencedAction="~handler_timer1_OnTick" />
       </OnTick>
     </Timer>
+    <BreadcrumbsCtrl identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+      <Name value="breadcrumbsCtrl1" />
+    </BreadcrumbsCtrl>
   </ApiObjects>
 </Form>

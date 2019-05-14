@@ -329,7 +329,7 @@
                                         </TextBox>
                                         <Panel>
                                           <Name value="panel14" />
-                                          <Orientation value="Vertical" />
+                                          <Orientation value="Horizontal" />
                                           <Panel.Height value="#" />
                                           <Panel.Width value="*" />
                                           <Children>
@@ -455,7 +455,7 @@
                 </GroupBox>
                 <Panel>
                   <Name value="panel4" />
-                  <Orientation value="Vertical" />
+                  <Orientation value="Horizontal" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                   <Children>
@@ -530,7 +530,7 @@
               <Name value="panel7" />
               <Orientation value="Vertical" />
               <Panel.Height value="#" />
-              <Panel.Width value="52%" />
+              <Panel.Width value="42%" />
               <Children>
                 <TextBox>
                   <Name value="textBox2" />
@@ -953,7 +953,7 @@
                                                     </TextBox>
                                                     <Panel>
                                                       <Name value="panel17" />
-                                                      <Orientation value="Vertical" />
+                                                      <Orientation value="Horizontal" />
                                                       <Panel.Height value="#" />
                                                       <Panel.Width value="*" />
                                                       <Children>

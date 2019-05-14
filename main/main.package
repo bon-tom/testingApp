@@ -5,7 +5,7 @@
   <Items>
     <PackageItem Src="editRecord.form" />
     <PackageItem Src="Episodes.dataEntity" />
-    <PackageItem Src="formII.form" />
+    <PackageItem Src="movieAdding.form" />
     <PackageItem Src="globalActions.globalActions" />
     <PackageItem Src="globalApiObjects.globalApiObjects" />
     <PackageItem Src="globalVariables.globalVariables" />
@@ -23,5 +23,6 @@
     <PackageItem Src="seasons.dataEntity" />
     <PackageItem Src="Series.dataEntity" />
     <PackageItem Src="starring.dataEntity" />
+    <ResourceItem ResourceName="styl.css" LinkerAction="Css" OutputFileName="styl.css" Src="styl.css" />
   </Items>
 </Package>

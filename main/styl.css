@@ -1,0 +1,88 @@
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvv */
+/* breadcrumb-arrows */
+
+/* list style - <ol> element */
+.breadcrumb-arrows {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* item style <li> element */
+.breadcrumb-arrows > li {
+    background: none repeat scroll 0 0 #f6f6f6;
+    display: block;
+    float: left;
+    padding: 5px 0 5px 30px;
+    position: relative;
+    border: 1px solid #dddddd;
+}
+
+.breadcrumb-arrows > li:first-child {
+    padding: 5px 0 5px 12px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.breadcrumb-arrows > li:last-child {
+    padding: 5px 12px 5px 30px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;}
+
+/* arrows by :before and :after pseudoelement */
+.breadcrumb-arrows > li:not(:last-child):before {
+    border-bottom: 15px solid transparent;
+    border-left: 20px solid #dddddd;
+    border-top: 15px solid transparent;
+    content:" ";
+    height: 0;
+    left: 100%;
+    margin-left: 1px;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 1;
+}
+.breadcrumb-arrows > li:not(:last-child):after {
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #f6f6f6;
+    border-top: 15px solid transparent;
+    content:" ";
+    height: 0;
+    left: 100%;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 2;
+}
+
+/* style for clickable item content - <a> element */
+.breadcrumb-arrows > li > a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+/* hover and focus styles for clickable item content - <a> element */
+.breadcrumb-arrows > li > a:hover,
+.breadcrumb-arrows > li > a:focus {
+  color: #23527c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* 'active' style for clickable item content - <a> element */
+.breadcrumb-arrows > li > a.active {
+  color: #777;
+}
+
+/* style for non-clickable item content - <span> element */
+.breadcrumb-arrows > li > span {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+/* 'active' style for non-clickable item content - <span> element */
+.breadcrumb-arrows > li > span.active {
+  color: #777;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
