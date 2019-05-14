@@ -17,7 +17,7 @@
       <routes>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.movieDetail" />
-          <masterPage reference="+UiParts.MasterForm" />
+          <params value="id" />
           <url value="routing" />
         </UrlRouteCfg>
       </routes>

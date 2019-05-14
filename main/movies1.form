@@ -29,6 +29,10 @@
           <Name value="busyIndicator1" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="IsVisible" Expression="attrForBusy" />
+            <Binding SourceProperty="IsEnabled" Expression="attrForBusy" />
+          </Bindings>
         </BusyIndicator>
         <Button>
           <Name value="RemoveAll" />
@@ -524,6 +528,15 @@
     <DataContext>
       <Children>
         <Attribute>
+          <Name value="attrForBusy" />
+          <Caption value="Attr for busy" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
           <Name value="dataforMovieDetail" />
           <Caption value="Datafor movie detail" />
           <DeclaredType>
@@ -686,6 +699,9 @@ endif
 apiobjects.urlRouter.clearUrl()
 */
 
+//var attrForBusy = true
+
+
 apiobjects.urlRouter1.clearUrl()
 var response = apiobjects.serverForMovies.getAsync("list")
 
@@ -693,6 +709,8 @@ var response = apiobjects.serverForMovies.getAsync("list")
 
 if response.isError() then
 	globals.errorMessage = response.getErrorMessage()
+	form.attrForBusy = true 
+	//system.console(tostring(attrForBusy))
 else
 	//system.console(response.extractJson())
 	//form.collection1.fromJson(response.extractJson("id"))
@@ -700,6 +718,9 @@ else
 	system.console(response.getJsonString())
 	
 	//form.Movies.fromJson(response.getJsonString())
+	
+	
+	//timer1.start()
 	
 	form.dataJson = response.getJsonString()
 	form.dataforMovieDetail = response.getJsonString()
@@ -712,7 +733,10 @@ else
 	//var codelistData = response.extractJson("list")
 	//form.apiobjects.movieSet.fillFromJson(codelistData)
 	
+
 endif
+
+
 
 ]]></Script>
       </ActionLangBody>
@@ -832,6 +856,17 @@ form.selectionofMovies.fromJson(resOfOrder)]]></Script>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_timer1_OnTick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.attrForBusy = false
+timer1.stop()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
   <ApiObjects>
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
@@ -851,5 +886,15 @@ form.selectionofMovies.fromJson(resOfOrder)]]></Script>
         </CodelistColumn>
       </columns>
     </Codelist>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page1" />
+    </Page>
+    <Timer identity="Timer.cee6b8357b9240469bd5d89cf64b0c9a">
+      <Name value="timer1" />
+      <interval value="1000" />
+      <OnTick>
+        <ActionEvent ReferencedAction="~handler_timer1_OnTick" />
+      </OnTick>
+    </Timer>
   </ApiObjects>
 </Form>

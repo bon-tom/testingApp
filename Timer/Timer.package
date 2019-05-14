@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="Timer.cee6b8357b9240469bd5d89cf64b0c9a" />
+  <Version value="1.0.1" />
+  <Items>
+    <PackageItem Src="Timer.apiObjectManifest" />
+    <ResourceItem ResourceName="timer.js" Action="None" OutputFileName="timer.js" Src="timer.js" />
+  </Items>
+</Package>

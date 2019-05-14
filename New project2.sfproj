@@ -72,5 +72,9 @@
       <ReferencedIdentity value="DeclListQuery.f41d2c211a8f43618588763e63b56065" />
       <ReferencedVersion value="1.0.2" />
     </PackageReference>
+    <PackageReference Alias="Timer" IsComponentLib="True" Origin="Timer\Timer.package">
+      <ReferencedIdentity value="Timer.cee6b8357b9240469bd5d89cf64b0c9a" />
+      <ReferencedVersion value="1.0.1" />
+    </PackageReference>
   </PackageReferences>
 </ProjectRoot>

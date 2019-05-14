@@ -726,29 +726,9 @@ navigation.main.movies1.go()]]></Script>
     <ActionBlock>
       <Name value="loadSingleRecord" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[/*
-var response = apiobjects.serverForMovies.getAsync("record?id=" +tostring(this.form.id))
+        <Script><![CDATA[var response = apiobjects.serverForMovies.getAsync("record?id=" +tostring(this.form.id))
 
-if response.isError() then
-	system.consoleError(response.getErrorMessage())	
-else
-//	result = response.extractJson("card")
-//	result = response.extractJson("record/")
-	
-	system.console(response.getJsonString())
-	
-	var codeListData = response.getJsonString()
-	
-	system.console(codeListData)
-	
-	//form.apiobjects.fillFromJson(codeListData)
-	form.complex1.fromJson(codeListData)
-endif
-
-*/
-
-var response = apiobjects.serverForMovies.getAsync("record?id=" +tostring(this.form.id))
-
+system.console(form.id)
 if response.isError() then
 	system.consoleError(response.getErrorMessage())	
 else
@@ -767,17 +747,11 @@ else
 	
 	
 	form.recordForEdit=response.getJsonString()
-	
-	//system.console("Tohle jsou má zdrojová data" +codeListData)
-	
-	//form.apiobjects.fillFromJson(codeListData)
-	//form.complex1.fromJson(codeListData)
-	//system.console(tostring(form.complex1.starring.Ac))
-	//system.console(complex1.starring)
+    form.actions.setUrl()
 	
 endif
 
-form.actions.setUrl()]]></Script>
+]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

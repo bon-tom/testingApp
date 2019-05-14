@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="Timer" />
+  <Generator value="timer.js" />
+  <Methods>
+    <MethodManifest>
+      <Name value="start" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="stop" />
+      <ReturnType />
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="interval" />
+      <IsRequired value="True" />
+      <Type value="integer" />
+      <UiCaption value="Interval till tick (in miliseconds)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="autoRepeat" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="OnTick" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.Actions.ActionEvent" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="autoStart" />
+      <Type value="bool" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>
