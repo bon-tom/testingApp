@@ -25,14 +25,6 @@
             </CssClassConditional>
           </CssClass>
         </Button>
-        <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
-          <Name value="breadcrumbs1" />
-          <Panel.Height value="#" />
-          <Panel.Width value="*" />
-          <OnItemClick>
-            <ActionEvent ReferencedAction="~createbread" />
-          </OnItemClick>
-        </Breadcrumbs>
         <BusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
           <Name value="busyIndicator1" />
           <Panel.Height value="#" />
@@ -696,16 +688,16 @@
     <ActionBlock>
       <Name value="initMovieForm" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.actions.createbread()
-
-/*
-if apiobjects.breadcrumbsCtrl1.count() = 0 then
+        <Script><![CDATA[if apiobjects.breadcrumbsCtrl1.count() = 0 then
 	apiobjects.breadcrumbsCtrl1.addBreadcrumb("main", "Main", "", "", true)
 else
 	apiobjects.breadcrumbsCtrl1.removeTo(1)
 endif
 
-*/
+
+
+
+
 
 //var attrForBusy = true
 
@@ -878,10 +870,32 @@ timer1.stop()]]></Script>
     <ActionBlock>
       <Name value="createbread" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.apiobjects.breadcrumbsCtrl1.removeAll()
+        <Script><![CDATA[/*
+form.apiobjects.breadcrumbsCtrl1.removeAll()
 form.apiobjects.breadcrumbsCtrl1.addBreadcrumb("Movie", "Movie list", "/list", defaultString(), true)
 
-//form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("Home", "Record", defaultString(), defaultString(), defaultBool())]]></Script>
+//form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("Home", "Record", defaultString(), defaultString(), defaultBool())
+*/
+
+if form.apiobjects.breadcrumbsCtrl1.count() = 0 then
+	form.apiobjects.breadcrumbsCtrl1.addBreadcrumb("main", "Main", "", "", true)
+else
+	form.apiobjects.breadcrumbsCtrl1.removeTo(1)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_eventDispatcher1_OnMessage" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if params.type = "breadcrumbsClick" then
+	if params.data = "main" then		
+		navigation.main.movies1.go()
+	endif
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -919,5 +933,11 @@ form.apiobjects.breadcrumbsCtrl1.addBreadcrumb("Movie", "Movie list", "/list", d
     <BreadcrumbsCtrl identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
       <Name value="breadcrumbsCtrl1" />
     </BreadcrumbsCtrl>
+    <EventDispatcher identity="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26">
+      <Name value="eventDispatcher1" />
+      <OnMessage>
+        <ActionEvent ReferencedAction="~handler_eventDispatcher1_OnMessage" />
+      </OnMessage>
+    </EventDispatcher>
   </ApiObjects>
 </Form>

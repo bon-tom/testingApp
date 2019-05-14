@@ -778,8 +778,17 @@ endif]]></Script>
     <ActionBlock>
       <Name value="initSearching" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.collection1.fromJson(form.dataJson)
+        <Script><![CDATA[if apiobjects.breadcrumbsCtrl1.count() = 2 then
+	apiobjects.breadcrumbsCtrl1.removeTo(1)
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("search", "Movie Search", "", "", true)
+	else
+	apiobjects.breadcrumbsCtrl1.removeTo(2)	
+endif
+if apiobjects.breadcrumbsCtrl1.count() = 1 then
+		apiobjects.breadcrumbsCtrl1.addBreadcrumb("search", "Movie Search", "", "", true)
+	endif
 
+form.collection1.fromJson(form.dataJson)
 form.apiobjects.movieName.fillFromJson(form.dataJson)]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -791,6 +800,20 @@ form.apiobjects.movieName.fillFromJson(form.dataJson)]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[navigation.main.movieDetail.goAndBack(params.data.id)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_eventDispatcher1_OnMessage" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if params.type = "breadcrumbsClick" then
+	if params.data = "main" then		
+		navigation.main.movies1.go()
+	endif
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -820,5 +843,11 @@ form.apiobjects.movieName.fillFromJson(form.dataJson)]]></Script>
       <listName value="list" />
       <server reference="+GlobalApiObjects.serverForMovies" />
     </DeclListQuery>
+    <EventDispatcher identity="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26">
+      <Name value="eventDispatcher1" />
+      <OnMessage>
+        <ActionEvent ReferencedAction="~handler_eventDispatcher1_OnMessage" />
+      </OnMessage>
+    </EventDispatcher>
   </ApiObjects>
 </Form>

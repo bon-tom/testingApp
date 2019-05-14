@@ -41,67 +41,67 @@
                     <Source Name="DispatchUpdaterVariablesTool" Show="false" />
                     <Source Name="ProjectUpgrader" Show="true" />
                     <Source Name="VariablesTool" Show="true" />
-                    <Source Name="TemplateLoader" Show="true" />
-                    <Source Name="Exception" Show="true" />
+                    <Source Name="MetaXmlReader" Show="false" />
+                    <Source Name="HtmlDocumentControl" Show="true" />
                     <Source Name="UpdateTreeNodesRec" Show="true" />
-                    <Source Name="PreviewKeyDown" Show="true" />
                     <Source Name="ValidationController" Show="true" />
                     <Source Name="ProjectManager" Show="true" />
-                    <Source Name="DispatchUpdater-PGDM" Show="false" />
-                    <Source Name="UserPropertyDefaults" Show="true" />
-                    <Source Name="FormDocumentEditor" Show="true" />
-                    <Source Name="SelectionManager/formtree" Show="true" />
-                    <Source Name="DispatchUpdaterFormDocumentEditor" Show="false" />
-                    <Source Name="FormTreeBuilder" Show="true" />
-                    <Source Name="MementoReader" Show="true" />
-                    <Source Name="InvalidOperationException" Show="true" />
-                    <Source Name="Autosave" Show="true" />
-                    <Source Name="ResourceSerializer" Show="true" />
                     <Source Name="EfAssetWriter" Show="true" />
                     <Source Name="EfWriter" Show="true" />
                     <Source Name="ResourceFactory" Show="true" />
                     <Source Name="AppBuilderNodeJs" Show="true" />
+                    <Source Name="VisualDesignerControl" Show="true" />
+                    <Source Name="FormDocumentEditor" Show="true" />
+                    <Source Name="DesignerApiWrapper" Show="true" />
+                    <Source Name="SelectionManager/formtree" Show="true" />
+                    <Source Name="IdeApiObject" Show="true" />
+                    <Source Name="CodeValidator" Show="true" />
+                    <Source Name="BindingPropertyEditor" Show="true" />
+                    <Source Name="TemplateLoader" Show="true" />
+                    <Source Name="SelectionManager/data designer CustomerData" Show="true" />
+                    <Source Name="PreviewKeyDown" Show="true" />
+                    <Source Name="DispatchUpdater-PGDM" Show="false" />
+                    <Source Name="SelectionManager/data designer Supplier" Show="true" />
+                    <Source Name="SelectionManager/ActionTestsControl" Show="true" />
+                    <Source Name="REFACTORING" Show="true" />
+                    <Source Name="UserPropertyDefaults" Show="true" />
+                    <Source Name="DispatchUpdaterFormDocumentEditor" Show="false" />
+                    <Source Name="FormTreeBuilder" Show="true" />
+                    <Source Name="Autosave" Show="true" />
+                    <Source Name="ResourceSerializer" Show="true" />
+                    <Source Name="NamingStrategy" Show="true" />
+                    <Source Name="CodeCompletionService" Show="true" />
+                    <Source Name="ComponentResolver" Show="true" />
+                    <Source Name="DependencyUpdaterBinding" Show="true" />
+                    <Source Name="SelectionManager/data designer product" Show="true" />
+                    <Source Name="ReadonlyViolationException" Show="true" />
                     <Source Name="SelectionManager/data designer entity" Show="true" />
+                    <Source Name="SelectionManager/data designer Movies" Show="true" />
+                    <Source Name="ColumnMonitor" Show="true" />
+                    <Source Name="SelectionManager/universal editor" Show="true" />
+                    <Source Name="NullReferenceException" Show="true" />
+                    <Source Name="FormApiTreeBuilder" Show="true" />
+                    <Source Name="KeyNotFoundException" Show="true" />
+                    <Source Name="Exception" Show="true" />
+                    <Source Name="MementoReader" Show="true" />
+                    <Source Name="InvalidOperationException" Show="true" />
                     <Source Name="SelectionManager/data designer Movie" Show="true" />
                     <Source Name="IOException" Show="true" />
-                    <Source Name="DependencyUpdaterBinding" Show="true" />
                     <Source Name="SelectionManager/data designer Series" Show="true" />
                     <Source Name="SelectionManager/data designer season" Show="true" />
                     <Source Name="SelectionManager/data designer ratingSeries" Show="true" />
                     <Source Name="DataTreeBuilder" Show="true" />
                     <Source Name="SelectionManager/data designer episodes" Show="true" />
                     <Source Name="SelectionManager/data designer seasons" Show="true" />
-                    <Source Name="SelectionManager/universal editor" Show="true" />
                     <Source Name="SelectionManager/data designer movie" Show="true" />
                     <Source Name="SelectionManager/data designer ratingMovies" Show="true" />
                     <Source Name="SelectionManager/data designer staring" Show="true" />
-                    <Source Name="CodeValidator" Show="true" />
-                    <Source Name="SelectionManager/ActionTestsControl" Show="true" />
-                    <Source Name="CodeCompletionService" Show="true" />
-                    <Source Name="BindingPropertyEditor" Show="true" />
-                    <Source Name="REFACTORING" Show="true" />
-                    <Source Name="NamingStrategy" Show="true" />
                     <Source Name="ArgumentException" Show="true" />
                     <Source Name="AncestingModifierVisitor" Show="true" />
                     <Source Name="FormActionsTreeBuilder" Show="true" />
                     <Source Name="ValidationTool" Show="true" />
                     <Source Name="ExpressionEditorControl" Show="true" />
                     <Source Name="DependencyUpdaterExpression" Show="true" />
-                    <Source Name="NullReferenceException" Show="true" />
-                    <Source Name="VisualDesignerControl" Show="true" />
-                    <Source Name="DesignerApiWrapper" Show="true" />
-                    <Source Name="IdeApiObject" Show="true" />
-                    <Source Name="MetaXmlReader" Show="false" />
-                    <Source Name="HtmlDocumentControl" Show="true" />
-                    <Source Name="SelectionManager/data designer CustomerData" Show="true" />
-                    <Source Name="SelectionManager/data designer Supplier" Show="true" />
-                    <Source Name="ComponentResolver" Show="true" />
-                    <Source Name="SelectionManager/data designer product" Show="true" />
-                    <Source Name="ReadonlyViolationException" Show="true" />
-                    <Source Name="SelectionManager/data designer Movies" Show="true" />
-                    <Source Name="ColumnMonitor" Show="true" />
-                    <Source Name="FormApiTreeBuilder" Show="true" />
-                    <Source Name="KeyNotFoundException" Show="true" />
                     <Source Name="SelectionManager/data designer entity1" Show="true" />
                     <Source Name="SelectionManager/data designer RatingMovies" Show="true" />
                     <Source Name="SelectionManager/data designer Starring" Show="true" />
@@ -121,14 +121,14 @@
     </AutoHideTabStrip>
   </AutoHideHost>
   <Content xsi:type="SplitContainer" AutoHideSize="1505,697.84" DockedSize="1528,697.84" DocumentSize="1505,697.84" FloatingSize="1505,697.84" Size="1528,697.84" Orientation="Vertical">
-    <UIElement xsi:type="SplitContainer" AutoHideSize="1505,697.84" DockedSize="1528,543.84" DocumentSize="1505,697.84" FloatingSize="1505,697.84" Size="1528,543.84" Orientation="Horizontal">
-      <UIElement xsi:type="ToolWindowContainer" AutoHideSize="150,0" DockedSize="205.6,543.84" DocumentSize="150,0" FloatingSize="150,0" Size="205.6,543.84" SelectedWindowUniqueId="25becc2c-c962-4bcb-9469-4c3cc5f135e1">
+    <UIElement xsi:type="SplitContainer" AutoHideSize="1505,697.84" DockedSize="1528,428.24" DocumentSize="1505,697.84" FloatingSize="1505,697.84" Size="1528,428.24" Orientation="Horizontal">
+      <UIElement xsi:type="ToolWindowContainer" AutoHideSize="150,0" DockedSize="205.6,428.24" DocumentSize="150,0" FloatingSize="150,0" Size="205.6,428.24" SelectedWindowUniqueId="25becc2c-c962-4bcb-9469-4c3cc5f135e1">
         <UIElement xsi:type="ToolWindowRef" UniqueId="25becc2c-c962-4bcb-9469-4c3cc5f135e1">
           <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.ToolboxControl" />
         </UIElement>
       </UIElement>
       <UIElement xsi:type="ToolWindowContainer" AutoHideSize="220,200" DockedSize="220,200" DocumentSize="220,200" FloatingSize="220,200" Size="220,200" />
-      <UIElement xsi:type="ToolWindowContainer" AutoHideSize="300,697.84" DockedSize="294.248326055313,543.84" DocumentSize="300,697.84" FloatingSize="300,697.84" Size="294.248326055313,543.84" SelectedWindowUniqueId="0efe2f4d-04cb-44b5-8026-fc7936e60b59">
+      <UIElement xsi:type="ToolWindowContainer" AutoHideSize="300,697.84" DockedSize="294.248326055313,428.24" DocumentSize="300,697.84" FloatingSize="300,697.84" Size="294.248326055313,428.24" SelectedWindowUniqueId="0efe2f4d-04cb-44b5-8026-fc7936e60b59">
         <UIElement xsi:type="ToolWindowRef" UniqueId="0efe2f4d-04cb-44b5-8026-fc7936e60b59">
           <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ProjectDesigner.ProjectDesignerControl">
             <Data>
@@ -140,9 +140,9 @@
           <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.DataContextDesigner.VariablesTool" />
         </UIElement>
       </UIElement>
-      <UIElement xsi:type="Workspace" AutoHideSize="586.6,697.84" DockedSize="586.6,697.84" DocumentSize="622.8,543.84" FloatingSize="586.6,697.84" Size="622.8,543.84">
+      <UIElement xsi:type="Workspace" AutoHideSize="586.6,697.84" DockedSize="586.6,697.84" DocumentSize="672.4,428.24" FloatingSize="586.6,697.84" Size="672.4,428.24">
         <Content xsi:type="TabbedMdiHost">
-          <Content xsi:type="TabbedMdiContainer" AutoHideSize="586.6,697.84" DockedSize="586.6,697.84" DocumentSize="622.8,543.84" FloatingSize="586.6,697.84" Size="622.8,543.84" SelectedWindowUniqueId="38dfc330-1bb8-426f-8126-c1b808d1fc80">
+          <Content xsi:type="TabbedMdiContainer" AutoHideSize="586.6,697.84" DockedSize="586.6,697.84" DocumentSize="672.4,428.24" FloatingSize="586.6,697.84" Size="672.4,428.24" SelectedWindowUniqueId="3ebc4306-2243-4f2a-baa5-8d014f79f1b6">
             <UIElement xsi:type="Track" UniqueId="675def01-6864-4341-bf5f-044beeb802fa" />
             <UIElement xsi:type="Track" UniqueId="83db11f7-5725-4bd5-837b-936fc72bc56d" />
             <UIElement xsi:type="Track" UniqueId="89927d05-b31b-497c-90b6-ef42d0569ffa" />
@@ -187,8 +187,79 @@
             <UIElement xsi:type="Track" UniqueId="1a7d7095-7b7a-4ac9-a838-96dc46964f9f" />
             <UIElement xsi:type="Track" UniqueId="f848c0f8-6684-444b-8dd1-6faa43d9d330" />
             <UIElement xsi:type="Track" UniqueId="8bb4e44d-86a3-44bf-8a97-185cd6500f45" />
-            <UIElement xsi:type="DocumentWindowRef" UniqueId="38dfc330-1bb8-426f-8126-c1b808d1fc80">
-              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieAdding">
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="dc2062e2-6afc-45c5-80b9-728010ba6ee2">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieSorting">
+                <Data>
+                  <State Split="*">
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+                      </State>
+                    </ToolsStates>
+                    <FormTree>
+                      <TreeState DefaultExpanded="true" />
+                      <Headers>
+                        <Header Width="240" Caption="Component" />
+                        <Header Width="90" Caption="Type" />
+                        <Header Width="200" Caption="Name" />
+                        <Header Width="60" Caption="# children" />
+                      </Headers>
+                    </FormTree>
+                    <VisualDesigner ShowContainerBorders="true" ShowInvisibleComponents="false" IsChanged="true" />
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="ef249bab-1b89-4d4f-b101-fa571cc8c48c">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.editRecord.initeditRecord">
+                <Data>
+                  <State>
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+                      </State>
+                    </ToolsStates>
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="ac6733df-f19f-4a4e-97e6-4a39fba043da">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movies1">
                 <Data>
                   <State Split="*">
                     <ToolsStates>
@@ -215,13 +286,9 @@
                       </State>
                     </ToolsStates>
                     <FormTree>
-                      <TreeState DefaultExpanded="true">
-                        <SelectedPaths>
-                          <Item>movieAdding/panel1/panel8/groupBox1/panel14/repeater1/panel7</Item>
-                        </SelectedPaths>
-                      </TreeState>
+                      <TreeState DefaultExpanded="true" />
                       <Headers>
-                        <Header Width="406" Caption="Component" />
+                        <Header Width="240" Caption="Component" />
                         <Header Width="90" Caption="Type" />
                         <Header Width="200" Caption="Name" />
                         <Header Width="60" Caption="# children" />
@@ -232,16 +299,421 @@
                 </Data>
               </Tag>
             </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="13aa9b37-b495-443e-8af0-b3802f8d369d">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieDetail">
+                <Data>
+                  <State Split="*">
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true">
+                          <SelectedPaths>
+                            <Item>form API objects (movieDetail)</Item>
+                          </SelectedPaths>
+                        </State>
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true">
+                          <SelectedPaths>
+                            <Item>form actions (movieDetail)</Item>
+                          </SelectedPaths>
+                        </State>
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                          <State IsEditMode="false" DefaultExpanded="false">
+                            <SavedPathStates>
+                              <Item>Form variables</Item>
+                              <Item>Global variables</Item>
+                            </SavedPathStates>
+                          </State>
+                          <Headers>
+                            <Header Width="300" Caption="Name" />
+                            <Header Width="90" Caption="Type" />
+                            <Header Width="120" Caption="Flags" />
+                          </Headers>
+                        </Variables>
+                      </State>
+                    </ToolsStates>
+                    <FormTree>
+                      <TreeState DefaultExpanded="true" />
+                      <Headers>
+                        <Header Width="240" Caption="Component" />
+                        <Header Width="90" Caption="Type" />
+                        <Header Width="200" Caption="Name" />
+                        <Header Width="60" Caption="# children" />
+                      </Headers>
+                    </FormTree>
+                    <VisualDesigner ShowContainerBorders="true" ShowInvisibleComponents="false" IsChanged="true" />
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="ab79fa19-29a7-45df-a130-399627361e11">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieDetail.action1">
+                <Data>
+                  <State>
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                          <State IsEditMode="false" DefaultExpanded="false">
+                            <SavedPathStates>
+                              <Item>Action parameters</Item>
+                              <Item>Form variables</Item>
+                              <Item>Global variables</Item>
+                            </SavedPathStates>
+                          </State>
+                          <Headers>
+                            <Header Width="300" Caption="Name" />
+                            <Header Width="90" Caption="Type" />
+                            <Header Width="120" Caption="Flags" />
+                          </Headers>
+                        </Variables>
+                      </State>
+                    </ToolsStates>
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="92754e84-a1f6-40cc-80fb-3373fcbe52b7">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movies1.handler_eventDispatcher1_OnMessage">
+                <Data>
+                  <State>
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                          <State IsEditMode="false" DefaultExpanded="false">
+                            <SavedPathStates>
+                              <Item>Action parameters</Item>
+                              <Item>Form variables</Item>
+                              <Item>Global variables</Item>
+                            </SavedPathStates>
+                          </State>
+                          <Headers>
+                            <Header Width="300" Caption="Name" />
+                            <Header Width="90" Caption="Type" />
+                            <Header Width="120" Caption="Flags" />
+                          </Headers>
+                        </Variables>
+                      </State>
+                    </ToolsStates>
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="777bbd3f-426d-4323-8089-887a5db19cc1">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.MasterForm">
+                <Data>
+                  <State Split="*">
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true">
+                          <SavedPathStates>
+                            <Item>form actions (MasterForm)</Item>
+                          </SavedPathStates>
+                        </State>
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                          <State IsEditMode="false" DefaultExpanded="false">
+                            <SavedPathStates>
+                              <Item>Global variables</Item>
+                            </SavedPathStates>
+                          </State>
+                          <Headers>
+                            <Header Width="300" Caption="Name" />
+                            <Header Width="90" Caption="Type" />
+                            <Header Width="120" Caption="Flags" />
+                          </Headers>
+                        </Variables>
+                      </State>
+                    </ToolsStates>
+                    <FormTree>
+                      <TreeState DefaultExpanded="true" />
+                      <Headers>
+                        <Header Width="240" Caption="Component" />
+                        <Header Width="90" Caption="Type" />
+                        <Header Width="200" Caption="Name" />
+                        <Header Width="60" Caption="# children" />
+                      </Headers>
+                    </FormTree>
+                    <VisualDesigner ShowContainerBorders="true" ShowInvisibleComponents="false" IsChanged="true" />
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="fb0ff306-e83a-45a8-9518-b11d00db476e">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.MasterForm.handler_breadcrumbs1_OnItemClick">
+                <Data>
+                  <State>
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Action parameters</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+                      </State>
+                    </ToolsStates>
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="f77d1a3e-250f-4d83-8a58-1c1ab19f78ad">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieDetail.createBreadCrumbs">
+                <Data>
+                  <State>
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+                      </State>
+                    </ToolsStates>
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="9e575c99-c263-462f-be17-293cc3938091">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movies1.initMovieForm">
+                <Data>
+                  <State>
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true">
+                          <SelectedPaths>
+                            <Item>/form API objects (movies1)/eventDispatcher1</Item>
+                          </SelectedPaths>
+                        </State>
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                          <State IsEditMode="false" DefaultExpanded="false">
+                            <SavedPathStates>
+                              <Item>Form variables</Item>
+                              <Item>Global variables</Item>
+                            </SavedPathStates>
+                          </State>
+                          <Headers>
+                            <Header Width="300" Caption="Name" />
+                            <Header Width="90" Caption="Type" />
+                            <Header Width="120" Caption="Flags" />
+                          </Headers>
+                        </Variables>
+                      </State>
+                    </ToolsStates>
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="e3d0a115-4c27-49e1-92b3-ab2b81d85c4e">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieDetail.loadSingleRecord">
+                <Data>
+                  <State>
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true">
+                          <SelectedPaths>
+                            <Item>/form API objects (movieDetail)/eventDispatcher1</Item>
+                          </SelectedPaths>
+                        </State>
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                          <State IsEditMode="false" DefaultExpanded="false">
+                            <SavedPathStates>
+                              <Item>Form variables</Item>
+                              <Item>Global variables</Item>
+                            </SavedPathStates>
+                          </State>
+                          <Headers>
+                            <Header Width="300" Caption="Name" />
+                            <Header Width="90" Caption="Type" />
+                            <Header Width="120" Caption="Flags" />
+                          </Headers>
+                        </Variables>
+                      </State>
+                    </ToolsStates>
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="38942971-cf8d-463e-9ff8-8386f6851428">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieSearching">
+                <Data>
+                  <State Split="*">
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true">
+                          <SelectedPaths>
+                            <Item>form API objects (movieSearching)</Item>
+                          </SelectedPaths>
+                        </State>
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true">
+                          <SelectedPaths>
+                            <Item>form actions (movieSearching)</Item>
+                          </SelectedPaths>
+                        </State>
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                          <State IsEditMode="false" DefaultExpanded="false">
+                            <SavedPathStates>
+                              <Item>Form variables</Item>
+                              <Item>Global variables</Item>
+                            </SavedPathStates>
+                          </State>
+                          <Headers>
+                            <Header Width="300" Caption="Name" />
+                            <Header Width="90" Caption="Type" />
+                            <Header Width="120" Caption="Flags" />
+                          </Headers>
+                        </Variables>
+                      </State>
+                    </ToolsStates>
+                    <FormTree>
+                      <TreeState DefaultExpanded="true" />
+                      <Headers>
+                        <Header Width="240" Caption="Component" />
+                        <Header Width="90" Caption="Type" />
+                        <Header Width="200" Caption="Name" />
+                        <Header Width="60" Caption="# children" />
+                      </Headers>
+                    </FormTree>
+                    <VisualDesigner ShowContainerBorders="true" ShowInvisibleComponents="false" IsChanged="true" />
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="f5528360-555e-4d10-83d1-444acf6e1dd1">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieSearching.initSearching">
+                <Data>
+                  <State>
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                          <State IsEditMode="false" DefaultExpanded="false">
+                            <SavedPathStates>
+                              <Item>Form variables</Item>
+                              <Item>Global variables</Item>
+                            </SavedPathStates>
+                          </State>
+                          <Headers>
+                            <Header Width="300" Caption="Name" />
+                            <Header Width="90" Caption="Type" />
+                            <Header Width="120" Caption="Flags" />
+                          </Headers>
+                        </Variables>
+                      </State>
+                    </ToolsStates>
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
+            <UIElement xsi:type="DocumentWindowRef" UniqueId="3ebc4306-2243-4f2a-baa5-8d014f79f1b6">
+              <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieSearching.handler_eventDispatcher1_OnMessage">
+                <Data>
+                  <State>
+                    <ToolsStates>
+                      <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                        <State DefaultExpanded="true" />
+                      </State>
+                      <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                        <State DefaultExpanded="true">
+                          <SelectedPaths>
+                            <Item>/form actions (movieSearching)/handler_eventDispatcher1_OnMessage</Item>
+                          </SelectedPaths>
+                        </State>
+                      </State>
+                      <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                        <Variables>
+                          <State IsEditMode="false" DefaultExpanded="false">
+                            <SavedPathStates>
+                              <Item>Action parameters</Item>
+                              <Item>Form variables</Item>
+                              <Item>Global variables</Item>
+                            </SavedPathStates>
+                          </State>
+                          <Headers>
+                            <Header Width="300" Caption="Name" />
+                            <Header Width="90" Caption="Type" />
+                            <Header Width="120" Caption="Flags" />
+                          </Headers>
+                        </Variables>
+                      </State>
+                    </ToolsStates>
+                  </State>
+                </Data>
+              </Tag>
+            </UIElement>
           </Content>
         </Content>
       </UIElement>
-      <UIElement xsi:type="SplitContainer" AutoHideSize="608.4,697.84" DockedSize="390.351673944687,543.84" DocumentSize="608.4,697.84" FloatingSize="608.4,697.84" Size="390.351673944687,543.84" Orientation="Vertical">
-        <UIElement xsi:type="ToolWindowContainer" AutoHideSize="608.4,515.416184379001" DockedSize="390.351673944687,452.71920581249" DocumentSize="608.4,515.416184379001" FloatingSize="608.4,515.416184379001" Size="390.351673944687,452.71920581249" SelectedWindowUniqueId="93df855e-c5be-4e1d-93d2-ecd3fd348a07">
+      <UIElement xsi:type="SplitContainer" AutoHideSize="608.4,697.84" DockedSize="340.751673944687,428.24" DocumentSize="608.4,697.84" FloatingSize="608.4,697.84" Size="340.751673944687,428.24" Orientation="Vertical">
+        <UIElement xsi:type="ToolWindowContainer" AutoHideSize="608.4,515.416184379001" DockedSize="340.751673944687,250.028618269019" DocumentSize="608.4,515.416184379001" FloatingSize="608.4,515.416184379001" Size="340.751673944687,250.028618269019" SelectedWindowUniqueId="93df855e-c5be-4e1d-93d2-ecd3fd348a07">
           <UIElement xsi:type="ToolWindowRef" UniqueId="93df855e-c5be-4e1d-93d2-ecd3fd348a07">
             <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.PropertyGridTool" />
           </UIElement>
         </UIElement>
-        <UIElement xsi:type="ToolWindowContainer" AutoHideSize="608.4,177.423815620999" DockedSize="390.351673944687,86.1207941875095" DocumentSize="608.4,177.423815620999" FloatingSize="608.4,177.423815620999" Size="390.351673944687,86.1207941875095" SelectedWindowUniqueId="851665aa-870b-4c37-a870-836828e1b0c0">
+        <UIElement xsi:type="ToolWindowContainer" AutoHideSize="608.4,177.423815620999" DockedSize="340.751673944687,173.211381730981" DocumentSize="608.4,177.423815620999" FloatingSize="608.4,177.423815620999" Size="340.751673944687,173.211381730981" SelectedWindowUniqueId="0c01c084-325d-4ddc-afc6-b53edbbc5b43">
           <UIElement xsi:type="ToolWindowRef" UniqueId="851665aa-870b-4c37-a870-836828e1b0c0">
             <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
               <Data>
@@ -255,20 +727,91 @@
         </UIElement>
       </UIElement>
     </UIElement>
-    <UIElement xsi:type="ToolWindowContainer" AutoHideSize="300,300" DockedSize="1528,102" DocumentSize="300,300" FloatingSize="300,300" Size="1528,102" SelectedWindowUniqueId="f3843f3e-ea4e-4e8c-8a95-6f545e73ad84">
+    <UIElement xsi:type="ToolWindowContainer" AutoHideSize="300,300" DockedSize="1528,42" DocumentSize="300,300" FloatingSize="300,300" Size="1528,42" SelectedWindowUniqueId="f3843f3e-ea4e-4e8c-8a95-6f545e73ad84">
       <UIElement xsi:type="ToolWindowRef" UniqueId="f3843f3e-ea4e-4e8c-8a95-6f545e73ad84">
         <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.ListResultsTool" />
       </UIElement>
     </UIElement>
-    <UIElement xsi:type="ToolWindowContainer" AutoHideSize="300,116.8" DockedSize="1528,42" DocumentSize="300,300" FloatingSize="300,300" Size="1528,42" SelectedWindowUniqueId="641b70c6-0801-442d-a404-0b7e3cc4fcbe">
+    <UIElement xsi:type="ToolWindowContainer" AutoHideSize="300,116.8" DockedSize="1528,217.6" DocumentSize="300,300" FloatingSize="300,300" Size="1528,217.6" SelectedWindowUniqueId="641b70c6-0801-442d-a404-0b7e3cc4fcbe">
       <UIElement xsi:type="ToolWindowRef" UniqueId="641b70c6-0801-442d-a404-0b7e3cc4fcbe">
         <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.ValidationTool" />
       </UIElement>
     </UIElement>
   </Content>
   <DocumentWindows>
-    <DocumentWindow UniqueId="38dfc330-1bb8-426f-8126-c1b808d1fc80" AutoHideSize="610,445.84" DockedSize="610,445.84" DocumentSize="622.8,543.84" FloatingSize="610,445.84" Size="622.8,543.84" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
-      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieAdding">
+    <DocumentWindow UniqueId="dc2062e2-6afc-45c5-80b9-728010ba6ee2" AutoHideSize="646,543.84" DockedSize="646,543.84" DocumentSize="672.4,428.24" FloatingSize="646,543.84" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieSorting">
+        <Data>
+          <State Split="*">
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+            <FormTree>
+              <TreeState DefaultExpanded="true" />
+              <Headers>
+                <Header Width="240" Caption="Component" />
+                <Header Width="90" Caption="Type" />
+                <Header Width="200" Caption="Name" />
+                <Header Width="60" Caption="# children" />
+              </Headers>
+            </FormTree>
+            <VisualDesigner ShowContainerBorders="true" ShowInvisibleComponents="false" IsChanged="true" />
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="ef249bab-1b89-4d4f-b101-fa571cc8c48c" AutoHideSize="646,543.84" DockedSize="646,543.84" DocumentSize="672.4,428.24" FloatingSize="646,543.84" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.editRecord.initeditRecord">
+        <Data>
+          <State>
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="ac6733df-f19f-4a4e-97e6-4a39fba043da" AutoHideSize="646,543.84" DockedSize="646,543.84" DocumentSize="672.4,428.24" FloatingSize="646,543.84" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movies1">
         <Data>
           <State Split="*">
             <ToolsStates>
@@ -295,19 +838,420 @@
               </State>
             </ToolsStates>
             <FormTree>
-              <TreeState DefaultExpanded="true">
-                <SelectedPaths>
-                  <Item>movieAdding/panel1/panel8/groupBox1/panel14/repeater1/panel7</Item>
-                </SelectedPaths>
-              </TreeState>
+              <TreeState DefaultExpanded="true" />
               <Headers>
-                <Header Width="406" Caption="Component" />
+                <Header Width="240" Caption="Component" />
                 <Header Width="90" Caption="Type" />
                 <Header Width="200" Caption="Name" />
                 <Header Width="60" Caption="# children" />
               </Headers>
             </FormTree>
             <VisualDesigner ShowContainerBorders="true" ShowInvisibleComponents="false" IsChanged="true" />
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="13aa9b37-b495-443e-8af0-b3802f8d369d" AutoHideSize="646,543.84" DockedSize="646,543.84" DocumentSize="672.4,428.24" FloatingSize="646,543.84" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieDetail">
+        <Data>
+          <State Split="*">
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true">
+                  <SelectedPaths>
+                    <Item>form API objects (movieDetail)</Item>
+                  </SelectedPaths>
+                </State>
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true">
+                  <SelectedPaths>
+                    <Item>form actions (movieDetail)</Item>
+                  </SelectedPaths>
+                </State>
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+            <FormTree>
+              <TreeState DefaultExpanded="true" />
+              <Headers>
+                <Header Width="240" Caption="Component" />
+                <Header Width="90" Caption="Type" />
+                <Header Width="200" Caption="Name" />
+                <Header Width="60" Caption="# children" />
+              </Headers>
+            </FormTree>
+            <VisualDesigner ShowContainerBorders="true" ShowInvisibleComponents="false" IsChanged="true" />
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="ab79fa19-29a7-45df-a130-399627361e11" AutoHideSize="646,543.84" DockedSize="646,543.84" DocumentSize="672.4,428.24" FloatingSize="646,543.84" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieDetail.action1">
+        <Data>
+          <State>
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Action parameters</Item>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="92754e84-a1f6-40cc-80fb-3373fcbe52b7" AutoHideSize="646,543.84" DockedSize="646,543.84" DocumentSize="672.4,428.24" FloatingSize="646,543.84" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movies1.handler_eventDispatcher1_OnMessage">
+        <Data>
+          <State>
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Action parameters</Item>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="777bbd3f-426d-4323-8089-887a5db19cc1" AutoHideSize="454.4,428.24" DockedSize="454.4,428.24" DocumentSize="672.4,428.24" FloatingSize="454.4,428.24" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.MasterForm">
+        <Data>
+          <State Split="*">
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true">
+                  <SavedPathStates>
+                    <Item>form actions (MasterForm)</Item>
+                  </SavedPathStates>
+                </State>
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+            <FormTree>
+              <TreeState DefaultExpanded="true" />
+              <Headers>
+                <Header Width="240" Caption="Component" />
+                <Header Width="90" Caption="Type" />
+                <Header Width="200" Caption="Name" />
+                <Header Width="60" Caption="# children" />
+              </Headers>
+            </FormTree>
+            <VisualDesigner ShowContainerBorders="true" ShowInvisibleComponents="false" IsChanged="true" />
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="fb0ff306-e83a-45a8-9518-b11d00db476e" AutoHideSize="454.4,428.24" DockedSize="454.4,428.24" DocumentSize="672.4,428.24" FloatingSize="454.4,428.24" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.MasterForm.handler_breadcrumbs1_OnItemClick">
+        <Data>
+          <State>
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Action parameters</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="f77d1a3e-250f-4d83-8a58-1c1ab19f78ad" AutoHideSize="454.4,428.24" DockedSize="454.4,428.24" DocumentSize="672.4,428.24" FloatingSize="454.4,428.24" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieDetail.createBreadCrumbs">
+        <Data>
+          <State>
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="9e575c99-c263-462f-be17-293cc3938091" AutoHideSize="672.4,428.24" DockedSize="672.4,428.24" DocumentSize="672.4,428.24" FloatingSize="672.4,428.24" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movies1.initMovieForm">
+        <Data>
+          <State>
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true">
+                  <SelectedPaths>
+                    <Item>/form API objects (movies1)/eventDispatcher1</Item>
+                  </SelectedPaths>
+                </State>
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="e3d0a115-4c27-49e1-92b3-ab2b81d85c4e" AutoHideSize="672.4,428.24" DockedSize="672.4,428.24" DocumentSize="672.4,428.24" FloatingSize="672.4,428.24" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieDetail.loadSingleRecord">
+        <Data>
+          <State>
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true">
+                  <SelectedPaths>
+                    <Item>/form API objects (movieDetail)/eventDispatcher1</Item>
+                  </SelectedPaths>
+                </State>
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="38942971-cf8d-463e-9ff8-8386f6851428" AutoHideSize="672.4,428.24" DockedSize="672.4,428.24" DocumentSize="672.4,428.24" FloatingSize="672.4,428.24" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieSearching">
+        <Data>
+          <State Split="*">
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true">
+                  <SelectedPaths>
+                    <Item>form API objects (movieSearching)</Item>
+                  </SelectedPaths>
+                </State>
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true">
+                  <SelectedPaths>
+                    <Item>form actions (movieSearching)</Item>
+                  </SelectedPaths>
+                </State>
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+            <FormTree>
+              <TreeState DefaultExpanded="true" />
+              <Headers>
+                <Header Width="240" Caption="Component" />
+                <Header Width="90" Caption="Type" />
+                <Header Width="200" Caption="Name" />
+                <Header Width="60" Caption="# children" />
+              </Headers>
+            </FormTree>
+            <VisualDesigner ShowContainerBorders="true" ShowInvisibleComponents="false" IsChanged="true" />
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="f5528360-555e-4d10-83d1-444acf6e1dd1" AutoHideSize="672.4,428.24" DockedSize="672.4,428.24" DocumentSize="672.4,428.24" FloatingSize="672.4,428.24" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieSearching.initSearching">
+        <Data>
+          <State>
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
+          </State>
+        </Data>
+      </Tag>
+    </DocumentWindow>
+    <DocumentWindow UniqueId="3ebc4306-2243-4f2a-baa5-8d014f79f1b6" AutoHideSize="672.4,428.24" DockedSize="672.4,428.24" DocumentSize="672.4,428.24" FloatingSize="672.4,428.24" Size="672.4,428.24" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
+      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movieSearching.handler_eventDispatcher1_OnMessage">
+        <Data>
+          <State>
+            <ToolsStates>
+              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
+                <State DefaultExpanded="true" />
+              </State>
+              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
+                <State DefaultExpanded="true">
+                  <SelectedPaths>
+                    <Item>/form actions (movieSearching)/handler_eventDispatcher1_OnMessage</Item>
+                  </SelectedPaths>
+                </State>
+              </State>
+              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
+                <Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Action parameters</Item>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
+              </State>
+            </ToolsStates>
           </State>
         </Data>
       </Tag>
@@ -381,67 +1325,67 @@
                 <Source Name="DispatchUpdaterVariablesTool" Show="false" />
                 <Source Name="ProjectUpgrader" Show="true" />
                 <Source Name="VariablesTool" Show="true" />
-                <Source Name="TemplateLoader" Show="true" />
-                <Source Name="Exception" Show="true" />
+                <Source Name="MetaXmlReader" Show="false" />
+                <Source Name="HtmlDocumentControl" Show="true" />
                 <Source Name="UpdateTreeNodesRec" Show="true" />
-                <Source Name="PreviewKeyDown" Show="true" />
                 <Source Name="ValidationController" Show="true" />
                 <Source Name="ProjectManager" Show="true" />
-                <Source Name="DispatchUpdater-PGDM" Show="false" />
-                <Source Name="UserPropertyDefaults" Show="true" />
-                <Source Name="FormDocumentEditor" Show="true" />
-                <Source Name="SelectionManager/formtree" Show="true" />
-                <Source Name="DispatchUpdaterFormDocumentEditor" Show="false" />
-                <Source Name="FormTreeBuilder" Show="true" />
-                <Source Name="MementoReader" Show="true" />
-                <Source Name="InvalidOperationException" Show="true" />
-                <Source Name="Autosave" Show="true" />
-                <Source Name="ResourceSerializer" Show="true" />
                 <Source Name="EfAssetWriter" Show="true" />
                 <Source Name="EfWriter" Show="true" />
                 <Source Name="ResourceFactory" Show="true" />
                 <Source Name="AppBuilderNodeJs" Show="true" />
+                <Source Name="VisualDesignerControl" Show="true" />
+                <Source Name="FormDocumentEditor" Show="true" />
+                <Source Name="DesignerApiWrapper" Show="true" />
+                <Source Name="SelectionManager/formtree" Show="true" />
+                <Source Name="IdeApiObject" Show="true" />
+                <Source Name="CodeValidator" Show="true" />
+                <Source Name="BindingPropertyEditor" Show="true" />
+                <Source Name="TemplateLoader" Show="true" />
+                <Source Name="SelectionManager/data designer CustomerData" Show="true" />
+                <Source Name="PreviewKeyDown" Show="true" />
+                <Source Name="DispatchUpdater-PGDM" Show="false" />
+                <Source Name="SelectionManager/data designer Supplier" Show="true" />
+                <Source Name="SelectionManager/ActionTestsControl" Show="true" />
+                <Source Name="REFACTORING" Show="true" />
+                <Source Name="UserPropertyDefaults" Show="true" />
+                <Source Name="DispatchUpdaterFormDocumentEditor" Show="false" />
+                <Source Name="FormTreeBuilder" Show="true" />
+                <Source Name="Autosave" Show="true" />
+                <Source Name="ResourceSerializer" Show="true" />
+                <Source Name="NamingStrategy" Show="true" />
+                <Source Name="CodeCompletionService" Show="true" />
+                <Source Name="ComponentResolver" Show="true" />
+                <Source Name="DependencyUpdaterBinding" Show="true" />
+                <Source Name="SelectionManager/data designer product" Show="true" />
+                <Source Name="ReadonlyViolationException" Show="true" />
                 <Source Name="SelectionManager/data designer entity" Show="true" />
+                <Source Name="SelectionManager/data designer Movies" Show="true" />
+                <Source Name="ColumnMonitor" Show="true" />
+                <Source Name="SelectionManager/universal editor" Show="true" />
+                <Source Name="NullReferenceException" Show="true" />
+                <Source Name="FormApiTreeBuilder" Show="true" />
+                <Source Name="KeyNotFoundException" Show="true" />
+                <Source Name="Exception" Show="true" />
+                <Source Name="MementoReader" Show="true" />
+                <Source Name="InvalidOperationException" Show="true" />
                 <Source Name="SelectionManager/data designer Movie" Show="true" />
                 <Source Name="IOException" Show="true" />
-                <Source Name="DependencyUpdaterBinding" Show="true" />
                 <Source Name="SelectionManager/data designer Series" Show="true" />
                 <Source Name="SelectionManager/data designer season" Show="true" />
                 <Source Name="SelectionManager/data designer ratingSeries" Show="true" />
                 <Source Name="DataTreeBuilder" Show="true" />
                 <Source Name="SelectionManager/data designer episodes" Show="true" />
                 <Source Name="SelectionManager/data designer seasons" Show="true" />
-                <Source Name="SelectionManager/universal editor" Show="true" />
                 <Source Name="SelectionManager/data designer movie" Show="true" />
                 <Source Name="SelectionManager/data designer ratingMovies" Show="true" />
                 <Source Name="SelectionManager/data designer staring" Show="true" />
-                <Source Name="CodeValidator" Show="true" />
-                <Source Name="SelectionManager/ActionTestsControl" Show="true" />
-                <Source Name="CodeCompletionService" Show="true" />
-                <Source Name="BindingPropertyEditor" Show="true" />
-                <Source Name="REFACTORING" Show="true" />
-                <Source Name="NamingStrategy" Show="true" />
                 <Source Name="ArgumentException" Show="true" />
                 <Source Name="AncestingModifierVisitor" Show="true" />
                 <Source Name="FormActionsTreeBuilder" Show="true" />
                 <Source Name="ValidationTool" Show="true" />
                 <Source Name="ExpressionEditorControl" Show="true" />
                 <Source Name="DependencyUpdaterExpression" Show="true" />
-                <Source Name="NullReferenceException" Show="true" />
-                <Source Name="VisualDesignerControl" Show="true" />
-                <Source Name="DesignerApiWrapper" Show="true" />
-                <Source Name="IdeApiObject" Show="true" />
-                <Source Name="MetaXmlReader" Show="false" />
-                <Source Name="HtmlDocumentControl" Show="true" />
-                <Source Name="SelectionManager/data designer CustomerData" Show="true" />
-                <Source Name="SelectionManager/data designer Supplier" Show="true" />
-                <Source Name="ComponentResolver" Show="true" />
-                <Source Name="SelectionManager/data designer product" Show="true" />
-                <Source Name="ReadonlyViolationException" Show="true" />
-                <Source Name="SelectionManager/data designer Movies" Show="true" />
-                <Source Name="ColumnMonitor" Show="true" />
-                <Source Name="FormApiTreeBuilder" Show="true" />
-                <Source Name="KeyNotFoundException" Show="true" />
                 <Source Name="SelectionManager/data designer entity1" Show="true" />
                 <Source Name="SelectionManager/data designer RatingMovies" Show="true" />
                 <Source Name="SelectionManager/data designer Starring" Show="true" />
@@ -457,36 +1401,36 @@
         </Data>
       </Tag>
     </ToolWindow>
-    <ToolWindow UniqueId="93df855e-c5be-4e1d-93d2-ecd3fd348a07" AutoHideSize="300,515.416184379001" DockedSize="390.351673944687,452.71920581249" DocumentSize="300,515.416184379001" FloatingSize="300,515.416184379001" Size="390.351673944687,452.71920581249" IsOpen="true" LastState="Docked" Name="ScreenFactory_Client_ToolWindows_PropertyGridTool" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="93df855e-c5be-4e1d-93d2-ecd3fd348a07" AutoHideSize="300,515.416184379001" DockedSize="558.751673944687,250.028618269019" DocumentSize="300,515.416184379001" FloatingSize="300,515.416184379001" Size="558.751673944687,250.028618269019" IsOpen="true" LastState="Docked" Name="ScreenFactory_Client_ToolWindows_PropertyGridTool" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.PropertyGridTool" />
     </ToolWindow>
-    <ToolWindow UniqueId="0efe2f4d-04cb-44b5-8026-fc7936e60b59" AutoHideSize="300,300" DockedSize="294.248326055313,445.84" DocumentSize="300,300" FloatingSize="261.2,519.2" Size="294.248326055313,445.84" IsOpen="true" LastState="Floating" Name="ScreenFactory_Client_ProjectDesigner_ProjectDesignerControl" RaftingLocation="150,128" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="0efe2f4d-04cb-44b5-8026-fc7936e60b59" AutoHideSize="300,300" DockedSize="294.248326055313,428.24" DocumentSize="300,300" FloatingSize="261.2,519.2" Size="294.248326055313,428.24" IsOpen="true" LastState="Floating" Name="ScreenFactory_Client_ProjectDesigner_ProjectDesignerControl" RaftingLocation="150,128" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ProjectDesigner.ProjectDesignerControl">
         <Data>
           <State DefaultExpanded="true" />
         </Data>
       </Tag>
     </ToolWindow>
-    <ToolWindow UniqueId="25becc2c-c962-4bcb-9469-4c3cc5f135e1" AutoHideSize="150,0" DockedSize="205.6,445.84" DocumentSize="150,0" FloatingSize="150,0" Size="205.6,445.84" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_ToolWindows_ToolboxControl" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="25becc2c-c962-4bcb-9469-4c3cc5f135e1" AutoHideSize="150,0" DockedSize="205.6,428.24" DocumentSize="150,0" FloatingSize="150,0" Size="205.6,428.24" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_ToolWindows_ToolboxControl" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.ToolboxControl" />
     </ToolWindow>
-    <ToolWindow UniqueId="0c01c084-325d-4ddc-afc6-b53edbbc5b43" AutoHideSize="300,177.423815620999" DockedSize="390.351673944687,86.1207941875095" DocumentSize="300,177.423815620999" FloatingSize="413.2,47.2" Size="390.351673944687,86.1207941875095" IsOpen="true" LastState="Floating" Name="ScreenFactory_Client_ApiObjectsDesigner_FormApiObjectsTool" RaftingLocation="952.4,399.2" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="0c01c084-325d-4ddc-afc6-b53edbbc5b43" AutoHideSize="300,177.423815620999" DockedSize="558.751673944687,173.211381730981" DocumentSize="300,177.423815620999" FloatingSize="413.2,47.2" Size="558.751673944687,173.211381730981" IsOpen="true" LastState="Floating" Name="ScreenFactory_Client_ApiObjectsDesigner_FormApiObjectsTool" RaftingLocation="952.4,399.2" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool" />
     </ToolWindow>
-    <ToolWindow UniqueId="851665aa-870b-4c37-a870-836828e1b0c0" AutoHideSize="0,200" DockedSize="390.351673944687,86.1207941875095" DocumentSize="579.2,587.24" FloatingSize="413.2,47.2" Size="390.351673944687,86.1207941875095" IsOpen="true" LastState="Document" Name="ScreenFactory_Client_Designers_ActionsDesigner_FormActionsTool" RaftingLocation="1110,320.8" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="851665aa-870b-4c37-a870-836828e1b0c0" AutoHideSize="0,200" DockedSize="558.751673944687,173.211381730981" DocumentSize="579.2,587.24" FloatingSize="413.2,47.2" Size="558.751673944687,173.211381730981" IsOpen="true" LastState="Document" Name="ScreenFactory_Client_Designers_ActionsDesigner_FormActionsTool" RaftingLocation="1110,320.8" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
         <Data>
           <Options ShowEvents="true" />
         </Data>
       </Tag>
     </ToolWindow>
-    <ToolWindow UniqueId="c70c479e-0391-4678-a147-854b3da9b3b7" AutoHideSize="300,300" DockedSize="294.248326055313,445.84" DocumentSize="300,300" FloatingSize="300,300" Size="294.248326055313,445.84" IsOpen="true" LastState="Floating" Name="ScreenFactory_Client_DataContextDesigner_VariablesTool" RaftingLocation="24.4,24.4" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="c70c479e-0391-4678-a147-854b3da9b3b7" AutoHideSize="300,300" DockedSize="294.248326055313,428.24" DocumentSize="300,300" FloatingSize="300,300" Size="294.248326055313,428.24" IsOpen="true" LastState="Floating" Name="ScreenFactory_Client_DataContextDesigner_VariablesTool" RaftingLocation="24.4,24.4" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.DataContextDesigner.VariablesTool" />
     </ToolWindow>
-    <ToolWindow UniqueId="641b70c6-0801-442d-a404-0b7e3cc4fcbe" AutoHideSize="300,114.4" DockedSize="1515.2,42" DocumentSize="665.6,697.84" FloatingSize="300,300" Size="1515.2,42" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_ToolWindows_ValidationTool" RaftingLocation="328.8,582.4" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="641b70c6-0801-442d-a404-0b7e3cc4fcbe" AutoHideSize="300,114.4" DockedSize="1528,217.6" DocumentSize="665.6,697.84" FloatingSize="300,300" Size="1528,217.6" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_ToolWindows_ValidationTool" RaftingLocation="328.8,582.4" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.ValidationTool" />
     </ToolWindow>
-    <ToolWindow UniqueId="f3843f3e-ea4e-4e8c-8a95-6f545e73ad84" AutoHideSize="300,300" DockedSize="1515.2,102" DocumentSize="300,300" FloatingSize="300,300" Size="1515.2,102" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_ToolWindows_ListResultsTool" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="f3843f3e-ea4e-4e8c-8a95-6f545e73ad84" AutoHideSize="300,300" DockedSize="1528,42" DocumentSize="300,300" FloatingSize="300,300" Size="1528,42" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_ToolWindows_ListResultsTool" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.ListResultsTool" />
     </ToolWindow>
     <ToolWindow UniqueId="d13cb2bb-7017-4bac-a722-6102d3fdf3c5" AutoHideSize="300,300" DockedSize="300,300" DocumentSize="300,300" FloatingSize="300,300" Size="300,300" IsOpen="false" LastState="Docked" Name="ScreenFactory_Client_ToolWindows_AsyncTasksTool" StandardMdiBounds="0,0,300,200" State="AutoHide">

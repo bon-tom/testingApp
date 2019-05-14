@@ -1355,26 +1355,8 @@ navigation.main.movies1.go()]]></Script>
         <Script><![CDATA[system.console("Tohle jsou data pro edit ve formuláři edit" +form.recordForEdit)
 system.console(tostring(form.recordForEdit.isTouched()) )
 
-//var response = apiobjects.serverForMovies.getAsync("record?id=" +tostring(this.form.id))
-
-//if response.isError() then
-//	system.consoleError(response.getErrorMessage())	
-//else
-//	result = response.extractJson("card")
-//	result = response.extractJson("record/")
-	
-	//system.console(response.getJsonString())
-	
-	//var codeListData = recordForEdit.getJsonString()
-	
-	//system.console(codeListData)
-	
-	//form.apiobjects.fillFromJson(recordForEdit)
-	form.complex1.fromJson(form.recordForEdit)
-	//form.dummyForActor = form.complex1.starring.count()
-	//system.console(tostring(form.dummyForActor))
-//endif
-//system.console("Seznam se jeví jako prázdny?" +tostring(form._MarkofEmptiness))]]></Script>
+form.complex1.fromJson(form.recordForEdit)
+]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

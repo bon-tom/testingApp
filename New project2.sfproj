@@ -76,5 +76,9 @@
       <ReferencedIdentity value="Timer.cee6b8357b9240469bd5d89cf64b0c9a" />
       <ReferencedVersion value="1.0.1" />
     </PackageReference>
+    <PackageReference Alias="EventDispatcher" IsComponentLib="True" Origin="EventDispatcher\EventDispatcher.package">
+      <ReferencedIdentity value="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26" />
+      <ReferencedVersion value="1.0.1" />
+    </PackageReference>
   </PackageReferences>
 </ProjectRoot>
