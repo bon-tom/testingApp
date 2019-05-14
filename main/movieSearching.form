@@ -30,53 +30,6 @@
           <Orientation value="Horizontal" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
-          <Children>
-            <Button>
-              <Name value="sortByName" />
-              <Caption value="Sort by name" />
-              <Panel.Height value="#" />
-              <Panel.Width value="150px" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~sortName" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-button" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Button>
-            <Button>
-              <Name value="sortByYear" />
-              <Caption value="Sort by year" />
-              <Panel.Height value="#" />
-              <Panel.Width value="150px" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~sortByYearOfRelease" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-button" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Button>
-            <Button>
-              <Name value="sortByRating" />
-              <Caption value="Sort by rating" />
-              <Panel.Height value="#" />
-              <Panel.Width value="150px" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~sortRating" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-button" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Button>
-          </Children>
           <CssClass>
             <CssClassConditional>
               <ClassName value="{theme}-panel" />
@@ -405,86 +358,142 @@
               <Name value="repeater1" />
               <Content>
                 <Panel>
-                  <Name value="panel6" />
-                  <Orientation value="Vertical" />
+                  <Name value="panel10" />
+                  <Orientation value="Horizontal" />
                   <Children>
-                    <TextBox>
-                      <Name value="textBox3" />
+                    <Panel>
+                      <Name value="panel9" />
+                      <Orientation value="Horizontal" />
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
-                      <Bindings>
-                        <Binding SourceProperty="Data" Expression="name" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="name.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="name.caption()" />
-                      </Bindings>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-textbox" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </TextBox>
-                    <TextBox>
-                      <Name value="textBox4" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="*" />
-                      <Bindings>
-                        <Binding SourceProperty="Data" Expression="yearOfRelease" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="yearOfRelease.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="yearOfRelease.caption()" />
-                      </Bindings>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-textbox" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </TextBox>
-                    <EnumCombo>
-                      <Name value="enumCombo2" />
-                      <IsEnabled value="False" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="*" />
-                      <Bindings>
-                        <Binding SourceProperty="Data" Expression="type" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="type.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="type.caption()" />
-                      </Bindings>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-enumcombo" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </EnumCombo>
-                    <GroupBox>
-                      <Name value="groupBox2" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="*" />
-                      <Content>
-                        <Repeater>
-                          <Name value="repeater2" />
-                          <Content>
+                      <Children>
+                        <Panel>
+                          <Name value="panel81" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Children>
                             <Panel>
-                              <Name value="panel7" />
-                              <Orientation value="Vertical" />
+                              <Name value="panel611" />
+                              <Orientation value="Horizontal" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
                               <Children>
-                                <TextBox>
-                                  <Name value="textBox7" />
+                                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                                  <Name value="nameOfMovie" />
+                                  <Caption value="Name of movie" />
+                                  <CaptionPosition value="Top" />
                                   <Panel.Height value="#" />
-                                  <Panel.Width value="*" />
+                                  <Panel.Width value="150px" />
                                   <Bindings>
-                                    <Binding SourceProperty="Data" Expression="actorName" />
-                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
-                                    <Binding SourceProperty="Caption" Expression="actorName.caption()" />
+                                    <Binding SourceProperty="Data" Expression="name" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="name.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="name.caption()" />
                                   </Bindings>
                                   <CssClass>
                                     <CssClassConditional>
-                                      <ClassName value="{theme}-textbox" />
+                                      <ClassName value="{theme}-labeledtext" />
                                       <IsThemedStyle value="True" />
                                     </CssClassConditional>
                                   </CssClass>
-                                </TextBox>
+                                </LabeledText>
+                                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                                  <Name value="yearOfRele" />
+                                  <Caption value="Year of rele" />
+                                  <CaptionPosition value="Top" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="150px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="yearOfRelease" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="yearOfRelease.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="yearOfRelease.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-labeledtext" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </LabeledText>
+                                <EnumCombo>
+                                  <Name value="enumCombo211" />
+                                  <Caption value="Enum combo 2" />
+                                  <IsEnabled value="False" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="type" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="type.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="type.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-enumcombo" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </EnumCombo>
+                                <GroupBox>
+                                  <Name value="groupBox211" />
+                                  <Caption value="Group box 2" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Content>
+                                    <Repeater>
+                                      <Name value="repeater211" />
+                                      <Content>
+                                        <Panel>
+                                          <Name value="panel711" />
+                                          <Orientation value="Vertical" />
+                                          <Children>
+                                            <TextBox>
+                                              <Name value="textBox711" />
+                                              <Caption value="Text box 7" />
+                                              <IsEnabled value="False" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="*" />
+                                              <Bindings>
+                                                <Binding SourceProperty="Data" Expression="actorName" />
+                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
+                                                <Binding SourceProperty="Caption" Expression="actorName.caption()" />
+                                              </Bindings>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-textbox" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </TextBox>
+                                          </Children>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Panel>
+                                      </Content>
+                                      <Bindings>
+                                        <Binding SourceProperty="DataItems" Expression="starring" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-repeater" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Repeater>
+                                  </Content>
+                                  <Bindings>
+                                    <Binding SourceProperty="Caption" Expression="starring.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-groupbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </GroupBox>
                               </Children>
                               <CssClass>
                                 <CssClassConditional>
@@ -493,28 +502,22 @@
                                 </CssClassConditional>
                               </CssClass>
                             </Panel>
-                          </Content>
-                          <Bindings>
-                            <Binding SourceProperty="DataItems" Expression="starring" />
-                          </Bindings>
+                          </Children>
                           <CssClass>
                             <CssClassConditional>
-                              <ClassName value="{theme}-repeater" />
+                              <ClassName value="{theme}-panel" />
                               <IsThemedStyle value="True" />
                             </CssClassConditional>
                           </CssClass>
-                        </Repeater>
-                      </Content>
-                      <Bindings>
-                        <Binding SourceProperty="Caption" Expression="starring.caption()" />
-                      </Bindings>
+                        </Panel>
+                      </Children>
                       <CssClass>
                         <CssClassConditional>
-                          <ClassName value="{theme}-groupbox" />
+                          <ClassName value="{theme}-panel" />
                           <IsThemedStyle value="True" />
                         </CssClassConditional>
                       </CssClass>
-                    </GroupBox>
+                    </Panel>
                   </Children>
                   <CssClass>
                     <CssClassConditional>
@@ -545,108 +548,6 @@
             </CssClassConditional>
           </CssClass>
         </GroupBox>
-        <Label>
-          <Name value="label6" />
-          <Data value="All Records" />
-          <Heading value="h3" />
-          <Panel.Height value="#" />
-          <Panel.HorizontalAlignment value="Center" />
-          <Panel.Width value="300px" />
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-label" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Label>
-        <DataTable>
-          <Name value="dataTable1" />
-          <Panel.Height value="#" />
-          <Panel.Width value="*" />
-          <Bindings>
-            <Binding SourceProperty="DataItems" Expression="collection1" />
-          </Bindings>
-          <Columns>
-            <DataColumn>
-              <Name value="nameofAll" />
-              <Caption value="Name" />
-              <Content>
-                <Label>
-                  <Name value="label1" />
-                  <Bindings>
-                    <Binding SourceProperty="Data" Expression="name" />
-                  </Bindings>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-label" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Label>
-              </Content>
-              <HeaderCssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-datacolumn" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </HeaderCssClass>
-            </DataColumn>
-            <DataColumn>
-              <Name value="year" />
-              <Caption value="Year Of Release" />
-              <Content>
-                <Label>
-                  <Name value="label2" />
-                  <Bindings>
-                    <Binding SourceProperty="Data" Expression="yearOfRelease" />
-                  </Bindings>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-label" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Label>
-              </Content>
-              <HeaderCssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-datacolumn" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </HeaderCssClass>
-            </DataColumn>
-            <DataColumn>
-              <Name value="dataColumn4" />
-              <Caption value="rating" />
-              <Content>
-                <Label>
-                  <Name value="label5" />
-                  <Bindings>
-                    <Binding SourceProperty="Data" Expression="rating.score" />
-                  </Bindings>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-label" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Label>
-              </Content>
-              <HeaderCssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-datacolumn" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </HeaderCssClass>
-            </DataColumn>
-          </Columns>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-datatable" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </DataTable>
       </Children>
       <CssClass>
         <CssClassConditional>
@@ -704,6 +605,13 @@
         <Attribute>
           <Name value="type" />
           <Caption value="Type" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="mainDirector" />
+          <Caption value="Main director" />
           <DeclaredType>
             <AttributeType />
           </DeclaredType>
@@ -839,7 +747,9 @@ if form.name.hasValue() then
 			
 			system.console("repoName"+item.toJson())
 			//form.collectionMovies.addItem()
-			//collectionItem.id = item.id
+			
+			
+			collectionItem.id = item.id
 			collectionItem.name = item.name
 			collectionItem.yearOfRelease = item.yearOfRelease
 			collectionItem.type = item.type
@@ -873,7 +783,8 @@ endif
       <Name value="handler_ShowWholeRecord_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.movieDetail.go(params.data.id)]]></Script>
+        <Script><![CDATA[//navigation.main.movieDetail.go(params.data.id)
+navigation.main.movieDetail.goAndBack(params.data.id)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -906,11 +817,13 @@ if form.filter.starringString.hasValue() then
 			
 			//form.collectionMovies = x
 			
+			collectionItem.id = item.id
+			
 			collectionItem.name = item.name
 			collectionItem.yearOfRelease = item.yearOfRelease
 			collectionItem.type = item.type
-			//collectionItem.mainDirector = item.mainDirector
-		    
+			
+  
 		    
 		    //collectionItem.starring = item.starring
 		    
@@ -951,6 +864,7 @@ if form.filter.type.hasValue() then
 			
 			system.console("repoType"+item.toJson())
 			
+			collectionItem.id = item.id
 			collectionItem.name = item.name
 			collectionItem.yearOfRelease = item.yearOfRelease
 			collectionItem.type = item.type
@@ -989,7 +903,8 @@ var resOfOrder = form.collection1.orderBy(current.rating.score, form.ascDesc).to
 
 system.console(resOfOrder)
 
-form.collection1.fromJson(resOfOrder)]]></Script>
+//form.collection1.fromJson(resOfOrder)
+form.collectionMovies.fromJson(resOfOrder)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1025,7 +940,8 @@ var resOfOrder = form.collectionMovies.orderBy(current.name, form.ascDesc).toJso
 
 system.console(resOfOrder)
 
-form.collection1.fromJson(resOfOrder)]]></Script>
+//form.collection1.fromJson(resOfOrder)
+form.collectionMovies.fromJson(resOfOrder)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1048,7 +964,8 @@ var resOfOrder = form.collection1.orderBy(current.yearOfRelease, form.ascDesc).t
 
 system.console(resOfOrder)
 
-form.collection1.fromJson(resOfOrder)]]></Script>
+//form.collection1.fromJson(resOfOrder)
+form.collectionMovies.fromJson(resOfOrder)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

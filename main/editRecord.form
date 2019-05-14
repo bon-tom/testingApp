@@ -40,6 +40,21 @@
             </CssClassConditional>
           </CssClass>
         </Button>
+        <Button>
+          <Name value="Reset" />
+          <Caption value="Reset" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~action2" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
         <Panel>
           <Name value="panel2" />
           <Orientation value="Horizontal" />
@@ -51,6 +66,9 @@
               <Orientation value="Vertical" />
               <Panel.Height value="#" />
               <Panel.Width value="42%" />
+              <Bindings>
+                <Binding SourceProperty="IsVisible" Expression="attributeforReset" />
+              </Bindings>
               <Children>
                 <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
                   <Name value="labeledText2" />
@@ -1157,6 +1175,15 @@
   <DataContext>
     <DataContext>
       <Children>
+        <Attribute>
+          <Name value="attributeforReset" />
+          <Caption value="Attribute for reset" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
         <Computed>
           <Name value="computed1" />
           <Caption value="Computed 1" />
@@ -1446,6 +1473,25 @@ item.number =  form.complex1.seasons.count()]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[params.data.removeMe()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action2" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.attributeforReset = true then
+	form.attributeforReset = false
+else
+	form.attributeforReset = true
+endif
+
+system.console("Tohle jsou data pro reset ve formuláři edit" +form.recordForEdit)
+system.console(tostring(form.recordForEdit.isTouched()) )
+
+
+	form.complex1.fromJson(form.recordForEdit)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

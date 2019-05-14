@@ -3,7 +3,7 @@
 <ProjectRoot>
   <CreatedOn value="2019-04-25T11:17:38.1107686+02:00" />
   <ProjectName value="New project2" />
-  <StartupForm reference="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.movies1" />
+  <StartupForm reference="/(main.f7d31f056d6b42a29b16cd4ccb7ef711)+UiParts.MasterForm" />
   <MainForm>
     <ProjectMainFormOptions />
   </MainForm>

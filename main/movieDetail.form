@@ -55,70 +55,96 @@
             </CssClassConditional>
           </CssClass>
         </Button>
-        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
-          <Name value="labeledText1" />
+        <GroupBox>
+          <Name value="groupBox5" />
+          <Caption value="Basic Info" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
-          <Bindings>
-            <Binding SourceProperty="Data" Expression="complex1.name" />
-            <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.name.isRequired()" />
-            <Binding SourceProperty="Caption" Expression="complex1.name.caption()" />
-          </Bindings>
+          <Content>
+            <Panel>
+              <Name value="panel8" />
+              <Orientation value="Horizontal" />
+              <Children>
+                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                  <Name value="labeledText1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="complex1.name" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.name.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="complex1.name.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-labeledtext" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </LabeledText>
+                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                  <Name value="labeledText2" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="complex1.yearOfRelease" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.yearOfRelease.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="complex1.yearOfRelease.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-labeledtext" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </LabeledText>
+                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                  <Name value="labeledText3" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="complex1.type" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.type.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="complex1.type.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-labeledtext" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </LabeledText>
+                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                  <Name value="labeledText4" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="complex1.mainDirector" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.mainDirector.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="complex1.mainDirector.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-labeledtext" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </LabeledText>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
           <CssClass>
             <CssClassConditional>
-              <ClassName value="{theme}-labeledtext" />
+              <ClassName value="{theme}-groupbox" />
               <IsThemedStyle value="True" />
             </CssClassConditional>
           </CssClass>
-        </LabeledText>
-        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
-          <Name value="labeledText2" />
-          <Panel.Height value="#" />
-          <Panel.Width value="300px" />
-          <Bindings>
-            <Binding SourceProperty="Data" Expression="complex1.yearOfRelease" />
-            <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.yearOfRelease.isRequired()" />
-            <Binding SourceProperty="Caption" Expression="complex1.yearOfRelease.caption()" />
-          </Bindings>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-labeledtext" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </LabeledText>
-        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
-          <Name value="labeledText3" />
-          <Panel.Height value="#" />
-          <Panel.Width value="300px" />
-          <Bindings>
-            <Binding SourceProperty="Data" Expression="complex1.type" />
-            <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.type.isRequired()" />
-            <Binding SourceProperty="Caption" Expression="complex1.type.caption()" />
-          </Bindings>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-labeledtext" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </LabeledText>
-        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
-          <Name value="labeledText4" />
-          <Panel.Height value="#" />
-          <Panel.Width value="300px" />
-          <Bindings>
-            <Binding SourceProperty="Data" Expression="complex1.mainDirector" />
-            <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.mainDirector.isRequired()" />
-            <Binding SourceProperty="Caption" Expression="complex1.mainDirector.caption()" />
-          </Bindings>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-labeledtext" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </LabeledText>
+        </GroupBox>
         <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
           <Name value="labeledText5" />
           <Panel.Height value="#" />
@@ -136,118 +162,144 @@
           </CssClass>
         </LabeledText>
         <GroupBox>
-          <Name value="groupBox2" />
+          <Name value="groupBox6" />
+          <Caption value="Group box 6" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
           <Content>
-            <Repeater>
-              <Name value="repeater2" />
-              <Content>
-                <Panel>
-                  <Name value="panel4" />
-                  <Orientation value="Vertical" />
-                  <Children>
-                    <TextBox>
-                      <Name value="textBox2" />
-                      <CaptionVAlign value="Middle" />
-                      <IsEnabled value="False" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="300px" />
+            <Panel>
+              <Name value="panel9" />
+              <Orientation value="Horizontal" />
+              <Children>
+                <GroupBox>
+                  <Name value="groupBox2" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Content>
+                    <Repeater>
+                      <Name value="repeater2" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel4" />
+                          <Orientation value="Vertical" />
+                          <Children>
+                            <TextBox>
+                              <Name value="textBox2" />
+                              <CaptionVAlign value="Middle" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="300px" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="genre" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="genre.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="genre.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
                       <Bindings>
-                        <Binding SourceProperty="Data" Expression="genre" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="genre.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="genre.caption()" />
+                        <Binding SourceProperty="DataItems" Expression="complex1.genres" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
-                          <ClassName value="{theme}-textbox" />
+                          <ClassName value="{theme}-repeater" />
                           <IsThemedStyle value="True" />
                         </CssClassConditional>
                       </CssClass>
-                    </TextBox>
-                  </Children>
+                    </Repeater>
+                  </Content>
+                  <Bindings>
+                    <Binding SourceProperty="Caption" Expression="complex1.genres.caption()" />
+                  </Bindings>
                   <CssClass>
                     <CssClassConditional>
-                      <ClassName value="{theme}-panel" />
+                      <ClassName value="{theme}-groupbox" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
                   </CssClass>
-                </Panel>
-              </Content>
-              <Bindings>
-                <Binding SourceProperty="DataItems" Expression="complex1.genres" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-repeater" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Repeater>
-          </Content>
-          <Bindings>
-            <Binding SourceProperty="Caption" Expression="complex1.genres.caption()" />
-          </Bindings>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-groupbox" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </GroupBox>
-        <GroupBox>
-          <Name value="groupBox1" />
-          <Panel.Height value="#" />
-          <Panel.Width value="*" />
-          <Content>
-            <Repeater>
-              <Name value="repeater1" />
-              <Content>
-                <Panel>
-                  <Name value="panel3" />
-                  <Orientation value="Vertical" />
-                  <Children>
-                    <TextBox>
-                      <Name value="textBox1" />
-                      <CaptionVAlign value="Middle" />
-                      <IsEnabled value="False" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="300px" />
+                </GroupBox>
+                <GroupBox>
+                  <Name value="groupBox1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Content>
+                    <Repeater>
+                      <Name value="repeater1" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel3" />
+                          <Orientation value="Vertical" />
+                          <Children>
+                            <TextBox>
+                              <Name value="textBox1" />
+                              <CaptionVAlign value="Middle" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="300px" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="actorName" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="actorName.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
                       <Bindings>
-                        <Binding SourceProperty="Data" Expression="actorName" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="actorName.caption()" />
+                        <Binding SourceProperty="DataItems" Expression="complex1.starring" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
-                          <ClassName value="{theme}-textbox" />
+                          <ClassName value="{theme}-repeater" />
                           <IsThemedStyle value="True" />
                         </CssClassConditional>
                       </CssClass>
-                    </TextBox>
-                  </Children>
+                    </Repeater>
+                  </Content>
+                  <Bindings>
+                    <Binding SourceProperty="Caption" Expression="complex1.starring.caption()" />
+                  </Bindings>
                   <CssClass>
                     <CssClassConditional>
-                      <ClassName value="{theme}-panel" />
+                      <ClassName value="{theme}-groupbox" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
                   </CssClass>
-                </Panel>
-              </Content>
-              <Bindings>
-                <Binding SourceProperty="DataItems" Expression="complex1.starring" />
-              </Bindings>
+                </GroupBox>
+              </Children>
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-repeater" />
+                  <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
               </CssClass>
-            </Repeater>
+            </Panel>
           </Content>
-          <Bindings>
-            <Binding SourceProperty="Caption" Expression="complex1.starring.caption()" />
-          </Bindings>
           <CssClass>
             <CssClassConditional>
               <ClassName value="{theme}-groupbox" />
