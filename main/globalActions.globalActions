@@ -2,4 +2,18 @@
 <?data-format version="0.400"?>
 <GlobalActions>
   <Name value="globalActions" />
+  <Actions>
+    <ActionBlock>
+      <Name value="action1" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.breadcrumbsCtrl1.removeAll()
+apiobjects.breadcrumbsCtrl1.addBreadcrumb("Home", "Movie list", "/list", defaultString(), true)
+
+apiobjects.breadcrumbsCtrl1.addBreadcrumb("Home", "Record", defaultString(), defaultString(), defaultBool())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
 </GlobalActions>

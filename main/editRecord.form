@@ -630,6 +630,11 @@
                           <OnClick>
                             <ActionEvent ReferencedAction="~action1" />
                           </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                            </CssClassConditional>
+                          </CssClass>
                         </Button>
                         <Repeater>
                           <Name value="repeater3" />
@@ -726,6 +731,11 @@
                           <OnClick>
                             <ActionEvent ReferencedAction="~handler_button21_OnClick" />
                           </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                            </CssClassConditional>
+                          </CssClass>
                         </Button>
                         <Repeater>
                           <Name value="repeater4" />
@@ -823,6 +833,11 @@
                           <OnClick>
                             <ActionEvent ReferencedAction="~addSeason" />
                           </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                            </CssClassConditional>
+                          </CssClass>
                         </Button>
                         <Repeater>
                           <Name value="repeater7" />

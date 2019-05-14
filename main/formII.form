@@ -10,6 +10,18 @@
       <Panel.Height value="#" />
       <Panel.Width value="*" />
       <Children>
+        <Label>
+          <Name value="formIIin" />
+          <Data value="Form II instead of movieAdd" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
         <Button>
           <Name value="SaveMyRecord" />
           <Panel.Height value="#" />
@@ -205,6 +217,11 @@
                       <OnClick>
                         <ActionEvent ReferencedAction="~addActor" />
                       </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                        </CssClassConditional>
+                      </CssClass>
                     </Button>
                     <Repeater>
                       <Name value="repeater5" />
@@ -556,6 +573,11 @@
                       <OnClick>
                         <ActionEvent ReferencedAction="~handler_button14_OnClick" />
                       </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                        </CssClassConditional>
+                      </CssClass>
                     </Button>
                     <Repeater>
                       <Name value="repeater1" />

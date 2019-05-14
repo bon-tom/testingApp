@@ -150,6 +150,11 @@
                       <OnClick>
                         <ActionEvent ReferencedAction="~action5" />
                       </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                        </CssClassConditional>
+                      </CssClass>
                     </Button>
                     <Button>
                       <Name value="button2" />

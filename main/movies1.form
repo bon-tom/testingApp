@@ -137,7 +137,7 @@
                 </Button>
                 <Button>
                   <Name value="GotoSearchForm" />
-                  <Caption value="Go to Search and Sort form" />
+                  <Caption value="Go to Search form" />
                   <Panel.Height value="#" />
                   <Panel.Width value="150px" />
                   <OnClick>
@@ -688,16 +688,15 @@
     <ActionBlock>
       <Name value="initMovieForm" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[/*
+        <Script><![CDATA[
 
-if apiobjects.breadcrumbsCtrl.count() = 0 then
-	apiobjects.breadcrumbsCtrl.addBreadcrumb("main", "Main", "", "", true)
+if apiobjects.breadcrumbsCtrl1.count() = 0 then
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("main", "Main", "", "", true)
 else
-	apiobjects.breadcrumbsCtrl.removeTo(1)
+	apiobjects.breadcrumbsCtrl1.removeTo(1)
 endif
 
-apiobjects.urlRouter.clearUrl()
-*/
+
 
 //var attrForBusy = true
 

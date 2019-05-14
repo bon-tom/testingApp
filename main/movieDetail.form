@@ -815,5 +815,22 @@ navigation.main.editRecord.go(form.recordForEdit)]]></Script>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="createBreadCrumbs" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.breadcrumbsCtrl2.removeAll()
+form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("Home", "Movie list", "/list", defaultString(), true)
+
+form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("Home", "Record", defaultString(), defaultString(), defaultBool())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
+  <ApiObjects>
+    <BreadcrumbsCtrl identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+      <Name value="breadcrumbsCtrl2" />
+    </BreadcrumbsCtrl>
+  </ApiObjects>
 </Form>
