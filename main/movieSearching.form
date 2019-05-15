@@ -551,14 +551,12 @@
       <Name value="searchwithName" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[//form.collectionMovies.clear()
-
-
-if form.name.hasValue() then
-	//form.collection1.clear()
-	//form.collection1.fromJson(form.dataJson)
+system.console(form.filter.list.name)
+if form.filter.list.name.hasValue() then
+	system.console(form.filter.list.name)
 
 	foreach item in form.collection1 do
-		if indexOf(item.name, form.name) <> 0 then
+		if indexOf(item.name, form.filter.list.name) <> 0 then
 		//	system.console(form.collectionMovies.)
 			var collectionItem = form.collectionMovies.addItem()
 			
@@ -775,46 +773,6 @@ if form.filter.starringString.hasValue() then
 		endif
 	endfor
 
-endif]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="searchwithNameII" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.collectionMovies.clear()
-if form.filter.type.hasValue() then
-	//form.collection1.fromJson(form.dataJson)
-
-	foreach item in form.collection1 do
-	
-		//if indexOf(item.type, form.filter.type) <> 0 then
-		//if indexOf(item.type, form.filter.type) then
-		if (form.filter.type = item.type ) then
-		//if indexOf(item.type, form.type) <> 0 then
-			
-			var collectionItem = form.collectionMovies.addItem()
-			
-			system.console("repoType"+item.toJson())
-			
-			collectionItem.id = item.id
-			collectionItem.name = item.name
-			collectionItem.yearOfRelease = item.yearOfRelease
-			collectionItem.type = item.type
-			
-			//collectionItem.starring = item.starring
-			
-			var ItemJson = item.starring.toJson()
-			collectionItem.starring.fromJson(ItemJson)
-			
-			system.console("Cosik jsem aj našel podle type")
-		endif
-	endfor
-	
-	//var x = form.collectionMovies.toJson()
-	
 endif]]></Script>
       </ActionLangBody>
       <DataContext>

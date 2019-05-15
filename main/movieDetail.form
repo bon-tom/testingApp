@@ -789,7 +789,7 @@ endif
     <ActionBlock>
       <Name value="setUrl" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var url = packages.main.apiobjects.urlRouter1.findFormUrl(navigation.main.Moviedetail.fullName)
+        <Script><![CDATA[var url = packages.main.apiobjects.urlRouter1.findFormUrl(navigation.main.movieDetail.fullName)
 
 if form.id.hasValue() then
 	url.addString("id", form.id)
