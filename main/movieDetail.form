@@ -747,9 +747,7 @@ else
 	
 	form.recordForEdit=response.getJsonString()
     form.actions.setUrl()
-    
-    
-	form.actions.createBreadCrumbs()
+ 
 endif
 
 ]]></Script>
@@ -761,16 +759,13 @@ endif
     <ActionBlock>
       <Name value="deleteRecord" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[//form.complex1.id = params.data.id
-
-form.deleteConfirm = apiobjects.page1.confirm("Do you really want to save all changes?")
+        <Script><![CDATA[form.deleteConfirm = apiobjects.page1.confirm("Do you really want to save all changes?")
 form.attrForBusy = true
 if form.deleteConfirm = true then
 
 	form.deleteComplex.id = form.id
 	system.console("vypsani" +tostring(form.deleteComplex.toJson()))
 	var response = apiobjects.serverForMovies.postAsync("delete", form.deleteComplex.toJson())
-
 
 	if response.isError() then
 		globals.errorMessage = response.getErrorMessage()
@@ -800,8 +795,7 @@ if form.id.hasValue() then
 	url.addString("id", form.id)
 endif
 
-url.updatePageUrl()
-]]></Script>
+url.updatePageUrl()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -812,29 +806,6 @@ url.updatePageUrl()
       <ActionLangBody IsValid="True">
         <Script><![CDATA[system.console("Tady odesílám data pro edit z movie detailu" +tostring(form.recordForEdit))
 navigation.main.editRecord.go(form.recordForEdit)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="createBreadCrumbs" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[/*
-apiobjects.breadcrumbsCtrl2.removeAll()
-form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("Movie", "Movie list", " /home", defaultString(), true)
-
-form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("Home", "Record", defaultString(), defaultString(), defaultBool())
-
-
-/*
-if form.apiobjects.breadcrumbsCtrl2.count() = 0 then
-	form.apiobjects.breadcrumbsCtrl2.addBreadcrumb("main", "Main", "", "", true)
-else
-	form.apiobjects.breadcrumbsCtrl2.removeTo(1)
-endif
-
-*/]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

@@ -166,7 +166,7 @@
           <Panel.Height value="#" />
           <Panel.Width value="150px" />
           <OnClick>
-            <ActionEvent ReferencedAction="~searchwithName" />
+            <ActionEvent ReferencedAction="~searchAll" />
           </OnClick>
           <CssClass>
             <CssClassConditional>
@@ -504,7 +504,7 @@
               <Caption value="Rating" />
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.RatingMovies" />
+                  <Include reference="+DataEntities.rating" />
                 </Include>
               </Children>
             </Complex>
@@ -550,12 +550,8 @@
     <ActionBlock>
       <Name value="searchwithName" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[//system.console(form.dataJson)
-form.collectionMovies.clear()
-//form.apiobjects.movieName.fillFromJson(form.dataJson)
+        <Script><![CDATA[//form.collectionMovies.clear()
 
-//var source = tostring(form.dataJson)
-//form.name = tostring(source)
 
 if form.name.hasValue() then
 	//form.collection1.clear()
@@ -603,10 +599,9 @@ endif
     <ActionBlock>
       <Name value="searchbyStarringName" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.collectionMovies.clear()
+        <Script><![CDATA[//form.collectionMovies.clear()
 if form.filter.starringString.hasValue() then
-	//form.collection1.clear()
-	//form.collection1.fromJson(form.dataJson)
+
 	var domalejchzfiltru=tolower(form.filter.starringString)
 	
 	system.console(domalejchzfiltru)
@@ -646,10 +641,7 @@ if form.filter.starringString.hasValue() then
 			//system.console(y)
 		endif
 	endfor
-	
-	//var x = form.collectionMovies.toJson()
-	//system.console("blbblbec"+ x)
-	
+
 endif]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -659,7 +651,7 @@ endif]]></Script>
     <ActionBlock>
       <Name value="searchbyType" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.collectionMovies.clear()
+        <Script><![CDATA[//form.collectionMovies.clear()
 if form.filter.type.hasValue() then
 	//form.collection1.fromJson(form.dataJson)
 
@@ -734,6 +726,138 @@ form.apiobjects.movieName.fillFromJson(form.dataJson)]]></Script>
 	if params.data = "main" then		
 		navigation.main.moviesList.go()
 	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="searchAll" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//form.collectionMovies.clear()
+
+//form.actions.searchwithNameII()
+form.actions.searchbyTypeII()
+form.actions.searchbyStarringNameII()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="searchbyStarringNameII" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//form.collectionMovies.clear()
+if form.filter.starringString.hasValue() then
+
+	var domalejchzfiltru=tolower(form.filter.starringString)
+	system.console(domalejchzfiltru)
+	system.console("Zdrojová data pro porovnání Starring Name II"+form.collectionMovies.toJson())
+	
+	foreach item in form.collectionMovies do
+	    system.console("Hledam podle jmena herce")
+	    /*
+		if item.starring.exists(indexOf(tolower(current.actorName), domalejchzfiltru) = 0) then
+		
+			system.console("Našel jsem vadny záznam "+item.id)
+			form.collectionMovies.removeItem(item.index())
+
+		endif
+		*/
+		if item.starring.exists(indexOf(tolower(current.actorName), domalejchzfiltru) <> 0) then
+		
+			system.console("Našel jsem spravny záznam "+item.id)
+		else
+			system.console("Našel jsem vadny záznam "+item.id)
+  			form.collectionMovies.removeItem(item.index())
+
+		endif
+	endfor
+
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="searchwithNameII" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.collectionMovies.clear()
+if form.filter.type.hasValue() then
+	//form.collection1.fromJson(form.dataJson)
+
+	foreach item in form.collection1 do
+	
+		//if indexOf(item.type, form.filter.type) <> 0 then
+		//if indexOf(item.type, form.filter.type) then
+		if (form.filter.type = item.type ) then
+		//if indexOf(item.type, form.type) <> 0 then
+			
+			var collectionItem = form.collectionMovies.addItem()
+			
+			system.console("repoType"+item.toJson())
+			
+			collectionItem.id = item.id
+			collectionItem.name = item.name
+			collectionItem.yearOfRelease = item.yearOfRelease
+			collectionItem.type = item.type
+			
+			//collectionItem.starring = item.starring
+			
+			var ItemJson = item.starring.toJson()
+			collectionItem.starring.fromJson(ItemJson)
+			
+			system.console("Cosik jsem aj našel podle type")
+		endif
+	endfor
+	
+	//var x = form.collectionMovies.toJson()
+	
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="searchbyTypeII" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.collectionMovies.clear()
+if form.filter.type.hasValue() then
+	//form.collection1.fromJson(form.dataJson)
+
+    system.console("Zdrojová data pro porovnání type II"+form.collection1.toJson())
+	
+	foreach item in form.collection1 do
+	
+		//if indexOf(item.type, form.filter.type) <> 0 then
+		//if indexOf(item.type, form.filter.type) then
+		if (form.filter.type = item.type ) then
+		//if indexOf(item.type, form.type) <> 0 then
+			
+			var collectionItem = form.collectionMovies.addItem()
+			
+			system.console("repoType"+item.toJson())
+			
+			collectionItem.id = item.id
+			collectionItem.name = item.name
+			collectionItem.yearOfRelease = item.yearOfRelease
+			collectionItem.type = item.type
+			
+			//collectionItem.starring = item.starring
+			
+			var ItemJson = item.starring.toJson()
+			collectionItem.starring.fromJson(ItemJson)
+			
+			//system.console(collectionItem)
+			system.console("Cosik jsem aj našel podle type")
+		endif
+	endfor
+	
+	//var x = form.collectionMovies.toJson()
+	
 endif]]></Script>
       </ActionLangBody>
       <DataContext>

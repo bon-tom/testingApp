@@ -25,7 +25,7 @@
           <Caption value="Rating" />
           <Children>
             <Include>
-              <Include reference="+DataEntities.RatingMovies" />
+              <Include reference="+DataEntities.rating" />
             </Include>
           </Children>
         </Complex>

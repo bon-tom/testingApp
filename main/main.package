@@ -16,8 +16,6 @@
     <PackageItem Src="moviesList.form" />
     <PackageItem Src="movieSearching.form" />
     <PackageItem Src="rating.dataEntity" />
-    <PackageItem Src="RatingMovies.dataEntity" />
-    <PackageItem Src="RatingSeries.dataEntity" />
     <PackageItem Src="seasons.dataEntity" />
     <PackageItem Src="Series.dataEntity" />
     <PackageItem Src="starring.dataEntity" />

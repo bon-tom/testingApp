@@ -48,15 +48,6 @@
         <AttributeType />
       </DeclaredType>
     </Attribute>
-    <Complex>
-      <Name value="RatingMovies" />
-      <Caption value="Rating movies" />
-      <Children>
-        <Include>
-          <Include reference="+DataEntities.RatingMovies" />
-        </Include>
-      </Children>
-    </Complex>
     <Collection>
       <Name value="starring" />
       <Caption value="Starring" />

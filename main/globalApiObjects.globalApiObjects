@@ -22,9 +22,9 @@
           <url value="routing" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
-          <form reference="+UiParts.MasterForm" />
+          <form reference="+UiParts.movieDetail" />
           <masterPage reference="+UiParts.MasterForm" />
-          <url value="home" />
+          <url value="routing" />
         </UrlRouteCfg>
       </routes>
     </UrlRouter>

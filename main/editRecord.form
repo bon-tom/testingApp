@@ -887,24 +887,6 @@
             </Complex>
           </Children>
         </Complex>
-        <Collection>
-          <Name value="collection1" />
-          <Caption value="Collection 1" />
-          <Children>
-            <Include>
-              <Include reference="+DataEntities.Movies" />
-            </Include>
-            <Complex>
-              <Name value="rating" />
-              <Caption value="Rating" />
-              <Children>
-                <Include>
-                  <Include reference="+DataEntities.RatingMovies" />
-                </Include>
-              </Children>
-            </Complex>
-          </Children>
-        </Collection>
         <Attribute>
           <Name value="editBool" />
           <Caption value="Edit bool" />
@@ -956,9 +938,7 @@ system.console("Id na návrat"+this.form.id)]]></Script>
     <ActionBlock>
       <Name value="SaveToServerII" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var item = form.collection1.addItem()
-
-form.attrForBusy = true
+        <Script><![CDATA[form.attrForBusy = true
 var response = apiobjects.serverForMovies.postAsync("update", form.complex1.toJson())
 
 
