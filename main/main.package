@@ -11,11 +11,9 @@
     <PackageItem Src="globalVariables.globalVariables" />
     <PackageItem Src="MasterForm.form" />
     <PackageItem Src="metaType.metaType" />
-    <PackageItem Src="movieAdd.form" />
     <PackageItem Src="movieDetail.form" />
-    <PackageItem Src="movieSorting.form" />
     <PackageItem Src="Movies.dataEntity" />
-    <PackageItem Src="movies1.form" />
+    <PackageItem Src="moviesList.form" />
     <PackageItem Src="movieSearching.form" />
     <PackageItem Src="rating.dataEntity" />
     <PackageItem Src="RatingMovies.dataEntity" />

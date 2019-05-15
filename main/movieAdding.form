@@ -10,18 +10,6 @@
       <Panel.Height value="#" />
       <Panel.Width value="*" />
       <Children>
-        <Label>
-          <Name value="formIIin" />
-          <Data value="Form II instead of movieAdd" />
-          <Panel.Height value="#" />
-          <Panel.Width value="150px" />
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-label" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Label>
         <Button>
           <Name value="SaveMyRecord" />
           <Panel.Height value="#" />
@@ -797,7 +785,7 @@ item.number =  form.Record.Seasons.count()]]></Script>
 	endif
 	
 	//navigation.main.movies1.go("")
-	navigation.main.movies1.go()
+	navigation.main.moviesList.go()
 // SuccessFull POSTING?
 
 //else 
@@ -874,7 +862,7 @@ item.number =  form.Record.Seasons.count()]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[//navigation.main.movies1.go("")
-navigation.main.movies1.go()]]></Script>
+navigation.main.moviesList.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

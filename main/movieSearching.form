@@ -10,21 +10,6 @@
       <Panel.Height value="#" />
       <Panel.Width value="*" />
       <Children>
-        <Button>
-          <Name value="goBack" />
-          <Caption value="Go back" />
-          <Panel.Height value="#" />
-          <Panel.Width value="150px" />
-          <OnClick>
-            <ActionEvent ReferencedAction="~goBackWithoutSearching" />
-          </OnClick>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-button" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Button>
         <Panel>
           <Name value="panel5" />
           <Orientation value="Horizontal" />
@@ -39,22 +24,10 @@
         </Panel>
         <Panel>
           <Name value="panel3" />
-          <Orientation value="Vertical" />
+          <Orientation value="Horizontal" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
           <Children>
-            <Label>
-              <Name value="SearchString" />
-              <Data value="Search string" />
-              <Panel.Height value="#" />
-              <Panel.Width value="300px" />
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-label" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Label>
             <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
               <Name value="namewithPrompter" />
               <Caption value="Name with Prompter" />
@@ -73,23 +46,6 @@
                 </CssClassConditional>
               </CssClass>
             </ReferenceLookup>
-            <TextBox>
-              <Name value="textBox1" />
-              <CaptionVAlign value="Middle" />
-              <Panel.Height value="#" />
-              <Panel.Width value="300px" />
-              <Bindings>
-                <Binding SourceProperty="Data" Expression="name" />
-                <Binding SourceProperty="IsRequiredMarkVisible" Expression="name.isRequired()" />
-                <Binding SourceProperty="Caption" Expression="name.caption()" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-textbox" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </TextBox>
             <Button>
               <Name value="searchbyNameONLY" />
               <Caption value="Search by name ONLY" />
@@ -211,21 +167,6 @@
           <Panel.Width value="150px" />
           <OnClick>
             <ActionEvent ReferencedAction="~searchwithName" />
-          </OnClick>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-button" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Button>
-        <Button>
-          <Name value="RemoveAll" />
-          <Caption value="Remove all" />
-          <Panel.Height value="#" />
-          <Panel.Width value="150px" />
-          <OnClick>
-            <ActionEvent ReferencedAction="~remove" />
           </OnClick>
           <CssClass>
             <CssClassConditional>
@@ -607,26 +548,6 @@
   </OnActivate>
   <Actions>
     <ActionBlock>
-      <Name value="goBackWithoutSearching" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//navigation.main.movies1.go("")
-navigation.main.movies1.go()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="remove" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.clear()
-system.console(tostring(not form.dataJson.isTouched()))]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="searchwithName" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[//system.console(form.dataJson)
@@ -811,7 +732,7 @@ form.apiobjects.movieName.fillFromJson(form.dataJson)]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if params.type = "breadcrumbsClick" then
 	if params.data = "main" then		
-		navigation.main.movies1.go()
+		navigation.main.moviesList.go()
 	endif
 endif]]></Script>
       </ActionLangBody>

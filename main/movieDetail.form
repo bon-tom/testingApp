@@ -11,23 +11,8 @@
       <Panel.Width value="*" />
       <Children>
         <Button>
-          <Name value="goBacktoRecordList" />
-          <Caption value="Go back to Record list" />
-          <Panel.Height value="#" />
-          <Panel.Width value="150px" />
-          <OnClick>
-            <ActionEvent ReferencedAction="~goToMovies1" />
-          </OnClick>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-button" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Button>
-        <Button>
           <Name value="editRecord" />
-          <Caption value="Edit record" />
+          <Caption value="Edit" />
           <Panel.Height value="#" />
           <Panel.Width value="150px" />
           <OnClick>
@@ -41,8 +26,8 @@
           </CssClass>
         </Button>
         <Button>
-          <Name value="deleteOneRecord" />
-          <Caption value="Delete one record" />
+          <Name value="deletingRecord" />
+          <Caption value="Delete" />
           <Panel.Height value="#" />
           <Panel.Width value="150px" />
           <OnClick>
@@ -163,7 +148,7 @@
         </LabeledText>
         <GroupBox>
           <Name value="groupBox6" />
-          <Caption value="Group box 6" />
+          <Caption value="More Info" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
           <Content>
@@ -493,7 +478,7 @@
         </GroupBox>
         <Panel>
           <Name value="panel2" />
-          <Orientation value="Vertical" />
+          <Orientation value="Horizontal" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
           <Children>
@@ -714,16 +699,6 @@ form.complex1.type.enumValue() = "series" ? true : false]]></ExpressionText>
   </OnCreate>
   <Actions>
     <ActionBlock>
-      <Name value="goToMovies1" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//navigation.main.movies1.go("")
-navigation.main.movies1.go()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="loadSingleRecord" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if apiobjects.breadcrumbsCtrl1.count() = 2 then
@@ -789,11 +764,11 @@ if form.deleteConfirm = true then
 	endif
 	
 	//navigation.main.movies1.go("")
-	navigation.main.movies1.go()
+	navigation.main.moviesList.go()
 else 
 //navigace na hlavní formulář
 //navigation.main.movies1.go("")
-navigation.main.movies1.go()
+navigation.main.moviesList.go()
 endif
 ]]></Script>
       </ActionLangBody>
@@ -856,7 +831,7 @@ endif
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if params.type = "breadcrumbsClick" then
 	if params.data = "main" then		
-		navigation.main.movies1.go()
+		navigation.main.moviesList.go()
 	endif
 endif]]></Script>
       </ActionLangBody>

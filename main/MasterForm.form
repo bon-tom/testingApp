@@ -36,7 +36,7 @@
         </Breadcrumbs>
         <FormPlaceholder>
           <Name value="formPlaceholder1" />
-          <InitialForm reference="+UiParts.movies1" />
+          <InitialForm reference="+UiParts.moviesList" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
         </FormPlaceholder>
