@@ -142,7 +142,7 @@
       </UIElement>
       <UIElement xsi:type="Workspace" AutoHideSize="586.6,697.84" DockedSize="586.6,697.84" DocumentSize="672.4,603.84" FloatingSize="586.6,697.84" Size="672.4,603.84">
         <Content xsi:type="TabbedMdiHost">
-          <Content xsi:type="TabbedMdiContainer" AutoHideSize="586.6,697.84" DockedSize="586.6,697.84" DocumentSize="672.4,603.84" FloatingSize="586.6,697.84" Size="672.4,603.84" SelectedWindowUniqueId="363806c3-7d06-4b82-93e4-40245fa98b18">
+          <Content xsi:type="TabbedMdiContainer" AutoHideSize="586.6,697.84" DockedSize="586.6,697.84" DocumentSize="672.4,603.84" FloatingSize="586.6,697.84" Size="672.4,603.84" SelectedWindowUniqueId="b5f39a3f-2c05-481e-955d-ed8081029c6d">
             <UIElement xsi:type="Track" UniqueId="675def01-6864-4341-bf5f-044beeb802fa" />
             <UIElement xsi:type="Track" UniqueId="83db11f7-5725-4bd5-837b-936fc72bc56d" />
             <UIElement xsi:type="Track" UniqueId="89927d05-b31b-497c-90b6-ef42d0569ffa" />
@@ -212,7 +212,7 @@
                     <FormTree>
                       <TreeState DefaultExpanded="true">
                         <SelectedPaths>
-                          <Item>editRecord</Item>
+                          <Item>editRecord/panel1/panel2/panel7/groupBox7/panel19/AddSeason1</Item>
                         </SelectedPaths>
                       </TreeState>
                       <Headers>
@@ -364,7 +364,7 @@
             <FormTree>
               <TreeState DefaultExpanded="true">
                 <SelectedPaths>
-                  <Item>editRecord</Item>
+                  <Item>editRecord/panel1/panel2/panel7/groupBox7/panel19/AddSeason1</Item>
                 </SelectedPaths>
               </TreeState>
               <Headers>

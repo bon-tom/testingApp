@@ -827,7 +827,7 @@
                       <Children>
                         <Button>
                           <Name value="AddSeason1" />
-                          <Caption value="Add season 1" />
+                          <Caption value="Add season" />
                           <Panel.Height value="#" />
                           <Panel.Width value="150px" />
                           <OnClick>
