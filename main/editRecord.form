@@ -329,7 +329,7 @@
                                         </TextBox>
                                         <Panel>
                                           <Name value="panel14" />
-                                          <Orientation value="Horizontal" />
+                                          <Orientation value="Vertical" />
                                           <Panel.Height value="#" />
                                           <Panel.Width value="*" />
                                           <Children>
@@ -953,7 +953,7 @@
                                                     </TextBox>
                                                     <Panel>
                                                       <Name value="panel17" />
-                                                      <Orientation value="Horizontal" />
+                                                      <Orientation value="Vertical" />
                                                       <Panel.Height value="#" />
                                                       <Panel.Width value="*" />
                                                       <Children>
@@ -1189,7 +1189,19 @@
   </Content>
   <DataContext>
     <DataContext>
+      <OnUserChange>
+        <ActionEvent ReferencedAction="+UiParts.editRecord.handler_dataContext1_OnUserChange" />
+      </OnUserChange>
       <Children>
+        <Attribute>
+          <Name value="confirm" />
+          <Caption value="Confirm" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
         <Attribute>
           <Name value="backConfirm" />
           <Caption value="Back confirm" />
@@ -1341,6 +1353,15 @@
             </Complex>
           </Children>
         </Collection>
+        <Attribute>
+          <Name value="editBool" />
+          <Caption value="Edit bool" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
       </Children>
     </DataContext>
   </DataContext>
@@ -1535,6 +1556,32 @@ if form.backConfirm = true then
 	endif	
 endif
 
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_dataContext1_OnUserChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[
+if form.complex1.type.enumValue() = "series" then
+	form.editBool = true
+else
+	if form.complex1.seasons.hasValue() then
+		form.confirm = apiobjects.page1.confirm("This action will delete all seasons and episodes. Are you sure about that?")
+		if form.confirm = true then
+			form.complex1.seasons.clear()
+			form.editBool = false
+		else
+			form.complex1.type.clear()
+		endif		
+	else
+		form.editBool = false
+	endif
+endif
 ]]></Script>
       </ActionLangBody>
       <DataContext>
