@@ -15,6 +15,23 @@
           <Orientation value="Horizontal" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="searchRecordsExc" />
+              <Caption value="Search records Exclusively" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~searchAll" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
           <CssClass>
             <CssClassConditional>
               <ClassName value="{theme}-panel" />
@@ -46,35 +63,6 @@
                 </CssClassConditional>
               </CssClass>
             </ReferenceLookup>
-            <Button>
-              <Name value="searchbyNameONLY" />
-              <Caption value="Search by name ONLY" />
-              <Panel.Height value="#" />
-              <Panel.Width value="150px" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~searchwithName" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-button" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Button>
-          </Children>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-panel" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Panel>
-        <Panel>
-          <Name value="panel2" />
-          <Orientation value="Horizontal" />
-          <Panel.Height value="#" />
-          <Panel.Width value="*" />
-          <Children>
             <EnumCombo>
               <Name value="enumCombo1" />
               <Panel.Height value="#" />
@@ -91,37 +79,8 @@
                 </CssClassConditional>
               </CssClass>
             </EnumCombo>
-            <Button>
-              <Name value="searchbyTypeONLY" />
-              <Caption value="Search by type ONLY" />
-              <Panel.Height value="#" />
-              <Panel.Width value="150px" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~searchbyType" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-button" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Button>
-          </Children>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-panel" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Panel>
-        <Panel>
-          <Name value="panel4" />
-          <Orientation value="Horizontal" />
-          <Panel.Height value="#" />
-          <Panel.Width value="*" />
-          <Children>
             <TextBox>
-              <Name value="starringString" />
+              <Name value="starring" />
               <CaptionVAlign value="Middle" />
               <Panel.Height value="#" />
               <Panel.Width value="300px" />
@@ -137,21 +96,6 @@
                 </CssClassConditional>
               </CssClass>
             </TextBox>
-            <Button>
-              <Name value="searchbyStarring" />
-              <Caption value="Search by starring ONLY" />
-              <Panel.Height value="#" />
-              <Panel.Width value="150px" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~searchbyStarringName" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-button" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Button>
           </Children>
           <CssClass>
             <CssClassConditional>
@@ -160,21 +104,6 @@
             </CssClassConditional>
           </CssClass>
         </Panel>
-        <Button>
-          <Name value="searchRecords" />
-          <Caption value="Search records" />
-          <Panel.Height value="#" />
-          <Panel.Width value="150px" />
-          <OnClick>
-            <ActionEvent ReferencedAction="~searchAll" />
-          </OnClick>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-button" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Button>
         <GroupBox>
           <Name value="groupBox1" />
           <Panel.Height value="#" />
@@ -184,157 +113,171 @@
               <Name value="repeater1" />
               <Content>
                 <Panel>
-                  <Name value="panel10" />
+                  <Name value="panel6" />
                   <Orientation value="Horizontal" />
                   <Children>
                     <Panel>
-                      <Name value="panel9" />
+                      <Name value="panel10" />
                       <Orientation value="Horizontal" />
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
                       <Children>
                         <Panel>
-                          <Name value="panel81" />
+                          <Name value="panel9" />
                           <Orientation value="Horizontal" />
                           <Panel.Height value="#" />
                           <Panel.Width value="*" />
                           <Children>
                             <Panel>
-                              <Name value="panel611" />
+                              <Name value="panel81" />
                               <Orientation value="Horizontal" />
                               <Panel.Height value="#" />
                               <Panel.Width value="*" />
                               <Children>
-                                <Button>
-                                  <Name value="ShowWholeRecordd" />
-                                  <Caption value="Show whole recordd" />
-                                  <Panel.Height value="#" />
-                                  <Panel.Width value="150px" />
-                                  <OnClick>
-                                    <ActionEvent ReferencedAction="~handler_button1_OnClick" />
-                                  </OnClick>
-                                  <CssClass>
-                                    <CssClassConditional>
-                                      <ClassName value="{theme}-button" />
-                                      <IsThemedStyle value="True" />
-                                    </CssClassConditional>
-                                  </CssClass>
-                                </Button>
-                                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
-                                  <Name value="nameOfMovie" />
-                                  <Caption value="Name of movie" />
-                                  <CaptionPosition value="Top" />
-                                  <Panel.Height value="#" />
-                                  <Panel.Width value="150px" />
-                                  <Bindings>
-                                    <Binding SourceProperty="Data" Expression="name" />
-                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="name.isRequired()" />
-                                    <Binding SourceProperty="Caption" Expression="name.caption()" />
-                                  </Bindings>
-                                  <CssClass>
-                                    <CssClassConditional>
-                                      <ClassName value="{theme}-labeledtext" />
-                                      <IsThemedStyle value="True" />
-                                    </CssClassConditional>
-                                  </CssClass>
-                                </LabeledText>
-                                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
-                                  <Name value="yearOfRele" />
-                                  <Caption value="Year of rele" />
-                                  <CaptionPosition value="Top" />
-                                  <Panel.Height value="#" />
-                                  <Panel.Width value="150px" />
-                                  <Bindings>
-                                    <Binding SourceProperty="Data" Expression="yearOfRelease" />
-                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="yearOfRelease.isRequired()" />
-                                    <Binding SourceProperty="Caption" Expression="yearOfRelease.caption()" />
-                                  </Bindings>
-                                  <CssClass>
-                                    <CssClassConditional>
-                                      <ClassName value="{theme}-labeledtext" />
-                                      <IsThemedStyle value="True" />
-                                    </CssClassConditional>
-                                  </CssClass>
-                                </LabeledText>
-                                <EnumCombo>
-                                  <Name value="enumCombo211" />
-                                  <Caption value="Enum combo 2" />
-                                  <IsEnabled value="False" />
+                                <Panel>
+                                  <Name value="panel611" />
+                                  <Orientation value="Horizontal" />
                                   <Panel.Height value="#" />
                                   <Panel.Width value="*" />
-                                  <Bindings>
-                                    <Binding SourceProperty="Data" Expression="type" />
-                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="type.isRequired()" />
-                                    <Binding SourceProperty="Caption" Expression="type.caption()" />
-                                  </Bindings>
-                                  <CssClass>
-                                    <CssClassConditional>
-                                      <ClassName value="{theme}-enumcombo" />
-                                      <IsThemedStyle value="True" />
-                                    </CssClassConditional>
-                                  </CssClass>
-                                </EnumCombo>
-                                <GroupBox>
-                                  <Name value="groupBox211" />
-                                  <Caption value="Group box 2" />
-                                  <Panel.Height value="#" />
-                                  <Panel.Width value="*" />
-                                  <Content>
-                                    <Repeater>
-                                      <Name value="repeater211" />
-                                      <Content>
-                                        <Panel>
-                                          <Name value="panel711" />
-                                          <Orientation value="Vertical" />
-                                          <Children>
-                                            <TextBox>
-                                              <Name value="textBox711" />
-                                              <Caption value="Text box 7" />
-                                              <IsEnabled value="False" />
-                                              <Panel.Height value="#" />
-                                              <Panel.Width value="*" />
-                                              <Bindings>
-                                                <Binding SourceProperty="Data" Expression="actorName" />
-                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
-                                                <Binding SourceProperty="Caption" Expression="actorName.caption()" />
-                                              </Bindings>
-                                              <CssClass>
-                                                <CssClassConditional>
-                                                  <ClassName value="{theme}-textbox" />
-                                                  <IsThemedStyle value="True" />
-                                                </CssClassConditional>
-                                              </CssClass>
-                                            </TextBox>
-                                          </Children>
-                                          <CssClass>
-                                            <CssClassConditional>
-                                              <ClassName value="{theme}-panel" />
-                                              <IsThemedStyle value="True" />
-                                            </CssClassConditional>
-                                          </CssClass>
-                                        </Panel>
-                                      </Content>
-                                      <Bindings>
-                                        <Binding SourceProperty="DataItems" Expression="starring" />
-                                      </Bindings>
+                                  <Children>
+                                    <Button>
+                                      <Name value="ShowWholeRecord" />
+                                      <Caption value="Show whole record" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="150px" />
+                                      <OnClick>
+                                        <ActionEvent ReferencedAction="~handler_button1_OnClick" />
+                                      </OnClick>
                                       <CssClass>
                                         <CssClassConditional>
-                                          <ClassName value="{theme}-repeater" />
+                                          <ClassName value="{theme}-button" />
                                           <IsThemedStyle value="True" />
                                         </CssClassConditional>
                                       </CssClass>
-                                    </Repeater>
-                                  </Content>
-                                  <Bindings>
-                                    <Binding SourceProperty="Caption" Expression="starring.caption()" />
-                                  </Bindings>
+                                    </Button>
+                                    <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                                      <Name value="nameOfMovie" />
+                                      <Caption value="Name of movie" />
+                                      <CaptionPosition value="Top" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="150px" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="name" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="name.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="name.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-labeledtext" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </LabeledText>
+                                    <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                                      <Name value="yearOfRele" />
+                                      <Caption value="Year of rele" />
+                                      <CaptionPosition value="Top" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="150px" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="yearOfRelease" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="yearOfRelease.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="yearOfRelease.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-labeledtext" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </LabeledText>
+                                    <EnumCombo>
+                                      <Name value="enumCombo211" />
+                                      <Caption value="Enum combo 2" />
+                                      <IsEnabled value="False" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="type" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="type.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="type.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-enumcombo" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </EnumCombo>
+                                    <GroupBox>
+                                      <Name value="groupBox211" />
+                                      <Caption value="Group box 2" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Content>
+                                        <Repeater>
+                                          <Name value="repeater211" />
+                                          <Content>
+                                            <Panel>
+                                              <Name value="panel711" />
+                                              <Orientation value="Vertical" />
+                                              <Children>
+                                                <TextBox>
+                                                  <Name value="textBox711" />
+                                                  <Caption value="Text box 7" />
+                                                  <IsEnabled value="False" />
+                                                  <Panel.Height value="#" />
+                                                  <Panel.Width value="*" />
+                                                  <Bindings>
+                                                    <Binding SourceProperty="Data" Expression="actorName" />
+                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
+                                                    <Binding SourceProperty="Caption" Expression="actorName.caption()" />
+                                                  </Bindings>
+                                                  <CssClass>
+                                                    <CssClassConditional>
+                                                      <ClassName value="{theme}-textbox" />
+                                                      <IsThemedStyle value="True" />
+                                                    </CssClassConditional>
+                                                  </CssClass>
+                                                </TextBox>
+                                              </Children>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-panel" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Panel>
+                                          </Content>
+                                          <Bindings>
+                                            <Binding SourceProperty="DataItems" Expression="starring" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-repeater" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Repeater>
+                                      </Content>
+                                      <Bindings>
+                                        <Binding SourceProperty="Caption" Expression="starring.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-groupbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </GroupBox>
+                                  </Children>
                                   <CssClass>
                                     <CssClassConditional>
-                                      <ClassName value="{theme}-groupbox" />
+                                      <ClassName value="{theme}-panel" />
                                       <IsThemedStyle value="True" />
                                     </CssClassConditional>
                                   </CssClass>
-                                </GroupBox>
+                                </Panel>
                               </Children>
                               <CssClass>
                                 <CssClassConditional>
@@ -548,145 +491,6 @@
   </OnActivate>
   <Actions>
     <ActionBlock>
-      <Name value="searchwithName" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//form.collectionMovies.clear()
-system.console(form.filter.list.name)
-if form.filter.list.name.hasValue() then
-	system.console(form.filter.list.name)
-
-	foreach item in form.collection1 do
-		if indexOf(item.name, form.filter.list.name) <> 0 then
-		//	system.console(form.collectionMovies.)
-			var collectionItem = form.collectionMovies.addItem()
-			
-			system.console("repoName"+item.toJson())
-			//form.collectionMovies.addItem()
-			
-			
-			collectionItem.id = item.id
-			collectionItem.name = item.name
-			collectionItem.yearOfRelease = item.yearOfRelease
-			collectionItem.type = item.type
-			//collectionItem.mainDirector = item.mainDirector
-			
-			//collectionItem.starring = item.starring
-		    var ItemJson = item.starring.toJson()
-			collectionItem.starring.fromJson(ItemJson)
-			
-			
-			system.console("Cosik jsem aj našel podle částečného jména")
-		endif
-	endfor
-	
-	//var x = form.collectionMovies.toJson()
-endif
-
-//if form.filter.type.hasValue() then
-
-
-
-
-
-]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="searchbyStarringName" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//form.collectionMovies.clear()
-if form.filter.starringString.hasValue() then
-
-	var domalejchzfiltru=tolower(form.filter.starringString)
-	
-	system.console(domalejchzfiltru)
-	//system.console(form.collection1.starring.actorName)
-	
-	foreach item in form.collection1 do
-	    system.console("Hledam podle jmena herce")
-		//system.console(tostring(item.starring))
-		
-		//if indexOf(form.filter.starringString, collection1.starring.actorName) then
-		//if indexOf(form.filter.starringString, collection1.starring.actorName) thenin
-		if item.starring.exists(indexOf(tolower(current.actorName), domalejchzfiltru) <> 0) then
-			var collectionItem = form.collectionMovies.addItem()
-			
-			//collectionItem.id = item.id
-			system.console("repoStarringName"+item.toJson())
-			//form.collectionMovies = item
-			
-			//form.collectionMovies = x
-			
-			collectionItem.id = item.id
-			
-			collectionItem.name = item.name
-			collectionItem.yearOfRelease = item.yearOfRelease
-			collectionItem.type = item.type
-			
-  
-		    
-		    //collectionItem.starring = item.starring
-		    
-		    var ItemJson = item.starring.toJson()
-			collectionItem.starring.fromJson(ItemJson)
-
-		    
-			system.console("Cosik jsem aj našel podle jmena herce")
-			//var y = collectionItem.toJson()
-			//system.console(y)
-		endif
-	endfor
-
-endif]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="searchbyType" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//form.collectionMovies.clear()
-if form.filter.type.hasValue() then
-	//form.collection1.fromJson(form.dataJson)
-
-	foreach item in form.collection1 do
-	
-		//if indexOf(item.type, form.filter.type) <> 0 then
-		//if indexOf(item.type, form.filter.type) then
-		if (form.filter.type = item.type ) then
-		//if indexOf(item.type, form.type) <> 0 then
-			
-			var collectionItem = form.collectionMovies.addItem()
-			
-			system.console("repoType"+item.toJson())
-			
-			collectionItem.id = item.id
-			collectionItem.name = item.name
-			collectionItem.yearOfRelease = item.yearOfRelease
-			collectionItem.type = item.type
-			
-			//collectionItem.starring = item.starring
-			
-			var ItemJson = item.starring.toJson()
-			collectionItem.starring.fromJson(ItemJson)
-			
-			system.console("Cosik jsem aj našel podle type")
-		endif
-	endfor
-	
-	//var x = form.collectionMovies.toJson()
-	
-endif]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="initSearching" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if apiobjects.breadcrumbsCtrl1.count() = 2 then
@@ -733,9 +537,9 @@ endif]]></Script>
     <ActionBlock>
       <Name value="searchAll" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[//form.collectionMovies.clear()
+        <Script><![CDATA[form.collectionMovies.clear()
 
-//form.actions.searchwithNameII()
+form.actions.searchwithNameII()
 form.actions.searchbyTypeII()
 form.actions.searchbyStarringNameII()]]></Script>
       </ActionLangBody>
@@ -782,40 +586,65 @@ endif]]></Script>
     <ActionBlock>
       <Name value="searchbyTypeII" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.collectionMovies.clear()
-if form.filter.type.hasValue() then
+        <Script><![CDATA[if form.filter.type.hasValue() then
 	//form.collection1.fromJson(form.dataJson)
 
-    system.console("Zdrojová data pro porovnání type II"+form.collection1.toJson())
+    system.console("Zdrojová data pro porovnání type II"+form.collectionMovies.toJson())
 	
-	foreach item in form.collection1 do
-	
-		//if indexOf(item.type, form.filter.type) <> 0 then
-		//if indexOf(item.type, form.filter.type) then
+	foreach item in form.collectionMovies do
 		if (form.filter.type = item.type ) then
-		//if indexOf(item.type, form.type) <> 0 then
-			
+
+			system.console("Našel jsem spravny záznam "+item.id)
+			system.console("Cosik jsem aj našel podle type")
+		else
+			system.console("Našel jsem vadny záznam "+item.id)
+  			form.collectionMovies.removeItem(item.index())
+
+		endif
+	
+	endfor
+	//var x = form.collectionMovies.toJson()
+
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="searchwithNameII" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console(form.filter.list.name)
+if form.filter.list.name.hasValue() then
+	system.console(form.filter.list.name)
+
+	foreach item in form.collection1 do
+		if indexOf(item.name, form.filter.list.name) <> 0 then
+		//	system.console(form.collectionMovies.)
 			var collectionItem = form.collectionMovies.addItem()
 			
-			system.console("repoType"+item.toJson())
+			system.console("repoName"+item.toJson())
+			//form.collectionMovies.addItem()
+			
 			
 			collectionItem.id = item.id
 			collectionItem.name = item.name
 			collectionItem.yearOfRelease = item.yearOfRelease
 			collectionItem.type = item.type
+			//collectionItem.mainDirector = item.mainDirector
 			
 			//collectionItem.starring = item.starring
-			
-			var ItemJson = item.starring.toJson()
+		    var ItemJson = item.starring.toJson()
 			collectionItem.starring.fromJson(ItemJson)
 			
-			//system.console(collectionItem)
-			system.console("Cosik jsem aj našel podle type")
+			
+			system.console("Cosik jsem aj našel podle částečného jména")
 		endif
 	endfor
+	else 
 	
+	form.collectionMovies.fromJson(form.dataJson)
 	//var x = form.collectionMovies.toJson()
-	
 endif]]></Script>
       </ActionLangBody>
       <DataContext>

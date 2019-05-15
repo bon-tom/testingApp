@@ -54,7 +54,7 @@
           <Panel.Height value="#" />
           <Panel.Width value="150px" />
           <OnClick>
-            <ActionEvent ReferencedAction="~action2" />
+            <ActionEvent ReferencedAction="~resetaction" />
           </OnClick>
           <CssClass>
             <CssClassConditional>
@@ -748,6 +748,16 @@
         <Attribute>
           <Name value="confirm" />
           <Caption value="Confirm" />
+          <Description value="&quot;Proměnná využívaná v user-change handleru formuláře editRecord&quot;" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="saveConfirm" />
+          <Caption value="Save confirm" />
           <DeclaredType>
             <AttributeType>
               <BaseType value="Bool" />
@@ -757,6 +767,7 @@
         <Attribute>
           <Name value="backConfirm" />
           <Caption value="Back confirm" />
+          <Description value="&quot;Proměnná využívaná v eventDispatcheru pro návrat&quot;" />
           <DeclaredType>
             <AttributeType>
               <BaseType value="Bool" />
@@ -890,6 +901,7 @@
         <Attribute>
           <Name value="editBool" />
           <Caption value="Edit bool" />
+          <Description value="&quot;Proměnná využívaná v user-change handleru formuláře editRecord&quot;" />
           <DeclaredType>
             <AttributeType>
               <BaseType value="Bool" />
@@ -906,8 +918,7 @@
     <ActionBlock>
       <Name value="goBackWithoutSaving" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[//navigation.main.movies1.go("")
-navigation.main.moviesList.go()]]></Script>
+        <Script><![CDATA[navigation.main.moviesList.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -938,22 +949,31 @@ system.console("Id na návrat"+this.form.id)]]></Script>
     <ActionBlock>
       <Name value="SaveToServerII" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.attrForBusy = true
-var response = apiobjects.serverForMovies.postAsync("update", form.complex1.toJson())
+        <Script><![CDATA[form.saveConfirm = apiobjects.page1.confirm("Do you really want to save all changes?")
+form.attrForBusy = true
+
+if form.saveConfirm = true then
+	var response = apiobjects.serverForMovies.postAsync("update", form.complex1.toJson())
 
 
-if (response.isError()) then
-	system.consoleError(response.getErrorMessage())
-else 
-	form.postResult = response.getJsonString()
-	form.ContentType = response.getHeader("Content-Type")
+	if (response.isError()) then
+		system.consoleError(response.getErrorMessage())
+	else 
+		form.postResult = response.getJsonString()
+		form.ContentType = response.getHeader("Content-Type")
+		//navigace na hlavní formulář vynechána, raději postupný UPDATE
+    	//navigation.main.movies1.go("")
+	endif
+	form.attrForBusy = false
+	// úspěšný POSTING?
 	//navigace na hlavní formulář vynechána, raději postupný UPDATE
-    //navigation.main.movies1.go("")
-endif
-form.attrForBusy = false
-// úspěšný POSTING?
-//navigace na hlavní formulář vynechána, raději postupný UPDATE
-navigation.main.moviesList.go()]]></Script>
+	navigation.main.moviesList.go()
+
+else 
+//navigace na hlavní formulář
+    form.attrForBusy = false
+	navigation.main.moviesList.go()
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1043,7 +1063,7 @@ item.number =  form.complex1.seasons.count()]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="action2" />
+      <Name value="resetaction" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if form.attributeforReset = true then
 	form.attributeforReset = false
@@ -1054,8 +1074,7 @@ endif
 system.console("Tohle jsou data pro reset ve formuláři edit" +form.recordForEdit)
 system.console(tostring(form.recordForEdit.isTouched()) )
 
-
-	form.complex1.fromJson(form.recordForEdit)]]></Script>
+form.complex1.fromJson(form.recordForEdit)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1094,8 +1113,7 @@ endif
       <Name value="handler_dataContext1_OnUserChange" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[
-if form.complex1.type.enumValue() = "series" then
+        <Script><![CDATA[if form.complex1.type.enumValue() = "series" then
 	form.editBool = true
 else
 	if form.complex1.seasons.hasValue() then
