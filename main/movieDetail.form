@@ -46,7 +46,7 @@
           </CssClass>
         </Button>
         <GroupBox>
-          <Name value="groupBox5" />
+          <Name value="basicinfo" />
           <Caption value="Basic Info" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
@@ -152,7 +152,7 @@
           </CssClass>
         </LabeledText>
         <GroupBox>
-          <Name value="groupBox6" />
+          <Name value="moreinfo" />
           <Caption value="More Info" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
