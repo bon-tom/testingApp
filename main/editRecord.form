@@ -552,6 +552,23 @@
                                                         </CssClassConditional>
                                                       </CssClass>
                                                     </TextBox>
+                                                    <TextBox>
+                                                      <Name value="textBox13" />
+                                                      <CaptionVAlign value="Middle" />
+                                                      <Panel.Height value="#" />
+                                                      <Panel.Width value="*" />
+                                                      <Bindings>
+                                                        <Binding SourceProperty="Data" Expression="rating.score" />
+                                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.score.isRequired()" />
+                                                        <Binding SourceProperty="Caption" Expression="rating.score.caption()" />
+                                                      </Bindings>
+                                                      <CssClass>
+                                                        <CssClassConditional>
+                                                          <ClassName value="{theme}-textbox" />
+                                                          <IsThemedStyle value="True" />
+                                                        </CssClassConditional>
+                                                      </CssClass>
+                                                    </TextBox>
                                                     <DatePicker>
                                                       <Name value="datePicker4" />
                                                       <Panel.Height value="#" />
@@ -584,23 +601,6 @@
                                                         </CssClassConditional>
                                                       </CssClass>
                                                     </CheckBox>
-                                                    <TextBox>
-                                                      <Name value="textBox13" />
-                                                      <CaptionVAlign value="Middle" />
-                                                      <Panel.Height value="#" />
-                                                      <Panel.Width value="*" />
-                                                      <Bindings>
-                                                        <Binding SourceProperty="Data" Expression="rating.score" />
-                                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.score.isRequired()" />
-                                                        <Binding SourceProperty="Caption" Expression="rating.score.caption()" />
-                                                      </Bindings>
-                                                      <CssClass>
-                                                        <CssClassConditional>
-                                                          <ClassName value="{theme}-textbox" />
-                                                          <IsThemedStyle value="True" />
-                                                        </CssClassConditional>
-                                                      </CssClass>
-                                                    </TextBox>
                                                   </Children>
                                                   <CssClass>
                                                     <CssClassConditional>

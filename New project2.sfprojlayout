@@ -290,7 +290,7 @@
                     <FormTree>
                       <TreeState DefaultExpanded="true">
                         <SelectedPaths>
-                          <Item>editRecord/panel1/panel2/panel7/groupBox7/panel19/repeater7/panel18/panel15/groupBox8/panel20/repeater8/panel16/checkBox4</Item>
+                          <Item>editRecord/panel1/panel2/panel7/groupBox7/panel19/repeater7/panel18/panel15/groupBox8/panel20/repeater8/panel16/textBox13</Item>
                         </SelectedPaths>
                       </TreeState>
                       <Headers>
@@ -335,7 +335,7 @@
                     <FormTree>
                       <TreeState DefaultExpanded="true" />
                       <Headers>
-                        <Header Width="240" Caption="Component" />
+                        <Header Width="314" Caption="Component" />
                         <Header Width="90" Caption="Type" />
                         <Header Width="200" Caption="Name" />
                         <Header Width="60" Caption="# children" />
@@ -484,7 +484,7 @@
             <FormTree>
               <TreeState DefaultExpanded="true">
                 <SelectedPaths>
-                  <Item>editRecord/panel1/panel2/panel7/groupBox7/panel19/repeater7/panel18/panel15/groupBox8/panel20/repeater8/panel16/checkBox4</Item>
+                  <Item>editRecord/panel1/panel2/panel7/groupBox7/panel19/repeater7/panel18/panel15/groupBox8/panel20/repeater8/panel16/textBox13</Item>
                 </SelectedPaths>
               </TreeState>
               <Headers>
@@ -529,7 +529,7 @@
             <FormTree>
               <TreeState DefaultExpanded="true" />
               <Headers>
-                <Header Width="240" Caption="Component" />
+                <Header Width="314" Caption="Component" />
                 <Header Width="90" Caption="Type" />
                 <Header Width="200" Caption="Name" />
                 <Header Width="60" Caption="# children" />
