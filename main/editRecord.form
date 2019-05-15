@@ -10,6 +10,14 @@
       <Panel.Height value="#" />
       <Panel.Width value="*" />
       <Children>
+        <BusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+          <Name value="busyIndicator1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="IsVisible" Expression="attrForBusy" />
+          </Bindings>
+        </BusyIndicator>
         <Button>
           <Name value="Cancel" />
           <Caption value="Cancel" />
@@ -729,6 +737,15 @@
       </OnUserChange>
       <Children>
         <Attribute>
+          <Name value="attrForBusy" />
+          <Caption value="Attr for busy" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
           <Name value="confirm" />
           <Caption value="Confirm" />
           <DeclaredType>
@@ -941,7 +958,7 @@ system.console("Id na návrat"+this.form.id)]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[var item = form.collection1.addItem()
 
-
+form.attrForBusy = true
 var response = apiobjects.serverForMovies.postAsync("update", form.complex1.toJson())
 
 
@@ -953,14 +970,10 @@ else
 	//navigace na hlavní formulář vynechána, raději postupný UPDATE
     //navigation.main.movies1.go("")
 endif
-
+form.attrForBusy = false
 // úspěšný POSTING?
 //navigace na hlavní formulář vynechána, raději postupný UPDATE
-navigation.main.moviesList.go()
-//navigation.main.movies1.go("")
-
-
-]]></Script>
+navigation.main.moviesList.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

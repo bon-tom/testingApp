@@ -10,8 +10,17 @@
       <Panel.Height value="#" />
       <Panel.Width value="*" />
       <Children>
+        <BusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+          <Name value="busyIndicator1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="IsVisible" Expression="attrForBusy" />
+          </Bindings>
+        </BusyIndicator>
         <Button>
-          <Name value="SaveMyRecord" />
+          <Name value="Save" />
+          <Caption value="Save" />
           <Panel.Height value="#" />
           <Panel.Width value="150px" />
           <OnClick>
@@ -678,6 +687,15 @@
     <DataContext>
       <Children>
         <Attribute>
+          <Name value="attrForBusy" />
+          <Caption value="Attr for busy" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
           <Name value="saveConfirm" />
           <Caption value="Save confirm" />
           <DeclaredType>
@@ -770,10 +788,10 @@ item.number =  form.Record.Seasons.count()]]></Script>
     <ActionBlock>
       <Name value="SaveRecord" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[//form.saveConfirm = apiobjects.page1.confirm("Do you really want to save all changes?")
+        <Script><![CDATA[form.saveConfirm = apiobjects.page1.confirm("Do you really want to save all changes?")
+form.attrForBusy = true
 
-//if form.saveConfirm = true then
-
+if form.saveConfirm = true then
 	system.console(tostring(form.Record.toJson()))
 	var response = apiobjects.serverForMovies.postAsync("create", form.Record.toJson())
 
@@ -783,16 +801,15 @@ item.number =  form.Record.Seasons.count()]]></Script>
 		form.postResult = response.getJsonString()
 		form.ContentType = response.getHeader("Content-Type")
 	endif
-	
-	//navigation.main.movies1.go("")
+	form.attrForBusy = false
 	navigation.main.moviesList.go()
 // SuccessFull POSTING?
 
-//else 
+else 
 //navigace na hlavní formulář
-//navigation.main.movies1.go("")
-
-//endif]]></Script>
+    form.attrForBusy = false
+	navigation.main.moviesList.go()
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -861,8 +878,7 @@ item.number =  form.Record.Seasons.count()]]></Script>
       <Name value="handler_Cancel_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[//navigation.main.movies1.go("")
-navigation.main.moviesList.go()]]></Script>
+        <Script><![CDATA[navigation.main.moviesList.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

@@ -10,6 +10,11 @@
       <Panel.Height value="#" />
       <Panel.Width value="*" />
       <Children>
+        <BusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+          <Name value="busyIndicator1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+        </BusyIndicator>
         <Button>
           <Name value="editRecord" />
           <Caption value="Edit" />
@@ -552,6 +557,15 @@
   <DataContext>
     <DataContext>
       <Children>
+        <Attribute>
+          <Name value="attrForBusy" />
+          <Caption value="Attr for busy" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
         <Computed>
           <Name value="computed1" />
           <Caption value="Computed 1" />
@@ -750,6 +764,7 @@ endif
         <Script><![CDATA[//form.complex1.id = params.data.id
 
 form.deleteConfirm = apiobjects.page1.confirm("Do you really want to save all changes?")
+form.attrForBusy = true
 if form.deleteConfirm = true then
 
 	form.deleteComplex.id = form.id
@@ -763,12 +778,12 @@ if form.deleteConfirm = true then
 		system.console("uspesne mazani")
 	endif
 	
-	//navigation.main.movies1.go("")
+	form.attrForBusy = false
 	navigation.main.moviesList.go()
 else 
 //navigace na hlavní formulář
-//navigation.main.movies1.go("")
-navigation.main.moviesList.go()
+	form.attrForBusy = false
+	navigation.main.moviesList.go()
 endif
 ]]></Script>
       </ActionLangBody>
