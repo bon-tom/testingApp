@@ -791,7 +791,7 @@ item.number =  form.Record.Seasons.count()]]></Script>
         <Script><![CDATA[form.saveConfirm = apiobjects.page1.confirm("Do you really want to save all changes?")
 form.attrForBusy = true
 
-if form.saveConfirm = true then
+if form.saveConfirm = true AND form.Record.type.hasValue() AND form.Record.name.hasValue() then
 	system.console(tostring(form.Record.toJson()))
 	var response = apiobjects.serverForMovies.postAsync("create", form.Record.toJson())
 
