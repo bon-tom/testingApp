@@ -1191,6 +1191,15 @@
     <DataContext>
       <Children>
         <Attribute>
+          <Name value="backConfirm" />
+          <Caption value="Back confirm" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
           <Name value="attributeforReset" />
           <Caption value="Attribute for reset" />
           <DeclaredType>
@@ -1355,8 +1364,17 @@ navigation.main.movies1.go()]]></Script>
         <Script><![CDATA[system.console("Tohle jsou data pro edit ve formuláři edit" +form.recordForEdit)
 system.console(tostring(form.recordForEdit.isTouched()) )
 
+if apiobjects.breadcrumbsCtrl1.count() = 2 then
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("edit", "Edit", "", "", false)
+else
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Movie Detail", "", "", true)
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("edit", "Edit", "", "", false)
+endif
+
+
 form.complex1.fromJson(form.recordForEdit)
-]]></Script>
+this.form.id = form.complex1.id
+system.console("Id na návrat"+this.form.id)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1494,5 +1512,42 @@ system.console(tostring(form.recordForEdit.isTouched()) )
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_eventDispatcher1_OnMessage" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.backConfirm = apiobjects.page1.confirm("This action will cancel all your changes. Do you want that?")
+
+
+system.console(form.id)
+
+if form.backConfirm = true then
+	if params.type = "breadcrumbsClick" then
+		if params.data = "main" then		
+			navigation.main.movies1.go()
+		endif
+	endif
+
+	if params.type = "breadcrumbsClick" then
+		if params.data = "detail" then		
+			navigation.main.movieDetail.go(this.form.id)
+		endif
+	endif	
+endif
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
+  <ApiObjects>
+    <EventDispatcher identity="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26">
+      <Name value="eventDispatcher1" />
+      <OnMessage>
+        <ActionEvent ReferencedAction="~handler_eventDispatcher1_OnMessage" />
+      </OnMessage>
+    </EventDispatcher>
+  </ApiObjects>
 </Form>
