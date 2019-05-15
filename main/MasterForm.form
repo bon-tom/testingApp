@@ -52,12 +52,30 @@
   <DataContext>
     <DataContext />
   </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~handler_MasterForm_OnActivate" />
+  </OnActivate>
   <Actions>
     <ActionBlock>
       <Name value="handler_breadcrumbs1_OnItemClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.apiobjects.eventDispatcher1.sendMessage("master", "breadcrumbsClick", params.id)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_MasterForm_OnActivate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// breadcrumbs musí být na MasterFormu, protože urlRouter skládá adresu i z MasterFormu
+if apiobjects.breadcrumbsCtrl1.count() = 0 then
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("main", "Main", "", "", true)
+else
+	apiobjects.breadcrumbsCtrl1.removeTo(1)
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

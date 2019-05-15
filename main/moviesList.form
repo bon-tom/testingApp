@@ -511,7 +511,7 @@ else
 	apiobjects.breadcrumbsCtrl1.removeTo(1)
 endif
 
-apiobjects.urlRouter1.clearUrl()
+//apiobjects.urlRouter1.clearUrl()
 var response = apiobjects.serverForMovies.getAsync("list")
 
 form.attrForBusy = true 

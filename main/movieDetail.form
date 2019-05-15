@@ -690,12 +690,12 @@ form.complex1.type.enumValue() = "series" ? true : false]]></ExpressionText>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if apiobjects.breadcrumbsCtrl1.count() = 2 then
 	apiobjects.breadcrumbsCtrl1.removeTo(1)
-	apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Movie Detail", "", "", true)
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", form.id, "", "", true)
 	else
 	apiobjects.breadcrumbsCtrl1.removeTo(2)	
 endif
 if apiobjects.breadcrumbsCtrl1.count() = 1 then
-		apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Movie Detail", "", "", true)
+		apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", form.id, "", "", true)
 	endif
 	
 var response = apiobjects.serverForMovies.getAsync("record?id=" +tostring(this.form.id))
@@ -762,10 +762,12 @@ endif
     <ActionBlock>
       <Name value="setUrl" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var url = packages.main.apiobjects.urlRouter1.findFormUrl(navigation.main.movieDetail.fullName)
+        <Script><![CDATA[//var url = packages.main.apiobjects.urlRouter1.findFormUrl(navigation.main.movieDetail.fullName)
+var url = apiobjects.urlRouter1.findFormUrl(navigation.main.movieDetail.fullName)
 
 if form.id.hasValue() then
 	url.addString("id", form.id)
+	
 endif
 
 url.updatePageUrl()]]></Script>
