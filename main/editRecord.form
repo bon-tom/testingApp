@@ -104,7 +104,7 @@
                         <TextBox>
                           <Name value="textBox3" />
                           <Panel.Height value="#" />
-                          <Panel.Width value="*" />
+                          <Panel.Width value="242px" />
                           <Bindings>
                             <Binding SourceProperty="Data" Expression="complex1.yearOfRelease" />
                             <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.yearOfRelease.isRequired()" />
@@ -120,7 +120,7 @@
                         <EnumCombo>
                           <Name value="enumCombo1" />
                           <Panel.Height value="#" />
-                          <Panel.Width value="300px" />
+                          <Panel.Width value="*" />
                           <Bindings>
                             <Binding SourceProperty="Data" Expression="complex1.type" />
                             <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.type.isRequired()" />

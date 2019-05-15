@@ -290,7 +290,7 @@
                     <FormTree>
                       <TreeState DefaultExpanded="true">
                         <SelectedPaths>
-                          <Item>editRecord/panel1/panel2/panel7/groupBox7/panel19/repeater7/panel18/panel15/groupBox8/panel20/repeater8/panel16/textBox13</Item>
+                          <Item>editRecord/panel1/panel2/panel7/basicnfo/panel5/textBox3</Item>
                         </SelectedPaths>
                       </TreeState>
                       <Headers>
@@ -484,7 +484,7 @@
             <FormTree>
               <TreeState DefaultExpanded="true">
                 <SelectedPaths>
-                  <Item>editRecord/panel1/panel2/panel7/groupBox7/panel19/repeater7/panel18/panel15/groupBox8/panel20/repeater8/panel16/textBox13</Item>
+                  <Item>editRecord/panel1/panel2/panel7/basicnfo/panel5/textBox3</Item>
                 </SelectedPaths>
               </TreeState>
               <Headers>
