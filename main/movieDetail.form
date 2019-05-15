@@ -173,24 +173,21 @@
                           <Name value="panel4" />
                           <Orientation value="Vertical" />
                           <Children>
-                            <TextBox>
-                              <Name value="textBox2" />
-                              <CaptionVAlign value="Middle" />
-                              <IsEnabled value="False" />
+                            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                              <Name value="genre" />
+                              <IsRequiredMarkVisible value="True" />
                               <Panel.Height value="#" />
                               <Panel.Width value="300px" />
                               <Bindings>
-                                <Binding SourceProperty="Data" Expression="genre" />
-                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="genre.isRequired()" />
-                                <Binding SourceProperty="Caption" Expression="genre.caption()" />
+                                <Binding SourceProperty="Caption" Expression="genre" />
                               </Bindings>
                               <CssClass>
                                 <CssClassConditional>
-                                  <ClassName value="{theme}-textbox" />
+                                  <ClassName value="{theme}-labeledtext" />
                                   <IsThemedStyle value="True" />
                                 </CssClassConditional>
                               </CssClass>
-                            </TextBox>
+                            </LabeledText>
                           </Children>
                           <CssClass>
                             <CssClassConditional>
@@ -233,24 +230,21 @@
                           <Name value="panel3" />
                           <Orientation value="Vertical" />
                           <Children>
-                            <TextBox>
-                              <Name value="textBox1" />
-                              <CaptionVAlign value="Middle" />
-                              <IsEnabled value="False" />
+                            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                              <Name value="actorName" />
+                              <IsRequiredMarkVisible value="True" />
                               <Panel.Height value="#" />
                               <Panel.Width value="300px" />
                               <Bindings>
-                                <Binding SourceProperty="Data" Expression="actorName" />
-                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
-                                <Binding SourceProperty="Caption" Expression="actorName.caption()" />
+                                <Binding SourceProperty="Caption" Expression="actorName" />
                               </Bindings>
                               <CssClass>
                                 <CssClassConditional>
-                                  <ClassName value="{theme}-textbox" />
+                                  <ClassName value="{theme}-labeledtext" />
                                   <IsThemedStyle value="True" />
                                 </CssClassConditional>
                               </CssClass>
-                            </TextBox>
+                            </LabeledText>
                           </Children>
                           <CssClass>
                             <CssClassConditional>
@@ -309,23 +303,21 @@
                   <Name value="panel5" />
                   <Orientation value="Vertical" />
                   <Children>
-                    <TextBox>
-                      <Name value="textBox3" />
-                      <IsEnabled value="False" />
+                    <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                      <Name value="number" />
+                      <IsRequiredMarkVisible value="True" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="*" />
+                      <Panel.Width value="300px" />
                       <Bindings>
-                        <Binding SourceProperty="Data" Expression="number" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="number.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="number.caption()" />
+                        <Binding SourceProperty="Caption" Expression="number" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
-                          <ClassName value="{theme}-textbox" />
+                          <ClassName value="{theme}-labeledtext" />
                           <IsThemedStyle value="True" />
                         </CssClassConditional>
                       </CssClass>
-                    </TextBox>
+                    </LabeledText>
                     <GroupBox>
                       <Name value="groupBox4" />
                       <Panel.Height value="#" />
@@ -336,90 +328,71 @@
                           <Content>
                             <Panel>
                               <Name value="panel6" />
-                              <Orientation value="Vertical" />
+                              <Orientation value="Horizontal" />
                               <Children>
-                                <TextBox>
-                                  <Name value="textBox4" />
+                                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                                  <Name value="episodeName" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="300px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Caption" Expression="episodeName" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-labeledtext" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </LabeledText>
+                                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                                  <Name value="rating" />
+                                  <IsRequiredMarkVisible value="True" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="300px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Caption" Expression="rating.score" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-labeledtext" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </LabeledText>
+                                <CheckBox>
+                                  <Name value="checkBox2" />
                                   <IsEnabled value="False" />
                                   <Panel.Height value="#" />
                                   <Panel.Width value="*" />
                                   <Bindings>
-                                    <Binding SourceProperty="Data" Expression="episodeName" />
-                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="episodeName.isRequired()" />
-                                    <Binding SourceProperty="Caption" Expression="episodeName.caption()" />
+                                    <Binding SourceProperty="Data" Expression="rating.seenItWhole" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.seenItWhole.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="rating.seenItWhole.caption()" />
                                   </Bindings>
                                   <CssClass>
                                     <CssClassConditional>
-                                      <ClassName value="{theme}-textbox" />
+                                      <ClassName value="{theme}-checkbox" />
                                       <IsThemedStyle value="True" />
                                     </CssClassConditional>
                                   </CssClass>
-                                </TextBox>
-                                <Panel>
-                                  <Name value="panel7" />
-                                  <Orientation value="Vertical" />
+                                </CheckBox>
+                                <DatePicker>
+                                  <Name value="datePicker2" />
+                                  <IsEnabled value="False" />
                                   <Panel.Height value="#" />
                                   <Panel.Width value="*" />
-                                  <Children>
-                                    <DatePicker>
-                                      <Name value="datePicker2" />
-                                      <IsEnabled value="False" />
-                                      <Panel.Height value="#" />
-                                      <Panel.Width value="*" />
-                                      <Bindings>
-                                        <Binding SourceProperty="Data" Expression="rating.dateOfWatching" />
-                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.dateOfWatching.isRequired()" />
-                                        <Binding SourceProperty="Caption" Expression="rating.dateOfWatching.caption()" />
-                                      </Bindings>
-                                      <CssClass>
-                                        <CssClassConditional>
-                                          <ClassName value="{theme}-datepicker" />
-                                          <IsThemedStyle value="True" />
-                                        </CssClassConditional>
-                                      </CssClass>
-                                    </DatePicker>
-                                    <CheckBox>
-                                      <Name value="checkBox2" />
-                                      <IsEnabled value="False" />
-                                      <Panel.Height value="#" />
-                                      <Panel.Width value="*" />
-                                      <Bindings>
-                                        <Binding SourceProperty="Data" Expression="rating.seenItWhole" />
-                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.seenItWhole.isRequired()" />
-                                        <Binding SourceProperty="Caption" Expression="rating.seenItWhole.caption()" />
-                                      </Bindings>
-                                      <CssClass>
-                                        <CssClassConditional>
-                                          <ClassName value="{theme}-checkbox" />
-                                          <IsThemedStyle value="True" />
-                                        </CssClassConditional>
-                                      </CssClass>
-                                    </CheckBox>
-                                    <TextBox>
-                                      <Name value="textBox5" />
-                                      <IsEnabled value="False" />
-                                      <Panel.Height value="#" />
-                                      <Panel.Width value="*" />
-                                      <Bindings>
-                                        <Binding SourceProperty="Data" Expression="rating.score" />
-                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.score.isRequired()" />
-                                        <Binding SourceProperty="Caption" Expression="rating.score.caption()" />
-                                      </Bindings>
-                                      <CssClass>
-                                        <CssClassConditional>
-                                          <ClassName value="{theme}-textbox" />
-                                          <IsThemedStyle value="True" />
-                                        </CssClassConditional>
-                                      </CssClass>
-                                    </TextBox>
-                                  </Children>
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="rating.dateOfWatching" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="rating.dateOfWatching.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="rating.dateOfWatching.caption()" />
+                                  </Bindings>
                                   <CssClass>
                                     <CssClassConditional>
-                                      <ClassName value="{theme}-panel" />
+                                      <ClassName value="{theme}-datepicker" />
                                       <IsThemedStyle value="True" />
                                     </CssClassConditional>
                                   </CssClass>
-                                </Panel>
+                                </DatePicker>
                               </Children>
                               <CssClass>
                                 <CssClassConditional>

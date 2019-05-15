@@ -191,24 +191,21 @@
                                         </CssClassConditional>
                                       </CssClass>
                                     </LabeledText>
-                                    <EnumCombo>
-                                      <Name value="enumCombo211" />
-                                      <Caption value="Enum combo 2" />
-                                      <IsEnabled value="False" />
+                                    <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                                      <Name value="labeledText2" />
+                                      <CaptionPosition value="Top" />
                                       <Panel.Height value="#" />
-                                      <Panel.Width value="*" />
+                                      <Panel.Width value="150px" />
                                       <Bindings>
-                                        <Binding SourceProperty="Data" Expression="type" />
-                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="type.isRequired()" />
-                                        <Binding SourceProperty="Caption" Expression="type.caption()" />
+                                        <Binding SourceProperty="Caption" Expression="type" />
                                       </Bindings>
                                       <CssClass>
                                         <CssClassConditional>
-                                          <ClassName value="{theme}-enumcombo" />
+                                          <ClassName value="{theme}-labeledtext" />
                                           <IsThemedStyle value="True" />
                                         </CssClassConditional>
                                       </CssClass>
-                                    </EnumCombo>
+                                    </LabeledText>
                                     <GroupBox>
                                       <Name value="groupBox211" />
                                       <Caption value="Group box 2" />
@@ -222,24 +219,20 @@
                                               <Name value="panel711" />
                                               <Orientation value="Vertical" />
                                               <Children>
-                                                <TextBox>
-                                                  <Name value="textBox711" />
-                                                  <Caption value="Text box 7" />
-                                                  <IsEnabled value="False" />
+                                                <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                                                  <Name value="labeledText1" />
                                                   <Panel.Height value="#" />
-                                                  <Panel.Width value="*" />
+                                                  <Panel.Width value="300px" />
                                                   <Bindings>
-                                                    <Binding SourceProperty="Data" Expression="actorName" />
-                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
-                                                    <Binding SourceProperty="Caption" Expression="actorName.caption()" />
+                                                    <Binding SourceProperty="Caption" Expression="actorName" />
                                                   </Bindings>
                                                   <CssClass>
                                                     <CssClassConditional>
-                                                      <ClassName value="{theme}-textbox" />
+                                                      <ClassName value="{theme}-labeledtext" />
                                                       <IsThemedStyle value="True" />
                                                     </CssClassConditional>
                                                   </CssClass>
-                                                </TextBox>
+                                                </LabeledText>
                                               </Children>
                                               <CssClass>
                                                 <CssClassConditional>
