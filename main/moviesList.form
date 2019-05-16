@@ -294,7 +294,7 @@
               <Content>
                 <Button>
                   <Name value="ShowWholeRec" />
-                  <Caption value="Show whole rec" />
+                  <Caption value="Show whole record" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                   <OnClick>

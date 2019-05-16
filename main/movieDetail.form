@@ -690,40 +690,30 @@ form.complex1.type.enumValue() = "series" ? true : false]]></ExpressionText>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if apiobjects.breadcrumbsCtrl1.count() = 2 then
 	apiobjects.breadcrumbsCtrl1.removeTo(1)
-	apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", form.id, "", "", true)
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Show whole record " +form.id, "", "", true)
 	else
 	apiobjects.breadcrumbsCtrl1.removeTo(2)	
 endif
 if apiobjects.breadcrumbsCtrl1.count() = 1 then
-		apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", form.id, "", "", true)
+		apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Show whole record " +form.id, "", "", true)
 	endif
 	
 var response = apiobjects.serverForMovies.getAsync("record?id=" +tostring(this.form.id))
-
+form.attrForBusy = true 
 system.console(form.id)
 if response.isError() then
 	system.consoleError(response.getErrorMessage())	
 else
-//	result = response.extractJson("card")
-//	result = response.extractJson("record/")
-	
 	system.console(response.getJsonString())
-	
 	var codeListData = response.getJsonString()
 	
 	system.console("Tohle jsou má zdrojová data" +codeListData)
-	
 	//form.apiobjects.fillFromJson(codeListData)
 	form.complex1.fromJson(codeListData)
-	
-	
-	
 	form.recordForEdit=response.getJsonString()
-    form.actions.setUrl()
- 
+    form.actions.setUrl() 
 endif
-
-]]></Script>
+form.attrForBusy = false]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
