@@ -265,33 +265,33 @@
                     <ToolsStates>
                       <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
                         <State DefaultExpanded="true">
-                          <SelectedPaths>
-                            <Item>form API objects (moviesList)</Item>
-                          </SelectedPaths>
-                        </State>
+                  <SelectedPaths>
+                    <Item>form API objects (moviesList)</Item>
+                  </SelectedPaths>
+                </State>
                       </State>
                       <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
                         <State DefaultExpanded="true">
-                          <SelectedPaths>
-                            <Item>form actions (moviesList)</Item>
-                          </SelectedPaths>
-                        </State>
+                  <SelectedPaths>
+                    <Item>form actions (moviesList)</Item>
+                  </SelectedPaths>
+                </State>
                       </State>
                       <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
                         <Variables>
-                          <State IsEditMode="false" DefaultExpanded="false">
-                            <SavedPathStates>
-                              <Item>Form variables</Item>
-                              <Item>Global variables</Item>
-                              <Item>Form variables/complex1</Item>
-                            </SavedPathStates>
-                          </State>
-                          <Headers>
-                            <Header Width="300" Caption="Name" />
-                            <Header Width="90" Caption="Type" />
-                            <Header Width="120" Caption="Flags" />
-                          </Headers>
-                        </Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                      <Item>Form variables/complex1</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
                       </State>
                     </ToolsStates>
                     <FormTree>
@@ -318,25 +318,25 @@
                       </State>
                       <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
                         <State DefaultExpanded="true">
-                          <SelectedPaths>
-                            <Item>/form actions (moviesList)/initMovieForm</Item>
-                          </SelectedPaths>
-                        </State>
+                  <SelectedPaths>
+                    <Item>/form actions (moviesList)/initMovieForm</Item>
+                  </SelectedPaths>
+                </State>
                       </State>
                       <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
                         <Variables>
-                          <State IsEditMode="false" DefaultExpanded="false">
-                            <SavedPathStates>
-                              <Item>Form variables</Item>
-                              <Item>Global variables</Item>
-                            </SavedPathStates>
-                          </State>
-                          <Headers>
-                            <Header Width="300" Caption="Name" />
-                            <Header Width="90" Caption="Type" />
-                            <Header Width="120" Caption="Flags" />
-                          </Headers>
-                        </Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
                       </State>
                     </ToolsStates>
                   </State>
@@ -381,32 +381,32 @@
                     <ToolsStates>
                       <State Tool="ScreenFactory.Client.ApiObjectsDesigner.FormApiObjectsTool">
                         <State DefaultExpanded="true">
-                          <SelectedPaths>
-                            <Item>form API objects (movieDetail)</Item>
-                          </SelectedPaths>
-                        </State>
+                  <SelectedPaths>
+                    <Item>form API objects (movieDetail)</Item>
+                  </SelectedPaths>
+                </State>
                       </State>
                       <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.FormActionsTool">
                         <State DefaultExpanded="true">
-                          <SelectedPaths>
-                            <Item>form actions (movieDetail)</Item>
-                          </SelectedPaths>
-                        </State>
+                  <SelectedPaths>
+                    <Item>form actions (movieDetail)</Item>
+                  </SelectedPaths>
+                </State>
                       </State>
                       <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
                         <Variables>
-                          <State IsEditMode="false" DefaultExpanded="false">
-                            <SavedPathStates>
-                              <Item>Form variables</Item>
-                              <Item>Global variables</Item>
-                            </SavedPathStates>
-                          </State>
-                          <Headers>
-                            <Header Width="300" Caption="Name" />
-                            <Header Width="90" Caption="Type" />
-                            <Header Width="120" Caption="Flags" />
-                          </Headers>
-                        </Variables>
+                  <State IsEditMode="false" DefaultExpanded="false">
+                    <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                    </SavedPathStates>
+                  </State>
+                  <Headers>
+                    <Header Width="300" Caption="Name" />
+                    <Header Width="90" Caption="Type" />
+                    <Header Width="120" Caption="Flags" />
+                  </Headers>
+                </Variables>
                       </State>
                     </ToolsStates>
                     <FormTree>
@@ -440,7 +440,6 @@
                             <SavedPathStates>
                               <Item>Form variables</Item>
                               <Item>Global variables</Item>
-                              <Item>Form variables/complex1</Item>
                             </SavedPathStates>
                           </State>
                           <Headers>
@@ -743,7 +742,6 @@
                     <SavedPathStates>
                       <Item>Form variables</Item>
                       <Item>Global variables</Item>
-                      <Item>Form variables/complex1</Item>
                     </SavedPathStates>
                   </State>
                   <Headers>

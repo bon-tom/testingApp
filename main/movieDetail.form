@@ -690,12 +690,15 @@ form.complex1.type.enumValue() = "series" ? true : false]]></ExpressionText>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if apiobjects.breadcrumbsCtrl1.count() = 2 then
 	apiobjects.breadcrumbsCtrl1.removeTo(1)
-	apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Show whole record " +form.id, "", "", true)
+	//apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Show whole record " +form.id, "", "", true)
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Show whole record ", "", "", true)
 	else
+	
 	apiobjects.breadcrumbsCtrl1.removeTo(2)	
 endif
 if apiobjects.breadcrumbsCtrl1.count() = 1 then
-		apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Show whole record " +form.id, "", "", true)
+		//apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Show whole record " +form.id, "", "", true)
+		apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Show whole record ", "", "", true)
 	endif
 	
 var response = apiobjects.serverForMovies.getAsync("record?id=" +tostring(this.form.id))
