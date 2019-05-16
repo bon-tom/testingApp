@@ -764,6 +764,9 @@ form.Record.type.enumValue() = "series" ? true : false
       </Children>
     </DataContext>
   </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~initmovieAdding" />
+  </OnActivate>
   <Actions>
     <ActionBlock>
       <Name value="addSeasonItem" />
@@ -884,5 +887,45 @@ endif]]></Script>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="initmovieAdding" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if apiobjects.breadcrumbsCtrl1.count() = 2 then
+	apiobjects.breadcrumbsCtrl1.removeTo(1)
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Add Form ", "", "", true)
+	else
+	
+	apiobjects.breadcrumbsCtrl1.removeTo(2)	
+endif
+if apiobjects.breadcrumbsCtrl1.count() = 1 then
+		apiobjects.breadcrumbsCtrl1.addBreadcrumb("detail", "Add Form ", "", "", true)
+	endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_eventDispatcher1_OnMessage" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if params.type = "breadcrumbsClick" then
+	if params.data = "main" then		
+		navigation.main.moviesList.go()
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
+  <ApiObjects>
+    <EventDispatcher identity="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26">
+      <Name value="eventDispatcher1" />
+      <OnMessage>
+        <ActionEvent ReferencedAction="~handler_eventDispatcher1_OnMessage" />
+      </OnMessage>
+    </EventDispatcher>
+  </ApiObjects>
 </Form>

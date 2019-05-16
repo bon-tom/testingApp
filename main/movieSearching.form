@@ -488,12 +488,12 @@
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if apiobjects.breadcrumbsCtrl1.count() = 2 then
 	apiobjects.breadcrumbsCtrl1.removeTo(1)
-	apiobjects.breadcrumbsCtrl1.addBreadcrumb("search", "Movie Search", "", "", true)
+	apiobjects.breadcrumbsCtrl1.addBreadcrumb("search", "Search Form ", "", "", true)
 	else
 	apiobjects.breadcrumbsCtrl1.removeTo(2)	
 endif
 if apiobjects.breadcrumbsCtrl1.count() = 1 then
-		apiobjects.breadcrumbsCtrl1.addBreadcrumb("search", "Movie Search", "", "", true)
+		apiobjects.breadcrumbsCtrl1.addBreadcrumb("search", "Search Form", "", "", true)
 	endif
 
 form.collection1.fromJson(form.dataJson)

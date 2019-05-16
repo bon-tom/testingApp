@@ -107,7 +107,7 @@
                 </Button>
                 <Button>
                   <Name value="GotoSearchForm" />
-                  <Caption value="Go to Search form" />
+                  <Caption value="Go to Search Form" />
                   <Panel.Height value="#" />
                   <Panel.Width value="150px" />
                   <OnClick>
@@ -293,8 +293,8 @@
               <Caption value="Show whole record" />
               <Content>
                 <Button>
-                  <Name value="ShowWholeRec" />
-                  <Caption value="Show whole record" />
+                  <Name value="GotoWholeRecord" />
+                  <Caption value="Go to Whole Record" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                   <OnClick>
