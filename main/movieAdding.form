@@ -54,72 +54,100 @@
           <Panel.Height value="#" />
           <Panel.Width value="*" />
           <Children>
-            <TextBox>
-              <Name value="textBox13" />
+            <GroupBox>
+              <Name value="basicinfo" />
+              <Caption value="Basic Info" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
-              <Bindings>
-                <Binding SourceProperty="Data" Expression="Record.name" />
-                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.name.isRequired()" />
-                <Binding SourceProperty="Caption" Expression="Record.name.caption()" />
-              </Bindings>
+              <Content>
+                <Panel>
+                  <Name value="panel6" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox13" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Record.name" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.name.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="Record.name.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <EnumCombo>
+                      <Name value="enumCombo1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Record.type" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.type.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="Record.type.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-enumcombo" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </EnumCombo>
+                    <TextBox>
+                      <Name value="textBox15" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Record.yearOfRelease" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.yearOfRelease.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="Record.yearOfRelease.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox16" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Record.mainDirector" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.mainDirector.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="Record.mainDirector.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-textbox" />
+                  <ClassName value="{theme}-groupbox" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
               </CssClass>
-            </TextBox>
-            <EnumCombo>
-              <Name value="enumCombo1" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Bindings>
-                <Binding SourceProperty="Data" Expression="Record.type" />
-                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.type.isRequired()" />
-                <Binding SourceProperty="Caption" Expression="Record.type.caption()" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-enumcombo" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </EnumCombo>
-            <TextBox>
-              <Name value="textBox15" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Bindings>
-                <Binding SourceProperty="Data" Expression="Record.yearOfRelease" />
-                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.yearOfRelease.isRequired()" />
-                <Binding SourceProperty="Caption" Expression="Record.yearOfRelease.caption()" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-textbox" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </TextBox>
-            <TextBox>
-              <Name value="textBox16" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Bindings>
-                <Binding SourceProperty="Data" Expression="Record.mainDirector" />
-                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.mainDirector.isRequired()" />
-                <Binding SourceProperty="Caption" Expression="Record.mainDirector.caption()" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-textbox" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </TextBox>
+            </GroupBox>
             <TextBox>
               <Name value="textBox17" />
+              <ImmediateUpdate value="True" />
+              <InputType value="Multiline" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <Bindings>
@@ -134,12 +162,258 @@
                 </CssClassConditional>
               </CssClass>
             </TextBox>
+            <GroupBox>
+              <Name value="moreinfo" />
+              <Caption value="More Info" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
+                <Panel>
+                  <Name value="panel9" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <GroupBox>
+                      <Name value="groupBox1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel14" />
+                          <Orientation value="Horizontal" />
+                          <Children>
+                            <Button>
+                              <Name value="AddGenre" />
+                              <Caption value="Add genre" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_button14_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                            <Repeater>
+                              <Name value="repeater1" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="panel7" />
+                                  <Orientation value="Vertical" />
+                                  <Children>
+                                    <Button>
+                                      <Name value="DeleteGenre" />
+                                      <Caption value="Delete genre" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="150px" />
+                                      <OnClick>
+                                        <ActionEvent ReferencedAction="~handler_DeleteGenre_OnClick" />
+                                      </OnClick>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-button" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Button>
+                                    <TextBox>
+                                      <Name value="textBox2" />
+                                      <CaptionVAlign value="Middle" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="300px" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="genre" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="genre.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="genre.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-textbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </TextBox>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <Bindings>
+                                <Binding SourceProperty="DataItems" Expression="Record.genres" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-repeater" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Repeater>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="Record.genres.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                    <GroupBox>
+                      <Name value="groupBox5" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel5" />
+                          <Orientation value="Horizontal" />
+                          <Children>
+                            <Button>
+                              <Name value="AddActorItem" />
+                              <Caption value="Add actor item" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~addActor" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                            <Repeater>
+                              <Name value="repeater5" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="panel10" />
+                                  <Orientation value="Vertical" />
+                                  <Children>
+                                    <TextBox>
+                                      <Name value="textBox19" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="actorName" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="actorName.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-textbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </TextBox>
+                                    <Button>
+                                      <Name value="DeleteActorItem" />
+                                      <Caption value="Delete actor item" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="150px" />
+                                      <OnClick>
+                                        <ActionEvent ReferencedAction="~handler_DeleteActorItem_OnClick" />
+                                      </OnClick>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-button" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Button>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <Bindings>
+                                <Binding SourceProperty="DataItems" Expression="Record.starring" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-repeater" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Repeater>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="Record.starring.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-groupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </GroupBox>
             <Panel>
               <Name value="panel15" />
               <Orientation value="Horizontal" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <Children>
+                <TextBox>
+                  <Name value="textBox3" />
+                  <CaptionVAlign value="Middle" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="Record.rating.score" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.rating.score.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="Record.rating.score.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
                 <DatePicker>
                   <Name value="datePicker3" />
                   <Panel.Height value="#" />
@@ -172,23 +446,6 @@
                     </CssClassConditional>
                   </CssClass>
                 </CheckBox>
-                <TextBox>
-                  <Name value="textBox3" />
-                  <CaptionVAlign value="Middle" />
-                  <Panel.Height value="#" />
-                  <Panel.Width value="300px" />
-                  <Bindings>
-                    <Binding SourceProperty="Data" Expression="Record.rating.score" />
-                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="Record.rating.score.isRequired()" />
-                    <Binding SourceProperty="Caption" Expression="Record.rating.score.caption()" />
-                  </Bindings>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-textbox" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </TextBox>
               </Children>
               <CssClass>
                 <CssClassConditional>
@@ -197,107 +454,6 @@
                 </CssClassConditional>
               </CssClass>
             </Panel>
-            <GroupBox>
-              <Name value="groupBox5" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Content>
-                <Panel>
-                  <Name value="panel5" />
-                  <Orientation value="Horizontal" />
-                  <Children>
-                    <Button>
-                      <Name value="AddActorItem" />
-                      <Caption value="Add actor item" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="150px" />
-                      <OnClick>
-                        <ActionEvent ReferencedAction="~addActor" />
-                      </OnClick>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-button" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </Button>
-                    <Repeater>
-                      <Name value="repeater5" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="*" />
-                      <Content>
-                        <Panel>
-                          <Name value="panel10" />
-                          <Orientation value="Vertical" />
-                          <Children>
-                            <TextBox>
-                              <Name value="textBox19" />
-                              <Panel.Height value="#" />
-                              <Panel.Width value="*" />
-                              <Bindings>
-                                <Binding SourceProperty="Data" Expression="actorName" />
-                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="actorName.isRequired()" />
-                                <Binding SourceProperty="Caption" Expression="actorName.caption()" />
-                              </Bindings>
-                              <CssClass>
-                                <CssClassConditional>
-                                  <ClassName value="{theme}-textbox" />
-                                  <IsThemedStyle value="True" />
-                                </CssClassConditional>
-                              </CssClass>
-                            </TextBox>
-                            <Button>
-                              <Name value="DeleteActorItem" />
-                              <Caption value="Delete actor item" />
-                              <Panel.Height value="#" />
-                              <Panel.Width value="150px" />
-                              <OnClick>
-                                <ActionEvent ReferencedAction="~handler_DeleteActorItem_OnClick" />
-                              </OnClick>
-                              <CssClass>
-                                <CssClassConditional>
-                                  <ClassName value="{theme}-button" />
-                                  <IsThemedStyle value="True" />
-                                </CssClassConditional>
-                              </CssClass>
-                            </Button>
-                          </Children>
-                          <CssClass>
-                            <CssClassConditional>
-                              <ClassName value="{theme}-panel" />
-                              <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                          </CssClass>
-                        </Panel>
-                      </Content>
-                      <Bindings>
-                        <Binding SourceProperty="DataItems" Expression="Record.starring" />
-                      </Bindings>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-repeater" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </Repeater>
-                  </Children>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-panel" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Panel>
-              </Content>
-              <Bindings>
-                <Binding SourceProperty="Caption" Expression="Record.starring.caption()" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-groupbox" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </GroupBox>
             <GroupBox>
               <Name value="groupBox6" />
               <Panel.Height value="#" />
@@ -561,108 +717,6 @@
                 </CssClassConditional>
                 <CssClassConditional>
                   <ClassName value="{theme}-textbox" />
-                </CssClassConditional>
-              </CssClass>
-            </GroupBox>
-            <GroupBox>
-              <Name value="groupBox1" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Content>
-                <Panel>
-                  <Name value="panel14" />
-                  <Orientation value="Horizontal" />
-                  <Children>
-                    <Button>
-                      <Name value="AddGenre" />
-                      <Caption value="Add genre" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="150px" />
-                      <OnClick>
-                        <ActionEvent ReferencedAction="~handler_button14_OnClick" />
-                      </OnClick>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-button" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </Button>
-                    <Repeater>
-                      <Name value="repeater1" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="*" />
-                      <Content>
-                        <Panel>
-                          <Name value="panel7" />
-                          <Orientation value="Vertical" />
-                          <Children>
-                            <Button>
-                              <Name value="DeleteGenre" />
-                              <Caption value="Delete genre" />
-                              <Panel.Height value="#" />
-                              <Panel.Width value="150px" />
-                              <OnClick>
-                                <ActionEvent ReferencedAction="~handler_DeleteGenre_OnClick" />
-                              </OnClick>
-                              <CssClass>
-                                <CssClassConditional>
-                                  <ClassName value="{theme}-button" />
-                                  <IsThemedStyle value="True" />
-                                </CssClassConditional>
-                              </CssClass>
-                            </Button>
-                            <TextBox>
-                              <Name value="textBox2" />
-                              <CaptionVAlign value="Middle" />
-                              <Panel.Height value="#" />
-                              <Panel.Width value="300px" />
-                              <Bindings>
-                                <Binding SourceProperty="Data" Expression="genre" />
-                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="genre.isRequired()" />
-                                <Binding SourceProperty="Caption" Expression="genre.caption()" />
-                              </Bindings>
-                              <CssClass>
-                                <CssClassConditional>
-                                  <ClassName value="{theme}-textbox" />
-                                  <IsThemedStyle value="True" />
-                                </CssClassConditional>
-                              </CssClass>
-                            </TextBox>
-                          </Children>
-                          <CssClass>
-                            <CssClassConditional>
-                              <ClassName value="{theme}-panel" />
-                              <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                          </CssClass>
-                        </Panel>
-                      </Content>
-                      <Bindings>
-                        <Binding SourceProperty="DataItems" Expression="Record.genres" />
-                      </Bindings>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-repeater" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </Repeater>
-                  </Children>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-panel" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Panel>
-              </Content>
-              <Bindings>
-                <Binding SourceProperty="Caption" Expression="Record.genres.caption()" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-groupbox" />
-                  <IsThemedStyle value="True" />
                 </CssClassConditional>
               </CssClass>
             </GroupBox>

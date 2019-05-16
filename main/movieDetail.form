@@ -291,6 +291,70 @@
             </CssClassConditional>
           </CssClass>
         </GroupBox>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <DatePicker>
+              <Name value="datePicker1" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.rating.dateOfWatching" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.rating.dateOfWatching.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="complex1.rating.dateOfWatching.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datepicker" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </DatePicker>
+            <CheckBox>
+              <Name value="checkBox1" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.rating.seenItWhole" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.rating.seenItWhole.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="complex1.rating.seenItWhole.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText7" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.rating.score" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.rating.score.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="complex1.rating.score.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledtext" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
         <GroupBox>
           <Name value="groupBox3" />
           <Panel.Height value="#" />
@@ -454,70 +518,6 @@
             </CssClassConditional>
           </CssClass>
         </GroupBox>
-        <Panel>
-          <Name value="panel2" />
-          <Orientation value="Horizontal" />
-          <Panel.Height value="#" />
-          <Panel.Width value="*" />
-          <Children>
-            <DatePicker>
-              <Name value="datePicker1" />
-              <IsEnabled value="False" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Bindings>
-                <Binding SourceProperty="Data" Expression="complex1.rating.dateOfWatching" />
-                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.rating.dateOfWatching.isRequired()" />
-                <Binding SourceProperty="Caption" Expression="complex1.rating.dateOfWatching.caption()" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-datepicker" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </DatePicker>
-            <CheckBox>
-              <Name value="checkBox1" />
-              <IsEnabled value="False" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Bindings>
-                <Binding SourceProperty="Data" Expression="complex1.rating.seenItWhole" />
-                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.rating.seenItWhole.isRequired()" />
-                <Binding SourceProperty="Caption" Expression="complex1.rating.seenItWhole.caption()" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-checkbox" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </CheckBox>
-            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
-              <Name value="labeledText7" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Bindings>
-                <Binding SourceProperty="Data" Expression="complex1.rating.score" />
-                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.rating.score.isRequired()" />
-                <Binding SourceProperty="Caption" Expression="complex1.rating.score.caption()" />
-              </Bindings>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-labeledtext" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </LabeledText>
-          </Children>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-panel" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Panel>
       </Children>
       <CssClass>
         <CssClassConditional>
