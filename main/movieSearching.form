@@ -141,8 +141,8 @@
                                   <Panel.Width value="*" />
                                   <Children>
                                     <Button>
-                                      <Name value="ShowWholeRecord" />
-                                      <Caption value="Show whole record" />
+                                      <Name value="GoToWholeRecord" />
+                                      <Caption value="Go to Whole Record" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="150px" />
                                       <OnClick>
